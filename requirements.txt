@@ -1,0 +1,7 @@
+pyyaml
+openai
+replicate
+edge-tts
+pydub
+requests
+python-dotenv

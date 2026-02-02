@@ -1,0 +1,69 @@
+characters:
+  - id: pfarrer_paul
+    name: Pfarrer Paul
+    folder: assets/characters/pfarrer_paul
+    archetype: Priester
+  - id: gina
+    name: Gina
+    folder: assets/characters/gina
+    archetype: Übermutter
+  - id: werner
+    name: Werner
+    folder: assets/characters/werner
+    archetype: Gemütlicher Trinker
+  - id: max
+    name: Max
+    folder: assets/characters/max
+    archetype: Tausendsassa
+  - id: eric
+    name: Eric
+    folder: assets/characters/eric
+    archetype: Ehrlicher Egoist
+  - id: professor_herbert
+    name: Professor Herbert
+    folder: assets/characters/professor_herbert
+    archetype: Erklärbär
+  - id: berthold
+    name: Berthold
+    folder: assets/characters/berthold
+    archetype: Angler
+  - id: torsten
+    name: Torsten
+    folder: assets/characters/torsten
+    archetype: Postbote
+  - id: tina
+    name: Tina
+    folder: assets/characters/tina
+    archetype: Müllfrau
+  - id: heinrich
+    name: Heinrich
+    folder: assets/characters/heinrich
+    archetype: Familienvater
+  - id: sabrina
+    name: Sabrina
+    folder: assets/characters/sabrina
+    archetype: Charmante
+  - id: doktor_klara
+    name: Doktor Klara
+    folder: assets/characters/doktor_klara
+    archetype: Ärztin
+  - id: buergermeister_bruno
+    name: Bürgermeister Bruno
+    folder: assets/characters/buergermeister_bruno
+    archetype: Überforderter
+  - id: fitness_fiona
+    name: Fitness-Fiona
+    folder: assets/characters/fitness_fiona
+    archetype: Motivierte
+  - id: oma_gerda
+    name: Oma Gerda
+    folder: assets/characters/oma_gerda
+    archetype: Weise
+  - id: hacker_hannes
+    name: Hacker-Hannes
+    folder: assets/characters/hacker_hannes
+    archetype: Verschwörer
+  - id: kuenstler_kurt
+    name: Künstler Kurt
+    folder: assets/characters/kuenstler_kurt
+    archetype: Unverstandener

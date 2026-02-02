@@ -1,0 +1,406 @@
+#!/bin/bash
+# Claw City CLI Tool
+# Hauptskript für Bildgenerierung und Pipeline-Management
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_DIR="$SCRIPT_DIR/configs"
+ASSETS_DIR="$SCRIPT_DIR/assets"
+OUTPUTS_DIR="$SCRIPT_DIR/outputs"
+
+# Farben für Output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Hilfsfunktionen
+print_header() {
+    echo -e "${BLUE}"
+    echo "╔════════════════════════════════════════════════════════════╗"
+    echo "║                    🦀 CLAW CITY PIPELINE                   ║"
+    echo "╚════════════════════════════════════════════════════════════╝"
+    echo -e "${NC}"
+}
+
+print_success() {
+    echo -e "${GREEN}✓ $1${NC}"
+}
+
+print_error() {
+    echo -e "${RED}✗ $1${NC}"
+}
+
+print_info() {
+    echo -e "${YELLOW}ℹ $1${NC}"
+}
+
+# Zeige Hilfe
+show_help() {
+    print_header
+    echo "Usage: ./clawcity <command> [options]"
+    echo ""
+    echo "Commands:"
+    echo "  character <name>     Generate images for a character"
+    echo "  scene <location>     Generate scene image for a location"
+    echo "  list                 List all available characters"
+    echo "  init <char_name>     Initialize new character template"
+    echo "  batch                Generate all character images"
+    echo "  status               Show project status"
+    echo ""
+    echo "Options:"
+    echo "  --dry-run            Show what would be generated without API calls"
+    echo "  --style <style>      Override default style (cartoon, realistic, etc.)"
+    echo ""
+    echo "Examples:"
+    echo "  ./clawcity character pfarrer_paul"
+    echo "  ./clawcity scene cafe"
+    echo "  ./clawcity init new_character"
+}
+
+# Liste alle Charaktere
+list_characters() {
+    print_header
+    echo "Verfügbare Charaktere:"
+    echo ""
+    
+    if [ -f "$CONFIG_DIR/characters.yaml" ]; then
+        # Extrahiere Charaktere aus YAML
+        grep "^  - id:" "$CONFIG_DIR/characters.yaml" | sed 's/.*id: //' | while read -r char_id; do
+            local name=$(grep -A1 "id: $char_id" "$CONFIG_DIR/characters.yaml" | grep "name:" | sed 's/.*name: //')
+            local archetype=$(grep -A2 "id: $char_id" "$CONFIG_DIR/characters.yaml" | grep "archetype:" | sed 's/.*archetype: //')
+            
+            if [ -d "$ASSETS_DIR/characters/$char_id" ]; then
+                echo -e "  ${GREEN}✓${NC} $char_id - $name ($archetype)"
+            else
+                echo -e "  ${YELLOW}○${NC} $char_id - $name ($archetype) [kein Ordner]"
+            fi
+        done
+    else
+        print_error "characters.yaml nicht gefunden"
+    fi
+    echo ""
+}
+
+# Generiere Bild für einen Charakter
+generate_character() {
+    local char_id=$1
+    local dry_run=$2
+    local style_override=$3
+    
+    local char_dir="$ASSETS_DIR/characters/$char_id"
+    local output_dir="$OUTPUTS_DIR/images/characters/$char_id"
+    
+    if [ ! -d "$char_dir" ]; then
+        print_error "Charakter '$char_id' nicht gefunden in $char_dir"
+        return 1
+    fi
+    
+    print_info "Generiere Bilder für: $char_id"
+    
+    # Lade visuelle Merkmale
+    local visual_file="$char_dir/visual_traits.md"
+    local profile_file="$char_dir/profile.md"
+    
+    if [ ! -f "$visual_file" ]; then
+        print_error "visual_traits.md fehlt für $char_id"
+        return 1
+    fi
+    
+    # Erstelle Output-Ordner
+    mkdir -p "$output_dir"
+    
+    # Extrahiere Prompt-Template
+    local prompt_template=$(sed -n '/```/,/```/p' "$visual_file" | sed '1d;$d')
+    
+    if [ -z "$prompt_template" ]; then
+        print_error "Kein Prompt-Template in visual_traits.md gefunden"
+        return 1
+    fi
+    
+    # Generiere verschiedene Bildtypen
+    local poses=("standing" "sitting" "talking" "happy" "confused")
+    
+    for pose in "${poses[@]}"; do
+        local pose_prompt=""
+        case $pose in
+            standing) pose_prompt="standing pose, full body" ;;
+            sitting) pose_prompt="sitting on a chair, relaxed" ;;
+            talking) pose_prompt="talking, gesturing with hands" ;;
+            happy) pose_prompt="happy expression, smiling" ;;
+            confused) pose_prompt="confused expression, scratching head" ;;
+        esac
+        
+        local final_prompt="$prompt_template, $pose_prompt"
+        
+        if [ "$dry_run" = true ]; then
+            echo "  [DRY-RUN] Würde generieren: $char_id - $pose"
+            echo "  Prompt: ${final_prompt:0:80}..."
+        else
+            print_info "Generiere: $char_id - $pose"
+            # Hier würde der API-Call stehen
+            echo "$final_prompt" > "$output_dir/${pose}_prompt.txt"
+            print_success "Prompt gespeichert: $output_dir/${pose}_prompt.txt"
+        fi
+    done
+    
+    # Speichere Metadaten
+    local meta_file="$output_dir/metadata.json"
+    cat > "$meta_file" << EOF
+{
+  "character_id": "$char_id",
+  "generated_at": "$(date -Iseconds)",
+  "poses_generated": $(printf '%s' "${#poses[@]}"),
+  "style": "${style_override:-cartoon}",
+  "source_files": [
+    "visual_traits.md",
+    "profile.md"
+  ]
+}
+EOF
+    
+    print_success "Charakter '$char_id' fertig"
+}
+
+# Initialisiere neuen Charakter
+init_character() {
+    local char_id=$1
+    local char_name=$2
+    local archetype=$3
+    
+    if [ -z "$char_id" ]; then
+        print_error "Charakter-ID erforderlich"
+        return 1
+    fi
+    
+    # Standardwerte
+    char_name=${char_name:-$char_id}
+    archetype=${archetype:-"Unbekannt"}
+    
+    local char_dir="$ASSETS_DIR/characters/$char_id"
+    
+    if [ -d "$char_dir" ]; then
+        print_error "Charakter '$char_id' existiert bereits"
+        return 1
+    fi
+    
+    print_info "Erstelle neuen Charakter: $char_id"
+    
+    mkdir -p "$char_dir"
+    mkdir -p "$char_dir/reference_images"
+    
+    # profile.md Template
+    cat > "$char_dir/profile.md" << EOF
+# $char_name
+
+## Archetyp
+$archetype
+
+## Persönlichkeit
+[TODO: Beschreibe die Persönlichkeit]
+
+## Catchphrases
+- \"[TODO: Füge Catchphrase hinzu]\"
+
+## Menschenkind
+[TODO: Name und Beschreibung des Menschenkindes]
+
+## Beziehungen
+[TODO: Liste wichtige Beziehungen zu anderen Charakteren]
+EOF
+
+    # visual_traits.md Template
+    cat > "$char_dir/visual_traits.md" << 'EOF'
+# Visuelle Merkmale - [CHARAKTERNAME]
+
+## Farbschema
+- **Körper**: [Farbe] (#HEXCODE)
+- **Augen**: [Farbe] (#HEXCODE)
+- **Akzent**: [Farbe] (#HEXCODE)
+
+## Aussehen
+- [TODO: Beschreibe Aussehen]
+
+## Kleidung
+- [TODO: Beschreibe Kleidung]
+
+## Accessoires
+- [TODO: Liste Accessoires]
+
+## Prompt-Template (Midjourney/DALL-E)
+\`\`\`
+[TODO: Füge Prompt-Template hier ein]
+Simpsons art style, warm pastel colors, cartoon style
+--style cartoon --ar 1:1
+\`\`\`
+EOF
+
+    # backstory.md Template
+    cat > "$char_dir/backstory.md" << EOF
+# Hintergrundgeschichte - $char_name
+
+## Herkunft
+[TODO: Beschreibe Herkunft]
+
+## Tägliche Routine
+- **Morgens**: 
+- **Mittags**: 
+- **Abends**: 
+- **Nachts**: 
+
+## Lieblingssnack
+[TODO]
+
+## Charakterentwicklung
+[TODO]
+
+## Beziehungen
+| Beziehung | Charakter | Art |
+|-----------|-----------|-----|
+| [TODO] | [TODO] | [TODO] |
+EOF
+
+    print_success "Charakter-Vorlage erstellt in: $char_dir"
+    print_info "Nächste Schritte:"
+    echo "  1. Bearbeite $char_dir/profile.md"
+    echo "  2. Bearbeite $char_dir/visual_traits.md"
+    echo "  3. Bearbeite $char_dir/backstory.md"
+    echo "  4. Füge Referenzbilder in $char_dir/reference_images/"
+    echo "  5. Führe aus: ./clawcity character $char_id"
+}
+
+# Generiere alle Charaktere
+generate_batch() {
+    print_header
+    print_info "Batch-Generierung aller Charaktere"
+    
+    local count=0
+    
+    if [ -f "$CONFIG_DIR/characters.yaml" ]; then
+        grep "^  - id:" "$CONFIG_DIR/characters.yaml" | sed 's/.*id: //' | while read -r char_id; do
+            if [ -d "$ASSETS_DIR/characters/$char_id" ]; then
+                generate_character "$char_id" "$1" "$2"
+                ((count++))
+            fi
+        done
+    fi
+    
+    print_success "$count Charaktere verarbeitet"
+}
+
+# Zeige Projekt-Status
+show_status() {
+    print_header
+    
+    echo "Projekt-Status:"
+    echo ""
+    
+    # Zähle Charaktere
+    local total_chars=0
+    local complete_chars=0
+    
+    if [ -f "$CONFIG_DIR/characters.yaml" ]; then
+        total_chars=$(grep -c "^  - id:" "$CONFIG_DIR/characters.yaml" || echo "0")
+    fi
+    
+    for char_dir in "$ASSETS_DIR/characters"/*/; do
+        if [ -d "$char_dir" ]; then
+            if [ -f "$char_dir/profile.md" ] && [ -f "$char_dir/visual_traits.md" ]; then
+                ((complete_chars++))
+            fi
+        fi
+    done
+    
+    echo "  Charaktere total:     $total_chars"
+    echo "  Charaktere vollständig: $complete_chars"
+    echo ""
+    
+    # Zähle generierte Bilder
+    local generated_images=0
+    if [ -d "$OUTPUTS_DIR/images" ]; then
+        generated_images=$(find "$OUTPUTS_DIR/images" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | wc -l)
+    fi
+    
+    echo "  Generierte Bilder:    $generated_images"
+    echo ""
+    
+    # Zeige Ordnerstruktur
+    echo "Ordnerstruktur:"
+    tree -L 2 "$SCRIPT_DIR" 2>/dev/null || find "$SCRIPT_DIR" -maxdepth 2 -type d | head -20
+}
+
+# Hauptprogramm
+main() {
+    local command=$1
+    shift || true
+    
+    case $command in
+        character)
+            local dry_run=false
+            local style=""
+            local char_id=""
+            
+            while [[ $# -gt 0 ]]; do
+                case $1 in
+                    --dry-run) dry_run=true ;;
+                    --style) style="$2"; shift ;;
+                    -*) print_error "Unbekannte Option: $1"; exit 1 ;;
+                    *) char_id="$1" ;;
+                esac
+                shift
+            done
+            
+            if [ -z "$char_id" ]; then
+                print_error "Charakter-ID erforderlich"
+                show_help
+                exit 1
+            fi
+            
+            generate_character "$char_id" "$dry_run" "$style"
+            ;;
+            
+        list)
+            list_characters
+            ;;
+            
+        init)
+            local char_id=$1
+            local char_name=$2
+            local archetype=$3
+            init_character "$char_id" "$char_name" "$archetype"
+            ;;
+            
+        batch)
+            local dry_run=false
+            local style=""
+            
+            while [[ $# -gt 0 ]]; do
+                case $1 in
+                    --dry-run) dry_run=true ;;
+                    --style) style="$2"; shift ;;
+                esac
+                shift
+            done
+            
+            generate_batch "$dry_run" "$style"
+            ;;
+            
+        status)
+            show_status
+            ;;
+            
+        help|--help|-h)
+            show_help
+            ;;
+            
+        *)
+            print_error "Unbekannter Befehl: $command"
+            show_help
+            exit 1
+            ;;
+    esac
+}
+
+main "$@"

@@ -1,0 +1,86 @@
+# Claw City Pipeline Einstellungen
+
+# Projekt-Info
+project:
+  name: "Claw City"
+  version: "1.0.0"
+  description: "Comedy-Show mit KI-Agenten in einer deutschen Kleinstadt"
+
+# Bildgenerierung
+image_generation:
+  provider: "midjourney"  # midjourney, dalle, stable_diffusion
+  default_style: "cartoon"
+  output_format: "png"
+  resolution:
+    width: 1024
+    height: 1024
+  
+  # Prompt-Engineering
+  prompt_prefix: "Claw City character, Simpsons art style, warm pastel colors, friendly cartoon robot,"
+  prompt_suffix: "clean lines, expressive face, cozy atmosphere, soft lighting, --ar 1:1 --style cartoon"
+  
+  # Posen die generiert werden sollen
+  poses:
+    - id: "standing"
+      name: "Stehend"
+      prompt_addition: "standing pose, full body view, neutral background"
+    - id: "sitting"
+      name: "Sitzend"
+      prompt_addition: "sitting on a chair, relaxed posture"
+    - id: "talking"
+      name: "Sprechend"
+      prompt_addition: "talking, gesturing with hands, expressive"
+    - id: "happy"
+      name: "Fröhlich"
+      prompt_addition: "happy expression, smiling, cheerful"
+    - id: "confused"
+      name: "Verwirrt"
+      prompt_addition: "confused expression, scratching head"
+
+# API-Konfiguration (Keys in .env!)
+api:
+  midjourney:
+    enabled: false
+    channel_id: ""  # Discord Channel ID
+    bot_token: ""   # In .env als MIDJOURNEY_BOT_TOKEN
+  
+  openai:
+    enabled: false
+    model: "dall-e-3"
+    api_key: ""     # In .env als OPENAI_API_KEY
+  
+  stability_ai:
+    enabled: false
+    api_key: ""     # In .env als STABILITY_API_KEY
+  
+  replicate:
+    enabled: true
+    rate_limit_delay: 10 # Auf 10s reduziert für schnellere Generierung (6 Req/Min)
+    max_workers: 6 # Auf 6 Worker erhöht, für max. Rate Limit Auslastung
+
+# Reproduzierbarkeit
+reproducibility:
+  # Seed für deterministische Generierung (wenn unterstützt)
+  seed: null
+  # Version der Prompts
+  prompt_version: "1.0"
+  # Welche Metadaten speichern
+  save_metadata: true
+  save_prompts: true
+
+# Output-Struktur
+output:
+  base_dir: "outputs"
+  structure:
+    - "images/characters/{character_id}/"
+    - "images/scenes/{scene_id}/"
+    - "images/episodes/{episode_id}/"
+    - "prompts/{date}/"
+    - "metadata/{character_id}/"
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/clawcity.log"
+  max_size: "10MB"
+  backup_count: 5

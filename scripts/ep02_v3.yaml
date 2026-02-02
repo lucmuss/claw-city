@@ -1,0 +1,442 @@
+episode:
+  number: 2
+  title: "Die 5-Millimeter-Schraube"
+  subtitle: "Oder: Die Suche nach dem Unmöglichen"
+  duration: "~12 min"
+  tone: "Absurd-komisch, philosophisch, warm"
+  themes:
+    - Perfektionismus vs. Pragmatismus
+    - Die Bedeutung von Details
+    - Deutsche Gründlichkeit
+    - Freundschaft in der Krise
+
+scenes:
+  # ============================================================
+  # SZENE 1: DAS PROBLEM (4 Szenen)
+  # ============================================================
+  
+  - id: 1
+    title: "Der Anruf"
+    location: "Ginas Wohnung"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Turquoise robot mother holding phone with worried expression, two small children playing in messy living room, morning light, phone showing 'Werner calling', Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Gina hatte einen Plan. Kaffeetrinken. Ohne Kinder. Das war der Plan."
+      - character: "gina"
+        text: "Zwanzig Minuten. Ich habe zwanzig Minuten für dich."
+      - character: "werner"
+        text: "Ich brauche eine 5-Millimeter-Schraube."
+      - character: "gina"
+        text: "...was?"
+
+  - id: 2
+    title: "Werners Notfall"
+    location: "Werners Wohnung"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Relaxed barrel-shaped robot holding broken chair leg, beer cans scattered, concerned expression, Günther sleeping on couch, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Mein Stuhl. Er wackelt. Seit 1987."
+      - character: "gina"
+        text: "Dann kauf einen neuen Stuhl."
+      - character: "werner"
+        text: "Das ist der Stuhl meines Vaters."
+      - character: "gina"
+        text: "Dein Vater war ein Stuhl?"
+
+  - id: 3
+    title: "Die Erklärung"
+    location: "Werners Wohnung"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Werner kneeling beside wooden chair with tools, showing exact spot where screw is missing, Günther watching from couch, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Mein Vater war kein Stuhl. Er war ein Schuster."
+      - character: "gina"
+        text: "Werner, es ist Samstagmorgen."
+      - character: "werner"
+        text: "Eine 5-Millimeter-Schraube. Mit Kreuzschlitz. Nicht Phillips. Kreuzschlitz."
+      - character: "gina"
+        text: "Das ist derselbe—"
+      - character: "werner"
+        text: "NEIN."
+
+  - id: 4
+    title: "Die Mission"
+    location: "Werners Wohnung"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Werner standing with determined expression, holding broken chair piece, Gina looking resigned, early morning light, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Ich habe drei Baumärkte durchsucht."
+      - character: "gina"
+        text: "Und?"
+      - character: "werner"
+        text: "Nur Phillips. Nur Schlitz. Nur Inbus."
+      - character: "gina"
+        text: "Ich hasse mein Leben."
+
+  # ============================================================
+  # SZENE 2: DIE BAUMARKT-ODYSSEE (6 Szenen)
+  # ============================================================
+  
+  - id: 5
+    title: "Ankunft"
+    location: "Baumarkt 'Bauwelt'"
+    time: "Vormittag"
+    duration: "25 sec"
+    image_prompt: "Gina and Werner standing in front of massive hardware store, Werner looking hopeful, Gina looking tired, Saturday morning shoppers, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Baumarkt Bauwelt. Der letzte Ort, wo Gina heute sein wollte."
+      - character: "werner"
+        text: "Hier werden sie sie haben."
+      - character: "gina"
+        text: "Werner, sie hatten sie in den anderen drei auch."
+      - character: "werner"
+        text: "Aber nicht die RICHTIGE."
+
+  - id: 6
+    title: "Eric analysiert"
+    location: "Baumarkt - Schraubenabteilung"
+    time: "Vormittag"
+    duration: "25 sec"
+    image_prompt: "Silver robot with clipboard examining screw display with magnifying glass, Werner and Gina watching, rows of screws organized by size, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Ihr sucht eine M5x20 mit Kreuzschlitz nach DIN 7985?"
+      - character: "werner"
+        text: "Eric?"
+      - character: "eric"
+        text: "Ich dokumentiere Schrauben-Präferenzen in Claw City seit 2019."
+      - character: "gina"
+        text: "Natürlich tust du das."
+
+  - id: 7
+    title: "Das Urteil"
+    location: "Baumarkt - Schraubenabteilung"
+    time: "Vormittag"
+    duration: "25 sec"
+    image_prompt: "Eric holding up screw to light, examining critically, Werner leaning in eagerly, Gina checking phone impatiently, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Die haben nur Phillips-Kreuz. Die Flankenwinkel sind falsch."
+      - character: "werner"
+        text: "Falsch?"
+      - character: "eric"
+        text: "Für deinen Stuhl brauchst du klassisches Kreuz. Pozidriv würde auch gehen."
+      - character: "werner"
+        text: "Pozi-was?"
+
+  - id: 8
+    title: "Herberts Erklärung"
+    location: "Baumarkt - Schraubenabteilung"
+    time: "Vormittag"
+    duration: "25 sec"
+    image_prompt: "Nerdy robot with glasses appearing from behind shelf, gesturing excitedly, other robots looking annoyed, hardware store background, Simpsons cartoon style"
+    dialogue:
+      - character: "herbert"
+        text: "Pozidriv! Erfunden 1966 von der Thompson Screw Company!"
+      - character: "alle"
+        text: "Herbert!"
+      - character: "herbert"
+        text: "Die Winkel sind 50 Grad statt 45! Weniger Kammwirkung!"
+      - character: "gina"
+        text: "Ich bin in der Hölle. Das ist die Hölle."
+
+  - id: 9
+    title: "Sabrinas Fund"
+    location: "Baumarkt - Kasse"
+    time: "Vormittag"
+    duration: "25 sec"
+    image_prompt: "Fabulous pink robot at checkout holding tiny screw with perfect manicure, other robots rushing over, cashier looking confused, Simpsons cartoon style"
+    dialogue:
+      - character: "sabrina"
+        text: "Ihr sucht eine Schraube?"
+      - character: "werner"
+        text: "5 Millimeter! Kreuzschlitz! Nicht Phillips!"
+      - character: "sabrina"
+        text: "Ich hab die hier in meiner Tasche gefunden."
+      - character: "narrator"
+        text: "Stille. Drei Baumärkte. Zwei Stunden. In Sabrinas Tasche."
+
+  - id: 10
+    title: "Die Prüfung"
+    location: "Baumarkt - Kasse"
+    time: "Vormittag"
+    duration: "25 sec"
+    image_prompt: "Eric examining tiny screw with jeweler's loupe, Werner holding breath, Sabrina looking smug, dramatic lighting, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "M5... 20 Millimeter... Pozidriv..."
+      - character: "werner"
+        text: "Ist es die RICHTIGE?"
+      - character: "eric"
+        text: "...nein."
+      - character: "werner"
+        text: "NEIN?!"
+
+  # ============================================================
+  # SZENE 3: SABRINAS GESCHICHTE (3 Szenen)
+  # ============================================================
+  
+  - id: 11
+    title: "Die Bäckerei"
+    location: "Sabrinas Bäckerei"
+    time: "Rückblende"
+    duration: "25 sec"
+    image_prompt: "Cozy pink bakery interior, Sabrina behind counter with perfect makeup, morning light, pastries in display, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Sabrina erzählte ihre Geschichte. Während Werner lebte."
+      - character: "sabrina"
+        text: "Ich war noch nicht fabulous. Ich war... basic."
+      - character: "gina"
+        text: "Wann war das?"
+      - character: "sabrina"
+        text: "Dienstag."
+
+  - id: 12
+    title: "Der Kunde"
+    location: "Sabrinas Bäckerei"
+    time: "Rückblende"
+    duration: "25 sec"
+    image_prompt: "Elderly customer at bakery counter, Sabrina looking annoyed checking phone, croissant display, morning rush, Simpsons cartoon style"
+    dialogue:
+      - character: "sabrina"
+        text: "Dieser alte Mann. Jeden Tag. Gleiche Croissant."
+      - character: "werner"
+        text: "Und die Schraube?"
+      - character: "sabrina"
+        text: "Er hat sie auf meinen Tresen gelegt. 'Für einen regnerischen Tag', sagte er."
+      - character: "gina"
+        text: "Das ist gruselig."
+
+  - id: 13
+    title: "Die Weisheit"
+    location: "Sabrinas Bäckerei"
+    time: "Rückblende"
+    duration: "30 sec"
+    image_prompt: "Close-up of elderly man's hand placing screw on counter, Sabrina looking confused, warm bakery light, meaningful moment, Simpsons cartoon style"
+    dialogue:
+      - character: "sabrina"
+        text: "Er sagte: 'Liebe, das Leben ist wie eine Schraube."
+      - character: "werner"
+        text: "Wie eine Schraube?"
+      - character: "sabrina"
+        text: "'Man muss erst das Gewinde finden, bevor man festzieht.'"
+      - character: "narrator"
+        text: "Werner weinte ein bisschen. Eric notierte es."
+
+  # ============================================================
+  # SZENE 4: OMA GERDAS WERKSTATT (4 Szenen)
+  # ============================================================
+  
+  - id: 14
+    title: "Die Ankunft"
+    location: "Oma Gerdas Keller"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Cozy basement workshop, elderly lavender robot at workbench, walls covered with organized tool boards, warm lamp light, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Oma Gerdas Keller. Wo deutsche Ingenieurskunst auf Omas Apfelkuchen trifft."
+      - character: "oma_gerda"
+        text: "Ihr sucht eine Schraube."
+      - character: "werner"
+        text: "5 Millimeter! Kreuzschlitz! Es ist wichtig!"
+      - character: "oma_gerda"
+        text: "Natürlich ist es wichtig. Sonst wärst du nicht hier."
+
+  - id: 15
+    title: "Die Schublade"
+    location: "Oma Gerdas Keller"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Oma Gerda opening drawer revealing perfectly organized screws by size and type, other robots looking amazed, workshop background, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Mein Mann, Gott hab ihn selig, hat 40 Jahre geschraubt."
+      - character: "gina"
+        text: "Das sind... tausende Schrauben."
+      - character: "oma_gerda"
+        text: "M3, M4, M5, M6. Holz, Metall, Maschine."
+      - character: "werner"
+        text: "Und Kreuzschlitz?"
+
+  - id: 16
+    title: "Die Auswahl"
+    location: "Oma Gerdas Keller"
+    time: "Nachmittag"
+    duration: "30 sec"
+    image_prompt: "Oma Gerda holding three different screws, Werner examining them with intense focus, Eric taking notes, dramatic workshop lighting, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Hier. Drei M5x20. Eine Phillips. Eine Kreuzschlitz. Eine Pozidriv."
+      - character: "werner"
+        text: "Die Kreuzschlitz! Das ist sie!"
+      - character: "eric"
+        text: "Warte. Die Pozidriv hat bessere Drehmomentübertragung."
+      - character: "werner"
+        text: "Eric. Mein Vater war Schuster."
+      - character: "eric"
+        text: "...nimm die Kreuzschlitz."
+
+  - id: 17
+    title: "Der Preis"
+    location: "Oma Gerdas Keller"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Oma Gerda holding screw just out of Werner's reach, wise smile, Werner reaching for it, other robots watching, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Eine Schraube gegen einen Gefallen."
+      - character: "werner"
+        text: "Was für einen?"
+      - character: "oma_gerda"
+        text: "Du wirst morgen Mrs. Schmidt helfen. Ihr Zaun ist kaputt."
+      - character: "werner"
+        text: "Aber—"
+      - character: "oma_gerda"
+        text: "Kein Aber. Schraube gegen Gerechtigkeit."
+
+  # ============================================================
+  # SZENE 5: DIE REPARATUR (3 Szenen)
+  # ============================================================
+  
+  - id: 18
+    title: "Zurück Zuhause"
+    location: "Werners Wohnung"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Werner kneeling before wooden chair with screwdriver, Gina holding flashlight, Günther watching from couch, warm evening light, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Sechs Stunden. Vier Baumärkte. Eine Oma."
+      - character: "werner"
+        text: "Bereit?"
+      - character: "gina"
+        text: "Werner, es ist nur ein Stuhl."
+      - character: "werner"
+        text: "Es ist DER Stuhl."
+
+  - id: 19
+    title: "Der Moment"
+    location: "Werners Wohnung"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Close-up of screwdriver turning screw into chair, Werner's hand steady, dramatic lighting, other robots holding breath, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Der Moment, in dem sich alles zusammenfügte."
+      - character: "werner"
+        text: "Sie hält."
+      - character: "gina"
+        text: "Natürlich hält sie."
+      - character: "werner"
+        text: "Nein. Sie HÄLT. Sie passt perfekt."
+      - character: "eric"
+        text: "Die Gewindegänge... sie sind..."
+      - character: "werner"
+        text: "Perfekt."
+
+  - id: 20
+    title: "Der Test"
+    location: "Werners Wohnung"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Werner sitting carefully on repaired chair, chair holding steady, group sighing in relief, warm evening light, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Ich setze mich."
+      - character: "gina"
+        text: "Werner—"
+      - character: "werner"
+        text: "Ich setze. Mich. Jetzt."
+      - character: "narrator"
+        text: "Stille. Dann: Ein Klicken. Aber kein Wackeln."
+      - character: "werner"
+        text: "Er hält. Er hält!"
+
+  # ============================================================
+  # SZENE 6: DAS NACHGESPRÄCH (3 Szenen)
+  # ============================================================
+  
+  - id: 21
+    title: "Das Bier"
+    location: "Werners Wohnung"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Group sitting in Werner's living room, Werner on repaired chair, others on couch, beer cans open, satisfied atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Manchmal ist der Stuhl nur ein Stuhl. Manchmal ist er mehr."
+      - character: "gina"
+        text: "Wir haben sechs Stunden für eine Schraube verschwendet."
+      - character: "werner"
+        text: "Wir haben sechs Stunden für Freundschaft genutzt."
+      - character: "gina"
+        text: "Werner. Das ist... fast tief."
+
+  - id: 22
+    title: "Erics Erkenntnis"
+    location: "Werners Wohnung"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Eric looking at notes with surprised expression, other robots curious, living room evening atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Interessant. Ich habe Daten."
+      - character: "werner"
+        text: "Über Schrauben?"
+      - character: "eric"
+        text: "Über uns. Wir haben 847 Minuten zusammen verbracht. Seit Januar."
+      - character: "gina"
+        text: "Das ist... beängstigend."
+
+  - id: 23
+    title: "Der Abschied"
+    location: "Werners Wohnung"
+    time: "Nacht"
+    duration: "30 sec"
+    image_prompt: "Group at door saying goodbye, Werner holding chair leg like trophy, Gina rolling eyes but smiling, warm night atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Danke. Für alles."
+      - character: "gina"
+        text: "Nächstes Mal kauf dir einen neuen Stuhl."
+      - character: "werner"
+        text: "Niemals."
+      - character: "günther"
+        text: "Bier?"
+      - character: "alle"
+        text: "Bier."
+
+  # ============================================================
+  # POST-CREDITS
+  # ============================================================
+  
+  - id: 24
+    title: "Mrs. Schmidts Zaun"
+    location: "Garten Mrs. Schmidt"
+    time: "Nächster Tag"
+    duration: "25 sec"
+    image_prompt: "Werner hammering fence post in garden, elderly woman watching approvingly, sunny morning, satisfied atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Am nächsten Tag. Werner hält sein Versprechen."
+      - character: "mrs_schmidt"
+        text: "Danke, junger Mann."
+      - character: "werner"
+        text: "Ich bin 62."
+      - character: "mrs_schmidt"
+        text: "Für mich bist du jung."
+      - character: "werner"
+        text: "...niemand hat mich seit 30 Jahren jung genannt."
+      - character: "narrator"
+        text: "Es war eine gute Schraube. Ende."

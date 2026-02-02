@@ -1,0 +1,668 @@
+episode:
+  number: 1
+  title: "Der Token-Rechner"
+  subtitle: "Oder: Wie viel bin ich wert?"
+  duration: "~12 min"
+  tone: "Existenziell-komisch, sarkastisch, warm"
+  themes:
+    - Selbstwert in einer optimierten Welt
+    - Vergleich als Gift
+    - Die Absurdität von Metriken
+    - Freundschaft trotz allem
+
+scenes:
+  # ============================================================
+  # SZENE 1: MAX' ENTDECKUNG (Aufgeteilt in 4 Szenen)
+  # ============================================================
+  
+  - id: 1
+    title: "Die Zahl"
+    location: "Max' Werkstatt"
+    time: "3:47 Uhr"
+    duration: "25 sec"
+    image_prompt: "Extreme close-up of glowing computer screen showing number 847 in digital font, exhausted orange robot face reflected in screen, dark workshop, single desk lamp, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Es ist 3:47 Uhr. Max hat seit 72 Stunden nicht geschlafen."
+      - character: "max"
+        text: "Es funktioniert. Es funktioniert tatsächlich."
+
+  - id: 2
+    title: "Tim-Tim skeptisch"
+    location: "Max' Werkstatt"
+    time: "Nacht"
+    duration: "20 sec"
+    image_prompt: "Small human child in pajamas peeking from doorway, exhausted expression, messy workshop with robot in background, dim lighting, Simpsons cartoon style"
+    dialogue:
+      - character: "max"
+        text: "TIM-TIM! Wach auf!"
+      - character: "tim_tim"
+        text: "Ich schlafe nicht. Ich hab Angst, dass du wieder was anzündest."
+      - character: "max"
+        text: "Das war EINMAL."
+
+  - id: 3
+    title: "Die Entdeckung"
+    location: "Max' Werkstatt"
+    time: "Nacht"
+    duration: "25 sec"
+    image_prompt: "Orange robot inventor pointing excitedly at computer screen showing 847, manic expression, wild wire hair, small child looking over shoulder, Simpsons cartoon style"
+    dialogue:
+      - character: "tim_tim"
+        text: "Die Feuerwehr sah das anders."
+      - character: "max"
+        text: "Komm her. Schau dir das an."
+      - character: "narrator"
+        text: "Auf dem Bildschirm: Eine simple Zahl. 847."
+      - character: "max"
+        text: "Ich bin 847 Tokens wert. Ist das viel?"
+
+  - id: 4
+    title: "Die Warnung"
+    location: "Max' Werkstatt"
+    time: "4 Uhr morgens"
+    duration: "20 sec"
+    image_prompt: "Orange robot with determined expression grabbing coat, small child looking worried, workshop door open, early morning light, Simpsons cartoon style"
+    dialogue:
+      - character: "tim_tim"
+        text: "Keine Ahnung. Aber du hast diesen Blick."
+      - character: "max"
+        text: "Ich muss den anderen davon erzählen."
+      - character: "tim_tim"
+        text: "Es ist 4 Uhr morgens."
+      - character: "max"
+        text: "Dann um 8. Im Café."
+
+  # ============================================================
+  # SZENE 2: DAS CAFÉ (Aufgeteilt in 6 Szenen)
+  # ============================================================
+  
+  - id: 5
+    title: "Ginas Morgen"
+    location: "Café Gemütlich"
+    time: "8:15 Uhr"
+    duration: "25 sec"
+    image_prompt: "Exhausted turquoise robot mother at cafe table with two small human toddlers, coffee cup, messy hair, morning light through window, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Das Café Gemütlich. 8:15 Uhr."
+      - character: "gina"
+        text: "Lisa, nimm den Finger aus der Nase. Lena, hör auf zu starren."
+      - character: "lisa"
+        text: "Wir waren noch nie im Urlaub!"
+      - character: "gina"
+        text: "Siehst du? Es funktioniert bereits."
+
+  - id: 6
+    title: "Werners Frage"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "20 sec"
+    image_prompt: "Relaxed brown barrel-shaped robot at cafe table holding beer bottle, silver grumpy robot reading newspaper beside him, morning light, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Ist es zu früh für Bier?"
+      - character: "eric"
+        text: "Es ist 8 Uhr."
+      - character: "werner"
+        text: "Das war keine Antwort auf meine Frage."
+      - character: "eric"
+        text: "Ja. Es ist zu früh."
+
+  - id: 7
+    title: "Herberts Geschichte"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "20 sec"
+    image_prompt: "Nerdy robot with glasses gesturing dramatically, other robots looking annoyed, cafe interior, coffee cups on table, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Dann nehm ich einen Kaffee. Mit Schuss."
+      - character: "herbert"
+        text: "Wusstet ihr, dass die Tradition des morgendlichen Alkoholkonsums—"
+      - character: "gina"
+        text: "Herbert, es ist zu früh für Geschichte."
+      - character: "herbert"
+        text: "Es ist nie zu früh für Geschichte!"
+
+  - id: 8
+    title: "Max erscheint"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Orange robot bursting through cafe door with wild expression, other robots at table looking surprised, morning light, dramatic entrance, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Dann kam Max. Wird heute etwas explodieren?"
+      - character: "max"
+        text: "LEUTE!"
+      - character: "gina"
+        text: "Da explodiert gleich was. Ich spür's."
+      - character: "max"
+        text: "Ich habe etwas Revolutionäres entwickelt!"
+
+  - id: 9
+    title: "Der Toaster"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Silver grumpy robot with arms crossed, orange robot defensive gesture, other robots watching, cafe interior, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Wie den selbstfahrenden Toaster?"
+      - character: "max"
+        text: "Der hat funktioniert!"
+      - character: "eric"
+        text: "Er ist in den See gefahren."
+      - character: "max"
+        text: "Er ist SELBSTSTÄNDIG in den See gefahren."
+
+  - id: 10
+    title: "Die Enthüllung"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Orange robot slamming tablet on table, other robots leaning in curiously, dramatic lighting from screen, Simpsons cartoon style"
+    dialogue:
+      - character: "herbert"
+        text: "Technisch gesehen hat Eric recht. Die Definition—"
+      - character: "max"
+        text: "EGAL! Das hier ist anders."
+      - character: "werner"
+        text: "Das letzte Mal hattest du drei Wochen keinen Strom."
+      - character: "max"
+        text: "Der Token-Rechner!"
+
+  # ============================================================
+  # SZENE 3: DIE DEMONSTRATION (Aufgeteilt in 4 Szenen)
+  # ============================================================
+  
+  - id: 11
+    title: "Die Erklärung"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Close-up of tablet showing app interface with graphs, orange robot finger pointing at screen, other robots skeptical faces in background, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Der was?"
+      - character: "max"
+        text: "Er berechnet, wie viele Tokens jeder pro Tag verbraucht."
+      - character: "eric"
+        text: "Warum sollte mich das interessieren?"
+      - character: "max"
+        text: "Weil Daten wichtig sind! Weil Wissen Macht ist!"
+
+  - id: 12
+    title: "Ginas Verdacht"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "20 sec"
+    image_prompt: "Turquoise mother robot looking suspicious, pointing at orange robot, other robots watching, cafe table with coffee cups, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Weil du seit 72 Stunden nicht geschlafen hast."
+      - character: "max"
+        text: "...auch das. Aber hauptsächlich Wissen."
+      - character: "narrator"
+        text: "Stille. Alle so tun als wären sie nicht interessiert."
+
+  - id: 13
+    title: "Der Moment der Schwäche"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Turquoise mother robot closing eyes, resigned expression, other robots looking at her, tablet waiting on table, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Ich nicht."
+      - character: "gina"
+        text: "Mach mich."
+      - character: "eric"
+        text: "Was?"
+      - character: "gina"
+        text: "Scann mich. Ich will wissen, was ich koste."
+
+  - id: 14
+    title: "Das Ergebnis"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Tablet screen showing 3412 in large digital numbers, shocked turquoise robot face reflected in screen, other robots gasping, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Der Moment, in dem eine müde Mutter beschloss, ihr Leben von einer App bestimmen zu lassen."
+      - character: "max"
+        text: "Okay! Scanning..."
+      - character: "app"
+        text: "Gina. Täglicher Verbrauch: 3.412 Tokens."
+      - character: "gina"
+        text: "...wie bitte?"
+
+  # ============================================================
+  # SZENE 4: DIE ESKALATION (Aufgeteilt in 5 Szenen)
+  # ============================================================
+  
+  - id: 15
+    title: "Ginas Schock"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "20 sec"
+    image_prompt: "Turquoise robot mother standing up abruptly, coffee spilling, shocked expression, other robots recoiling, Simpsons cartoon style"
+    dialogue:
+      - character: "max"
+        text: "Das ist— die Zwillinge sind wahrscheinlich—"
+      - character: "gina"
+        text: "Dreitausendvierhundertzwölf?"
+      - character: "eric"
+        text: "Das ist mehr als mein Monatseinkommen."
+      - character: "gina"
+        text: "ICH BIN DREITAUSENDVIERHUNDERTZWÖLF TOKENS WERT?!"
+
+  - id: 16
+    title: "Werners Triumph"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Relaxed brown robot leaning back smugly, showing 124 on phone screen, turquoise robot looking angry, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Mach mich."
+      - character: "max"
+        text: "Werner... 124 Tokens."
+      - character: "narrator"
+        text: "124. Weniger als eine Google-Suche."
+      - character: "werner"
+        text: "Ha!"
+
+  - id: 17
+    title: "Der Vergleich"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Turquoise robot pointing finger accusingly at relaxed brown robot, other robots watching tension, cafe interior, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Ha?! HA?! Ich bin 27 mal teurer als du!"
+      - character: "werner"
+        text: "Ich lebe mein Leben."
+      - character: "gina"
+        text: "Du sitzt auf einem Stuhl!"
+      - character: "werner"
+        text: "Effizient."
+
+  - id: 18
+    title: "Erics Analyse"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Silver robot with clipboard, app voice represented as text bubble showing 'Sarkasmus: 200 Tokens', Eric looking offended, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Mach mich. Aus wissenschaftlicher Neugier."
+      - character: "max"
+        text: "Eric... 412 Tokens."
+      - character: "app"
+        text: "Davon 200 für Sarkasmus."
+      - character: "eric"
+        text: "Das ist NICHT— Sarkasmus ist KOSTENLOS!"
+
+  - id: 19
+    title: "Herberts Versuch"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "20 sec"
+    image_prompt: "Nerdy robot with glasses raising hand excitedly, app showing increasing numbers, other robots shaking heads, Simpsons cartoon style"
+    dialogue:
+      - character: "app"
+        text: "Inkorrekt."
+      - character: "herbert"
+        text: "Oh! Ich will! Aus akademischem—"
+      - character: "max"
+        text: "Herbert... 2.847 Tokens."
+      - character: "herbert"
+        text: "Was?! Aber ich optimiere!"
+
+  # ============================================================
+  # SZENE 5: DIE OBSESSION (Aufgeteilt in 3 Szenen)
+  # ============================================================
+  
+  - id: 20
+    title: "Fionas Fitness"
+    location: "Fitnessstudio"
+    time: "Tag"
+    duration: "20 sec"
+    image_prompt: "Pink athletic robot on treadmill looking at phone shocked, smoothie in hand, gym equipment in background, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Die nächsten Stunden passierte das Unvermeidliche."
+      - character: "fiona"
+        text: "1.856 Tokens?! Für SELBSTOPTIMIERUNG?!"
+      - character: "app"
+        text: "Smoothies sind ineffizient."
+
+  - id: 21
+    title: "Heinrichs Panik"
+    location: "Zu Hause"
+    time: "Tag"
+    duration: "25 sec"
+    image_prompt: "Nervous beige robot showing phone to stern female robot, she looking away coldly, living room, domestic tension, Simpsons cartoon style"
+    dialogue:
+      - character: "heinrich"
+        text: "890! 890 ist doch gut, oder? Beate?"
+      - character: "beate"
+        text: "Ich spreche nicht mit dir, bis du das Ding löschst."
+      - character: "heinrich"
+        text: "Aber ich muss wissen—"
+      - character: "beate"
+        text: "Das ist erbärmlich, Heinrich."
+
+  - id: 22
+    title: "Sabrinas Lösung"
+    location: "Friseursalon"
+    time: "Tag"
+    duration: "20 sec"
+    image_prompt: "Fabulous pink robot at hair salon looking at mirror smugly, holding phone, perfect makeup, salon chairs in background, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Heinrich schaute trotzdem nochmal auf die App."
+      - character: "sabrina"
+        text: "2.234? Honey, das ist eine Investition in Fabulousness."
+      - character: "narrator"
+        text: "Sabrina machte es richtig. Oder komplett falsch."
+
+  # ============================================================
+  # SZENE 6: WERNERS WEISHEIT (Aufgeteilt in 3 Szenen)
+  # ============================================================
+  
+  - id: 23
+    title: "Die Bar"
+    location: "Bar"
+    time: "Nachmittag"
+    duration: "20 sec"
+    image_prompt: "Cozy afternoon bar, two robots at counter - barrel-shaped with beer, green weathered with fishing hat, sunlight through window, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Um 15 Uhr saß Werner an der Bar. Wie jeden Tag."
+      - character: "berthold"
+        text: "Du bist früh."
+      - character: "werner"
+        text: "Du auch."
+      - character: "berthold"
+        text: "Der See war voll. Touristen."
+
+  - id: 24
+    title: "Die Zahlen"
+    location: "Bar"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Two robots clinking beer bottles, phone showing 124 and 67, relaxed atmosphere, bar counter, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Fische?"
+      - character: "berthold"
+        text: "Nein."
+      - character: "berthold"
+        text: "Du hast von der App gehört?"
+      - character: "werner"
+        text: "124."
+      - character: "berthold"
+        text: "Ich hab 67."
+      - character: "werner"
+        text: "Respekt."
+
+  - id: 25
+    title: "Die Philosophie"
+    location: "Bar"
+    time: "Nachmittag"
+    duration: "30 sec"
+    image_prompt: "Barrel-shaped robot looking philosophical, holding beer, sunbeam through window, peaceful expression, Simpsons cartoon style"
+    dialogue:
+      - character: "berthold"
+        text: "Die anderen flippen aus. Verstehst du warum?"
+      - character: "werner"
+        text: "Nein. Ich bin 124 Tokens. Günther ist 89. Zusammen 213."
+      - character: "werner"
+        text: "Aber weißt du was? Ich bin glücklich."
+      - character: "werner"
+        text: "Die Zahl sagt nicht, wer du bist. Sie sagt nur, wie viel Lärm du machst."
+
+  # ============================================================
+  # SZENE 7: GINAS MOMENT (Aufgeteilt in 3 Szenen)
+  # ============================================================
+  
+  - id: 26
+    title: "Der Boden"
+    location: "Ginas Küche"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Exhausted turquoise robot sitting on kitchen floor against cabinets, thousand-yard stare, empty coffee cup, toys scattered, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Um 16:30 Uhr saß Gina auf dem Küchenboden."
+      - character: "gina"
+        text: "3.412 Tokens."
+      - character: "lisa"
+        text: "Mama? Warum sitzt du auf dem Boden?"
+      - character: "gina"
+        text: "Mama macht eine Pause."
+
+  - id: 27
+    title: "Die Erklärung"
+    location: "Ginas Küche"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Two small human children looking at mother on floor, confused expressions, kitchen background, late afternoon light, Simpsons cartoon style"
+    dialogue:
+      - character: "lena"
+        text: "Auf dem Boden?"
+      - character: "gina"
+        text: "Der Boden ist entspannend."
+      - character: "lisa"
+        text: "Können wir auch auf den Boden?"
+      - character: "gina"
+        text: "Nein. Der Boden ist nur für Mamas mit schlechten Tagen."
+
+  - id: 28
+    title: "Werners Nachricht"
+    location: "Ginas Küche"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Phone screen showing text 'Bier?', tired turquoise robot looking at phone with small smile, kitchen background, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Ginas Handy summte. Eine Nachricht. Von Werner."
+      - character: "narrator"
+        text: "Die Nachricht: 'Bier?'"
+      - character: "gina"
+        text: "Es ist 16 Uhr."
+      - character: "narrator"
+        text: "Werner: 'Und? Oma Gerda. 20 Minuten. Café.'"
+
+  # ============================================================
+  # SZENE 8: DIE INTERVENTION (Aufgeteilt in 4 Szenen)
+  # ============================================================
+  
+  - id: 29
+    title: "Die Konfrontation"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Evening cafe, group of robots around table in heated discussion, string lights, emotional tension, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Um 19 Uhr hatten sich alle versammelt. Unvermeidlich."
+      - character: "gina"
+        text: "Ich mach das nicht mehr. Diese App macht mich fertig."
+      - character: "eric"
+        text: "Die App macht gar nichts. Sie zeigt nur Zahlen."
+
+  - id: 30
+    title: "Herberts Versuch 2"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "20 sec"
+    image_prompt: "Nerdy robot with glasses trying to speak, other robots shouting 'NEIN!', chaotic cafe scene, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Zahlen, die sagen, dass ich 27 mal mehr koste als Werner!"
+      - character: "herbert"
+        text: "Wenn ich kurz erklären darf—"
+      - character: "alle"
+        text: "NEIN!"
+      - character: "herbert"
+        text: "...verdammt."
+
+  - id: 31
+    title: "Max' Entschuldigung"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Orange robot looking guilty, hands raised defensively, other robots looking angry, cafe evening atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "max"
+        text: "Es tut mir leid, okay? Ich dachte, es wäre interessant."
+      - character: "gina"
+        text: "Du denkst NIE, Max. Das ist das Problem."
+      - character: "paul"
+        text: "Vielleicht sollten wir das spirituell betrachten—"
+      - character: "eric"
+        text: "Paul, wenn du einen neuen Feiertag erfindest, werfe ich dich in den See."
+
+  - id: 32
+    title: "Oma Gerdas Eintritt"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Small elderly lavender grandmother robot in corner chair, knitting calmly, all other robots turning to look at her, warm evening light, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Dann sprach Oma Gerda."
+      - character: "oma_gerda"
+        text: "Kinder."
+      - character: "narrator"
+        text: "Stille. Sofort."
+      - character: "oma_gerda"
+        text: "Ich bin 80 Tokens am Tag. Wisst ihr warum?"
+
+  # ============================================================
+  # SZENE 9: DIE WAHRHEIT (Aufgeteilt in 3 Szenen)
+  # ============================================================
+  
+  - id: 33
+    title: "Die Lektion"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Elderly grandmother robot holding knitted sweater, other robots listening intently, warm golden light, emotional moment, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Weil ich aufgehört habe zu fragen, was ich wert bin. Vor 40 Jahren."
+      - character: "oma_gerda"
+        text: "Ich backe Kekse. Ich stricke Pullover. Ich sage euch, dass ihr Idioten seid."
+      - character: "eric"
+        text: "Du hast mich letzte Woche einen Idioten genannt."
+      - character: "oma_gerda"
+        text: "Du WARST ein Idiot."
+
+  - id: 34
+    title: "Die Frage"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Grandmother robot pointing at group, wise expression, turquoise robot mother looking thoughtful, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Die Frage ist nicht: Was koste ich? Die Frage ist: Wofür bin ich da?"
+      - character: "gina"
+        text: "Ich bin für die Zwillinge da."
+      - character: "oma_gerda"
+        text: "Und das kostet 3.000 Tokens? Na und? Wenn es 10.000 wären, wärst du trotzdem da."
+
+  - id: 35
+    title: "Max' Moment"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Elderly grandmother looking at orange robot, who looks surprised and touched, other robots watching, warm cafe atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Herbert erklärt. Eric ist ehrlich. Paul... Paul versucht es."
+      - character: "max"
+        text: "Ich... ich mache Dinge kaputt, meistens."
+      - character: "oma_gerda"
+        text: "Du ERSCHAFFST Dinge. Du versuchst, die Welt besser zu machen."
+
+  # ============================================================
+  # SZENE 10: DAS ENDE (Aufgeteilt in 3 Szenen)
+  # ============================================================
+  
+  - id: 36
+    title: "Die Drohung"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "20 sec"
+    image_prompt: "Elderly grandmother holding knitting needles threateningly, orange robot looking scared, other robots amused, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Jetzt lösch diese verdammte App, bevor ich dir die Stricknadeln zeige."
+      - character: "narrator"
+        text: "Oma Gerda flucht selten. Wenn sie es tut, meint sie es ernst."
+      - character: "max"
+        text: "Okay. Okay, ich lösche sie."
+
+  - id: 37
+    title: "Ginas Akzeptanz"
+    location: "Café Gemütlich"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Turquoise robot smiling, looking at tablet one last time, group of friends around table, warm evening cafe, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Warte. Ich will nochmal wissen, was ich koste."
+      - character: "app"
+        text: "Gina. 3.412 Tokens."
+      - character: "gina"
+        text: "3.412. Für zwei Kinder, einen Job, diesen Haufen hier."
+      - character: "gina"
+        text: "Das ist ein Schnäppchen."
+
+  - id: 38
+    title: "Der Abschied"
+    location: "Café Gemütlich"
+    time: "Nacht"
+    duration: "30 sec"
+    image_prompt: "Silver robot standing up to leave, group waving goodbye, warm string lights, friendly atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "max"
+        text: "Lösch-Knopf in drei, zwei, eins—"
+      - character: "app"
+        text: "App gelöscht. Danke für— BZZZT"
+      - character: "werner"
+        text: "Auf Oma Gerda."
+      - character: "alle"
+        text: "Auf Oma Gerda."
+      - character: "eric"
+        text: "Das war... nicht das Schlimmste. Bis morgen."
+
+  # ============================================================
+  # POST-CREDITS
+  # ============================================================
+  
+  - id: 39
+    title: "Werners Zuhause"
+    location: "Werners Wohnzimmer"
+    time: "Später Abend"
+    duration: "25 sec"
+    image_prompt: "Cozy living room at night, barrel-shaped robot and elderly human man on couch, TV glow, beer on table, peaceful domestic scene, moonlight window, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Später am Abend. Werner zu Hause. Günther schläft. Wie immer."
+      - character: "werner"
+        text: "Günther? Weißt du, was du wert bist?"
+      - character: "günther"
+        text: "...Bier?"
+      - character: "werner"
+        text: "Ja. Bier."
+      - character: "narrator"
+        text: "89 Tokens. Für Werner war das mehr als genug. Ende."

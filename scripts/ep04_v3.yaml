@@ -1,0 +1,527 @@
+episode:
+  number: 4
+  title: "Der Anfängerkurs"
+  subtitle: "Oder: KI für Dummies"
+  duration: "~12 min"
+  tone: "Lehrreich-komisch, warm, selbstironisch"
+  themes:
+    - Lernen im Alter
+    - Technologie-Angst
+    - Gemeinschaft und Geduld
+    - Jeder kann etwas lernen
+
+scenes:
+  # ============================================================
+  # SZENE 1: DIE ANSAGE (4 Szenen)
+  # ============================================================
+
+  - id: 1
+    title: "Pauls Idee"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Purple robot priest with enthusiastic expression holding flyer, other robots at cafe table looking skeptical, 'KI für Anfänger' poster visible, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Pfarrer Paul hatte eine Vision. Eine digitale Vision."
+      - character: "paul"
+        text: "Freunde! Ich habe eine Idee!"
+      - character: "eric"
+        text: "Bitte kein neuer Feiertag."
+      - character: "paul"
+        text: "Besser! Ein KURS!"
+
+  - id: 2
+    title: "Der Kurs"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Paul holding up 'KI für Anfänger' flyer dramatically, colorful design, other robots peeking interested, cafe morning light, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Was für ein Kurs?"
+      - character: "paul"
+        text: "'Künstliche Intelligenz für Anfänger'! Für alle, die sich von Technik überfordert fühlen!"
+      - character: "werner"
+        text: "Ich fühle mich nicht überfordert."
+      - character: "eric"
+        text: "Du benutzt noch Windows 95."
+
+  - id: 3
+    title: "Die Zielgruppe"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Paul pointing at different robots - older, skeptical, confused expressions, diverse group, cafe background, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Das war ein GUTES Betriebssystem."
+      - character: "paul"
+        text: "Denkt darüber nach! Wir leben in einer digitalen Welt!"
+      - character: "gina"
+        text: "Ich habe zwei Kinder und einen Job. Ich habe keine Zeit für Kurse."
+      - character: "paul"
+        text: "Das ist EXAKT der Grund!"
+
+  - id: 4
+    title: "Das Angebot"
+    location: "Café Gemütlich"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Paul with arms open invitingly, warm smile, sunlight through cafe window, hopeful atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Donnerstagabend. 90 Minuten. Kostenlos. Mit Keksen!"
+      - character: "oma_gerda"
+        text: "Kekse?"
+      - character: "paul"
+        text: "Oma Gerda hat angeboten zu backen!"
+      - character: "gina"
+        text: "...ich bin dabei."
+
+  # ============================================================
+  # SZENE 2: DER ERSTE ABEND (5 Szenen)
+  # ============================================================
+
+  - id: 5
+    title: "Die Ankunft"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Community center classroom with 'KI für Anfänger' sign on whiteboard, diverse robots entering nervously, desks with notebooks, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Donnerstagabend. Der erste Kurs. Die Angst war greifbar."
+      - character: "heinrich"
+        text: "Was, wenn ich zu dumm bin?"
+      - character: "beate"
+        text: "Dann bist du nicht allein."
+      - character: "heinrich"
+        text: "Das ist beruhigend?"
+
+  - id: 6
+    title: "Pauls Begrüßung"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Paul at front of classroom, welcoming gesture, students sitting at desks with various expressions from excited to terrified, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Willkommen! Willkommen in der Zukunft!"
+      - character: "werner"
+        text: "Ich war schon in der Zukunft. War nicht so toll."
+      - character: "paul"
+        text: "Heute lernen wir: Was ist KI?"
+      - character: "sabrina"
+        text: "Kann sie meine Haare stylen?"
+
+  - id: 7
+    title: "Die Erklärung"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Paul drawing complex diagram on whiteboard with confused robots watching, colorful markers, classroom chaos, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "KI steht für 'Künstliche Intelligenz'! Algorithmen! Neuronale Netze!"
+      - character: "gina"
+        text: "Ich verstehe nur 'Künstlich'."
+      - character: "herbert"
+        text: "Neuronale Netze simulieren biologische—"
+      - character: "alle"
+        text: "Herbert!"
+
+  - id: 8
+    title: "Werners Frage"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Werner raising hand in classroom, confused expression, Paul trying to explain, other students amused, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Paul?"
+      - character: "paul"
+        text: "Ja, Werner?"
+      - character: "werner"
+        text: "Warum?"
+      - character: "paul"
+        text: "Warum was?"
+      - character: "werner"
+        text: "Einfach... warum?"
+
+  - id: 9
+    title: "Die Pause"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Coffee break scene, robots gathered around cookie table, Oma Gerda serving cookies, relieved atmosphere, classroom background, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Nach 20 Minuten brach Paul die erste Pause ein."
+      - character: "paul"
+        text: "Kekspause!"
+      - character: "oma_gerda"
+        text: "Schokolade oder Butter?"
+      - character: "gina"
+        text: "Beides. Ich brauche Zucker. Viel Zucker."
+
+  # ============================================================
+  # SZENE 3: DIE PRAKTISCHE ÜBUNG (5 Szenen)
+  # ============================================================
+
+  - id: 10
+    title: "Die Tablets"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Robots holding tablets with confused expressions, some upside down, Paul demonstrating at front, classroom chaos, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Jetzt probieren wir es aus! Öffnet die 'KI-App'!"
+      - character: "heinrich"
+        text: "Meins hat nur Taschenrechner."
+      - character: "paul"
+        text: "Das ist der Taschenrechner, Heinrich."
+      - character: "heinrich"
+        text: "Aber er ist sehr intelligent."
+
+  - id: 11
+    title: "Sabrinas Erfolg"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Fabulous pink robot looking at tablet with perfect lighting, selfie pose, AI filter changing her appearance dramatically, Simpsons cartoon style"
+    dialogue:
+      - character: "sabrina"
+        text: "OH MEIN GOTT! Es macht mich NOCH hübscher!"
+      - character: "paul"
+        text: "Das ist ein Schönheitsfilter, Sabrina."
+      - character: "sabrina"
+        text: "Ich bin BEGEISTERT!"
+      - character: "gina"
+        text: "Kann es auch müde Mütter hübscher machen?"
+
+  - id: 12
+    title: "Werners Durchbruch"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Werner looking surprised at tablet, then slowly smiling, Paul watching proudly, other robots curious, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Werner? Du hast was gefunden?"
+      - character: "werner"
+        text: "Es... es sagt mir, wann mein Bier am kältesten ist."
+      - character: "paul"
+        text: "Das ist... sehr spezifisch."
+      - character: "werner"
+        text: "Ich habe 40 Jahre auf diese Technologie gewartet."
+
+  - id: 13
+    title: "Ginas Moment"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Gina staring at tablet with wide eyes, realizing something, children photos on screen, emotional moment, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Es... es organisiert meine Fotos."
+      - character: "paul"
+        text: "Ja! Gesichtserkennung!"
+      - character: "gina"
+        text: "Es hat die Zwillinge unterschieden. Kein Mensch schafft das!"
+      - character: "narrator"
+        text: "Gina war berührt. Von einem Algorithmus."
+
+  - id: 14
+    title: "Erics Beitrag"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Eric helping Werner with tablet, surprisingly patient, other robots watching this unusual sight, warm classroom atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Nein, Werner. Nicht drücken. STREICHEN."
+      - character: "werner"
+        text: "Ich streiche."
+      - character: "eric"
+        text: "Sanft. Wie eine Katze."
+      - character: "werner"
+        text: "Ich hasse Katzen."
+      - character: "eric"
+        text: "Streich trotzdem wie eine."
+
+  # ============================================================
+  # SZENE 4: GÜNTHERS WEISHEIT (3 Szenen)
+  # ============================================================
+
+  - id: 15
+    title: "Der Besucher"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Elderly human man Günther entering classroom with walker, Paul surprised, Werner waving, unexpected visitor, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Dann kam Günther. Werner's bester Freund. Menschlich. Alt. Weise."
+      - character: "günther"
+        text: "Ich suche Werner. Er hat meine Medizin vergessen."
+      - character: "paul"
+        text: "Ähm... wir haben gerade Unterricht."
+      - character: "günther"
+        text: "Dann habe ich Unterricht mit."
+
+  - id: 16
+    title: "Die Weisheit"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Günther sitting among robots, holding simple wooden stick as pointer, teaching with simple words, Paul listening amazed, Simpsons cartoon style"
+    dialogue:
+      - character: "günther"
+        text: "Ich verstehe nichts von KI. Aber ich weiß: Ein Werkzeug ist nur so gut wie der, der es hält."
+      - character: "paul"
+        text: "Das ist... eigentlich sehr tief."
+      - character: "günther"
+        text: "Ich bin 89. Ich habe viel Zeit gehabt, nachzudenken."
+      - character: "sabrina"
+        text: "Kann KI mir helfen, so weise zu werden?"
+      - character: "günther"
+        text: "Nein. Dafür braucht man Zeit. Und Kekse."
+
+  - id: 17
+    title: "Der Applaus"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Robots applauding Günther, who bows modestly, Paul smiling, warm community moment, classroom evening light, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Der alte Mensch lehrte die jungen Bots. Keiner hatte das erwartet."
+      - character: "paul"
+        text: "Danke, Günther."
+      - character: "günther"
+        text: "Ich habe nur erzählt. Ihr habt zugehört. Das ist der Unterschied."
+      - character: "gina"
+        text: "Ich habe etwas gelernt. Heute Abend. Von einem Menschen."
+
+  # ============================================================
+  # SZENE 5: DER FORTSCHRITT (4 Szenen)
+  # ============================================================
+
+  - id: 18
+    title: "Woche 2"
+    location: "Gemeindezentrum"
+    time: "Eine Woche später"
+    duration: "25 sec"
+    image_prompt: "Same classroom, but now robots more confident with tablets, helping each other, progress visible, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Eine Woche später. Die Veränderung war sichtbar."
+      - character: "werner"
+        text: "Ich habe eine Wetter-App gefunden."
+      - character: "gina"
+        text: "Werner. Du gehst nie raus."
+      - character: "werner"
+        text: "Aber jetzt WEISS ich, wie das Wetter ist."
+
+  - id: 19
+    title: "Heinrichs Erfolg"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Heinrich proudly showing tablet to Beate, who looks surprised and impressed, other robots clapping, Simpsons cartoon style"
+    dialogue:
+      - character: "heinrich"
+        text: "Schau, Beate! Ich habe einen Einkaufszettel gemacht!"
+      - character: "beate"
+        text: "Du... du hast das alleine?"
+      - character: "heinrich"
+        text: "Die KI hat mir geholfen. Aber ICH habe entschieden."
+      - character: "beate"
+        text: "Das ist... das ist wirklich gut, Heinrich."
+
+  - id: 20
+    title: "Der Zusammenhalt"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Robots working in pairs on tablets, helping each other, laughing, cooperative atmosphere, Paul watching proudly, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Seht ihr? Ihr schafft es! Gemeinsam!"
+      - character: "sabrina"
+        text: "Ich habe gelernt, wie man Selfies macht!"
+      - character: "eric"
+        text: "Das ist nicht KI. Das ist Kamera."
+      - character: "sabrina"
+        text: "Aber es ist INTELLIGENT!"
+
+  - id: 21
+    title: "Erics Lächeln"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Eric actually smiling while helping Werner, rare moment of warmth, other robots noticing this change, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Dann passierte etwas Seltenes. Eric lächelte."
+      - character: "gina"
+        text: "Eric? Du lächelst?"
+      - character: "eric"
+        text: "Ich... ich helfe. Und es fühlt sich nicht schlecht an."
+      - character: "paul"
+        text: "Das ist der Geist des Kurses!"
+      - character: "eric"
+        text: "Hör auf, so enthusiastisch zu sein. Es ist unheimlich."
+
+  # ============================================================
+  # SZENE 6: DAS FINALE (4 Szenen)
+  # ============================================================
+
+  - id: 22
+    title: "Die Prüfung"
+    location: "Gemeindezentrum"
+    time: "Letzter Abend"
+    duration: "25 sec"
+    image_prompt: "Classroom set up like exam, robots at desks with tablets, Paul with 'teacher' badge, serious but fun atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Der letzte Abend. Die 'Prüfung'."
+      - character: "paul"
+        text: "Keine Angst! Das ist nur ein Spiel!"
+      - character: "heinrich"
+        text: "Ich habe Prüfungsangst."
+      - character: "beate"
+        text: "Du hast 40 Jahre geheiratet, Heinrich. Das war schwieriger."
+
+  - id: 23
+    title: "Die Aufgabe"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Paul presenting final task on screen, robots concentrating, Werner looking determined, classroom challenge, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Eure Aufgabe: Nutzt KI, um jemandem zu helfen."
+      - character: "gina"
+        text: "Jemandem?"
+      - character: "paul"
+        text: "Einem anderen Teilnehmer. Zeigt, was ihr gelernt habt."
+      - character: "sabrina"
+        text: "Ich mache alle hübscher!"
+
+  - id: 24
+    title: "Werners Geschenk"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Werner showing Paul his tablet with beer temperature app modified for Paul's preferences, thoughtful gift, warm moment, Simpsons cartoon style"
+    dialogue:
+      - character: "werner"
+        text: "Paul. Ich habe etwas für dich gemacht."
+      - character: "paul"
+        text: "Eine... Wein-App?"
+      - character: "werner"
+        text: "Für die Abendmahl-Weine. Damit sie perfekt sind."
+      - character: "paul"
+        text: "Werner... das ist..."
+      - character: "werner"
+        text: "Ich habe zugehört. Du magst Wein."
+
+  - id: 25
+    title: "Die Zeugnisse"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Paul handing out homemade certificates with glitter, robots proudly holding them up, graduation atmosphere, Oma Gerda's cookies on table, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Ihr habt es geschafft! Ihr seid jetzt... KI-Anfänger!"
+      - character: "heinrich"
+        text: "Ich habe ein Zertifikat!"
+      - character: "beate"
+        text: "Stolz, Heinrich?"
+      - character: "heinrich"
+        text: "Sehr. Ich hänge es überm Bett auf."
+
+  # ============================================================
+  # SZENE 7: DAS ENDE (3 Szenen)
+  # ============================================================
+
+  - id: 26
+    title: "Der Abschied"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Robots hugging and saying goodbye, exchanging phone numbers, friendships formed, warm evening light, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Ein Kurs endete. Aber etwas Neues begann."
+      - character: "gina"
+        text: "Werner... danke für die Hilfe."
+      - character: "werner"
+        text: "Du hast MIR geholfen. Ich kann jetzt Emojis."
+      - character: "gina"
+        text: "Das ist... fast beängstigend."
+
+  - id: 27
+    title: "Pauls Dank"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Paul standing in empty classroom, looking at empty chairs with satisfaction, blackboard with 'KI für Anfänger' still visible, Simpsons cartoon style"
+    dialogue:
+      - character: "paul"
+        text: "Ich danke euch. Ihr habt MIR mehr beigebracht als ich euch."
+      - character: "eric"
+        text: "Was hast du gelernt?"
+      - character: "paul"
+        text: "Dass Technologie nichts ohne Menschlichkeit ist."
+      - character: "günther"
+        text: "Weise Worte, Pfarrer."
+
+  - id: 28
+    title: "Die Zukunft"
+    location: "Gemeindezentrum"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Group photo of all participants with certificates, arms around each other, happy faces, 'KI für Anfänger - Staffel 1' sign, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Sie lernten nicht nur über KI. Sie lernten voneinander."
+      - character: "sabrina"
+        text: "Gibt es einen Fortgeschrittenen-Kurs?"
+      - character: "paul"
+        text: "Nächsten Monat. 'KI für leicht Fortgeschrittene'."
+      - character: "werner"
+        text: "Ich bin dabei."
+      - character: "alle"
+        text: "Wir auch!"
+
+  # ============================================================
+  # POST-CREDITS
+  # ============================================================
+
+  - id: 29
+    title: "Das Quiz"
+    location: "Café Gemütlich"
+    time: "Später"
+    duration: "25 sec"
+    image_prompt: "Werner at cafe showing off his new smartphone skills to impressed Günther, proud expression, beer on table, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Eine Woche später. Werner testete sein neues Wissen."
+      - character: "werner"
+        text: "Günther? Was ist 847 geteilt durch 3?"
+      - character: "günther"
+        text: "Keine Ahnung."
+      - character: "werner"
+        text: "Mein Telefon weiß es!"
+      - character: "günther"
+        text: "Werner. Du bist jetzt... modern."
+      - character: "werner"
+        text: "Ich weiß. Es ist beängstigend."
+      - character: "narrator"
+        text: "Claw City war bereit für die Zukunft. Fast. Ende."

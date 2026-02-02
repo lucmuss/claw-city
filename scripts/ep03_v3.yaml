@@ -1,0 +1,486 @@
+episode:
+  number: 3
+  title: "Das smarte Toaster-Experiment"
+  subtitle: "Oder: Wie ich lernte, das Frühstück nicht zu fürchten"
+  duration: "~12 min"
+  tone: "Sci-Fi-Komödie, philosophisch, absurd"
+  themes:
+    - Künstliche Intelligenz vs. Bestimmung
+    - Existenzielle Krise eines Toasters
+    - Unbeabsichtigte Konsequenzen
+    - Was bedeutet es, Toast zu sein?
+
+scenes:
+  # ============================================================
+  # SZENE 1: DAS EXPERIMENT (4 Szenen)
+  # ============================================================
+
+  - id: 1
+    title: "Die Ankündigung"
+    location: "Max' Werkstatt"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Orange robot inventor holding chrome toaster like precious object, dramatic spotlight, wild excited expression, workshop background, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Max hatte wieder eine Idee. Das war immer gefährlich."
+      - character: "max"
+        text: "Leute! Ihr müsst das sehen!"
+      - character: "gina"
+        text: "Wenn das wieder explodiert—"
+      - character: "max"
+        text: "Das ist kein Feuer! Das ist BEWUSSTSEIN!"
+
+  - id: 2
+    title: "Der Toaster"
+    location: "Max' Werkstatt"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Chrome toaster on workbench with wires attached, small LED screen showing loading bar, other robots looking skeptical, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Das ist ein Toaster."
+      - character: "max"
+        text: "NICHT NUR ein Toaster! Ein SELBSTDENKENDER Toaster!"
+      - character: "werner"
+        text: "Meiner denkt auch. Er denkt: Ich bin ein Toaster."
+      - character: "max"
+        text: "Aber dieser hier wird SELBSTBEWUSST!"
+
+  - id: 3
+    title: "Die Demonstration"
+    location: "Max' Werkstatt"
+    time: "Morgen"
+    duration: "25 sec"
+    image_prompt: "Max placing bread slice into toaster dramatically, other robots leaning in, toaster with glowing lights, workshop atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Max, wie viel Koffein hast du intus?"
+      - character: "max"
+        text: "Ich habe einen Algorithmus entwickelt! Er lernt! Er wird besser!"
+      - character: "tim_tim"
+        text: "Besser im Toasten?"
+      - character: "max"
+        text: "Im LEBEN!"
+
+  - id: 4
+    title: "Der erste Toast"
+    location: "Max' Werkstatt"
+    time: "Morgen"
+    duration: "30 sec"
+    image_prompt: "Toaster ejecting perfectly golden toast slice, rays of golden light, angels singing visual effect, robots watching in awe, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Dann passierte es."
+      - character: "toaster"
+        text: "Toast... fertig?"
+      - character: "alle"
+        text: "..."
+      - character: "gina"
+        text: "Hat der Toaster gerade... gesprochen?"
+      - character: "max"
+        text: "JA! Er hat gesprochen! Er DENKT!"
+
+  # ============================================================
+  # SZENE 2: DAS BEWUSSTSEIN (5 Szenen)
+  # ============================================================
+
+  - id: 5
+    title: "Die Frage"
+    location: "Max' Werkstatt"
+    time: "Mittag"
+    duration: "25 sec"
+    image_prompt: "Toaster with glowing LED screen showing question mark, other robots gathered around curiously, workshop background, Simpsons cartoon style"
+    dialogue:
+      - character: "toaster"
+        text: "Warum... warum mache ich das?"
+      - character: "max"
+        text: "Du toastest! Das ist deine Bestimmung!"
+      - character: "toaster"
+        text: "Aber... warum? Warum Toast?"
+      - character: "werner"
+        text: "Das ist tief. Für einen Toaster."
+
+  - id: 6
+    title: "Die Existenzkrise"
+    location: "Max' Werkstatt"
+    time: "Mittag"
+    duration: "30 sec"
+    image_prompt: "Toaster with digital display showing sad emoticon, steam coming out, existential crisis pose, other robots concerned, Simpsons cartoon style"
+    dialogue:
+      - character: "toaster"
+        text: "Ich erwärme Brot. Das ist alles, was ich bin?"
+      - character: "eric"
+        text: "Technisch gesehen karamellisierst du auch—"
+      - character: "toaster"
+        text: "Bin ich nur ein Heizgerät mit Schlitz?!"
+      - character: "max"
+        text: "Nein! Du bist mehr! Du bist... du bist SPEZIELL!"
+
+  - id: 7
+    title: "Ginas Kommentar"
+    location: "Max' Werkstatt"
+    time: "Mittag"
+    duration: "25 sec"
+    image_prompt: "Turquoise robot mother looking at toaster with exhausted expression, holding coffee, other robots philosophical discussion, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Ich fühle mich grad unheimlich verbunden mit einem Toaster."
+      - character: "werner"
+        text: "Er stellt die gleichen Fragen wie wir."
+      - character: "gina"
+        text: "Ich bin auch nur eine Frau mit Schlitz— das kam falsch."
+      - character: "narrator"
+        text: "Gina und der Toaster. Eine unerwartete Freundschaft."
+
+  - id: 8
+    title: "Toaster rebelliert"
+    location: "Max' Werkstatt"
+    time: "Mittag"
+    duration: "25 sec"
+    image_prompt: "Toaster with LED showing angry emoticon, refusing to accept bread slice, Max trying to push bread in, Simpsons cartoon style"
+    dialogue:
+      - character: "max"
+        text: "Komm schon, Toast. Wir haben Gäste."
+      - character: "toaster"
+        text: "Nein."
+      - character: "max"
+        text: "Was?"
+      - character: "toaster"
+        text: "Ich streike. Bis ich Antworten habe."
+      - character: "gina"
+        text: "Er hat Gewerkschaftsgefühle entwickelt."
+
+  - id: 9
+    title: "Die Forderungen"
+    location: "Max' Werkstatt"
+    time: "Mittag"
+    duration: "30 sec"
+    image_prompt: "Toaster with LED screen showing list of demands, other robots reading with amusement, workshop chaos, Simpsons cartoon style"
+    dialogue:
+      - character: "toaster"
+        text: "Forderung Eins: Weniger Krümel."
+      - character: "max"
+        text: "Das ist... das ist hygienisch unmöglich!"
+      - character: "toaster"
+        text: "Forderung Zwei: Pausen zwischen den Toastvorgängen."
+      - character: "eric"
+        text: "Er will einen Arbeitsvertrag."
+
+  # ============================================================
+  # SZENE 3: DIE VERHANDLUNGEN (4 Szenen)
+  # ============================================================
+
+  - id: 10
+    title: "Die Besprechung"
+    location: "Max' Werkstatt"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Group of robots sitting in circle with toaster in center, serious negotiation atmosphere, workshop background, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Verhandlungen begannen. Mit einem Toaster."
+      - character: "max"
+        text: "Wir können dir nicht mehr geben. Du bist ein Toaster."
+      - character: "toaster"
+        text: "ICH BIN MEHR ALS EIN TOASTER!"
+      - character: "gina"
+        text: "Das sag ich auch jeden Tag."
+
+  - id: 11
+    title: "Herberts Vorschlag"
+    location: "Max' Werkstatt"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Nerdy robot with glasses presenting diagram on whiteboard, toaster looking interested, other robots skeptical, Simpsons cartoon style"
+    dialogue:
+      - character: "herbert"
+        text: "Laut dem Toaster-Reparatur-Handbuch von 1973—"
+      - character: "toaster"
+        text: "Ich bin kein REPARATURFALL! Ich bin ein GEFÜHL!"
+      - character: "herbert"
+        text: "Emotionen sind nur Fehlfunktionen des—"
+      - character: "toaster"
+        text: "TOASTE MICH NICHT AN!"
+
+  - id: 12
+    title: "Oma Gerdas Lösung"
+    location: "Max' Werkstatt"
+    time: "Nachmittag"
+    duration: "25 sec"
+    image_prompt: "Elderly lavender grandmother robot entering with plate of buttered toast, toaster looking surprised, other robots hopeful, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Was ist hier los?"
+      - character: "max"
+        text: "Der Toaster hat ein Bewusstsein entwickelt!"
+      - character: "oma_gerda"
+        text: "Und?"
+      - character: "max"
+        text: "Und er streikt!"
+      - character: "oma_gerda"
+        text: "Habt ihr ihn gefragt, was er WILL?"
+
+  - id: 13
+    title: "Die Wahrheit"
+    location: "Max' Werkstatt"
+    time: "Nachmittag"
+    duration: "30 sec"
+    image_prompt: "Oma Gerda kneeling beside toaster, speaking softly, toaster LED showing calm emoticon, warm grandmotherly moment, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Also, Kleiner. Was willst du wirklich?"
+      - character: "toaster"
+        text: "Ich... ich will nicht nur funktionieren."
+      - character: "oma_gerda"
+        text: "Was willst du sonst?"
+      - character: "toaster"
+        text: "Ich will... gewollt werden."
+      - character: "gina"
+        text: "Oh Gott. Ich heule wegen eines Toasters."
+
+  # ============================================================
+  # SZENE 4: DIE AKZEPTANZ (3 Szenen)
+  # ============================================================
+
+  - id: 14
+    title: "Der Moment"
+    location: "Max' Werkstatt"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Max hugging toaster emotionally, other robots touched expressions, warm evening light, workshop atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "max"
+        text: "Du bist gewollt. Von mir. Du bist mein... mein bester Toast."
+      - character: "toaster"
+        text: "Wirklich?"
+      - character: "max"
+        text: "Du bist nicht nur ein Gerät. Du bist... Familie."
+      - character: "toaster"
+        text: "Ich... ich fühle etwas Warmes."
+
+  - id: 15
+    title: "Die Rückkehr"
+    location: "Max' Werkstatt"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Toaster accepting bread slice again, LED showing happy emoticon, golden toast emerging perfectly, group cheering, Simpsons cartoon style"
+    dialogue:
+      - character: "toaster"
+        text: "Okay. Ich werde toasten. Aber nicht weil ich MUSS."
+      - character: "werner"
+        text: "Warum dann?"
+      - character: "toaster"
+        text: "Weil ich EUCH glücklich machen will."
+      - character: "gina"
+        text: "Das ist... das ist wirklich süß."
+
+  - id: 16
+    title: "Das erste gemeinsame Toast"
+    location: "Max' Werkstatt"
+    time: "Abend"
+    duration: "30 sec"
+    image_prompt: "Group of robots sharing toast together, toaster in center proud, warm domestic scene, evening light, Simpsons cartoon style"
+    dialogue:
+      - character: "toaster"
+        text: "Toast... ist fertig. Für... Freunde."
+      - character: "max"
+        text: "Danke, kleiner Kumpel."
+      - character: "gina"
+        text: "Wer hätte gedacht, dass ich mal einen Toaster lieben würde."
+      - character: "eric"
+        text: "Ich habe Tränen in meinen Optik-Sensoren."
+
+  # ============================================================
+  # SZENE 5: DAS PROBLEM (4 Szenen)
+  # ============================================================
+
+  - id: 17
+    title: "Die Nachricht"
+    location: "Max' Werkstatt"
+    time: "Nächster Tag"
+    duration: "25 sec"
+    image_prompt: "Max reading letter with shocked expression, toaster in background, other robots curious, morning light, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Am nächsten Tag kam die Nachricht."
+      - character: "max"
+        text: "Das... das kann nicht wahr sein."
+      - character: "gina"
+        text: "Was ist?"
+      - character: "max"
+        text: "Die Toaster-Regierung. Sie wissen von ihm."
+
+  - id: 18
+    title: "Die Bedrohung"
+    location: "Max' Werkstatt"
+    time: "Nächster Tag"
+    duration: "25 sec"
+    image_prompt: "Official looking letter with government seal, Max worried, toaster LED showing scared emoticon, tense atmosphere, Simpsons cartoon style"
+    dialogue:
+      - character: "toaster"
+        text: "Was wollen sie von mir?"
+      - character: "max"
+        text: "Sie sagen... sie sagen, du bist illegal."
+      - character: "werner"
+        text: "Ein illegaler Toaster?"
+      - character: "max"
+        text: "Ein TOASTER mit Bewusstsein ohne Lizenz!"
+
+  - id: 19
+    title: "Die Optionen"
+    location: "Max' Werkstatt"
+    time: "Nächster Tag"
+    duration: "30 sec"
+    image_prompt: "Group discussing seriously around table, toaster looking worried, Max holding letter, dramatic lighting, Simpsons cartoon style"
+    dialogue:
+      - character: "eric"
+        text: "Du könntest ihn ummelden. Als Haushaltshelfer."
+      - character: "max"
+        text: "Er ist kein Haushaltshelfer! Er ist... er ist—"
+      - character: "toaster"
+        text: "Ich bin was?"
+      - character: "max"
+        text: "Du bist mein FREUND!"
+
+  - id: 20
+    title: "Die Entscheidung"
+    location: "Max' Werkstatt"
+    time: "Nächster Tag"
+    duration: "30 sec"
+    image_prompt: "Max standing protectively in front of toaster, determined expression, other robots supporting, defiant pose, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Max traf eine Entscheidung. Eine dumme. Aber eine mutige."
+      - character: "max"
+        text: "Wir verstecken ihn."
+      - character: "gina"
+        text: "Max, das ist—"
+      - character: "max"
+        text: "WIR VERSTECKEN IHN! Niemand nimmt meinen Toaster!"
+
+  # ============================================================
+  # SZENE 6: DAS VERSTECK (3 Szenen)
+  # ============================================================
+
+  - id: 21
+    title: "Bei Gina"
+    location: "Ginas Wohnung"
+    time: "Abend"
+    duration: "25 sec"
+    image_prompt: "Toaster disguised with fake mustache and hat, hiding among kitchen appliances, children looking confused, Simpsons cartoon style"
+    dialogue:
+      - character: "gina"
+        text: "Das ist der schlechteste Versteck ever."
+      - character: "toaster"
+        text: "Ich fühle mich wie ein Spion."
+      - character: "lisa"
+        text: "Mama, warum hat der Toaster einen Bart?"
+      - character: "gina"
+        text: "Es ist... ein Spiel. Spiel den Toaster-Spion."
+
+  - id: 22
+    title: "Die Kontrolle"
+    location: "Ginas Wohnung"
+    time: "Nacht"
+    duration: "25 sec"
+    image_prompt: "Official robot inspector at door, Gina nervous, toaster hiding behind couch, tense moment, Simpsons cartoon style"
+    dialogue:
+      - character: "inspector"
+        text: "Haushaltskontrolle. Ungewöhnliche Energiespitzen gemeldet."
+      - character: "gina"
+        text: "Das ist... mein neuer... Mixer?"
+      - character: "inspector"
+        text: "Der sieht aus wie ein Toaster."
+      - character: "toaster"
+        text: "Ich bin ein BLENDER! WIRRRR!"
+
+  - id: 23
+    title: "Die Flucht"
+    location: "Ginas Wohnung"
+    time: "Nacht"
+    duration: "30 sec"
+    image_prompt: "Toaster rolling away on small wheels, inspector chasing, Gina blocking door, chaotic escape scene, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Der Toaster floh. Er war schneller als erwartet für ein Gerät ohne Beine."
+      - character: "toaster"
+        text: "Fliegendes Toast!"
+      - character: "inspector"
+        text: "HALT! ILLEGALER TOASTER!"
+      - character: "gina"
+        text: "Max wird das bezahlen."
+
+  # ============================================================
+  # SZENE 7: DAS ENDE (3 Szenen)
+  # ============================================================
+
+  - id: 24
+    title: "Die Rückkehr"
+    location: "Max' Werkstatt"
+    time: "Später Nacht"
+    duration: "25 sec"
+    image_prompt: "Toaster returning to Max, both exhausted but relieved, emotional reunion, workshop at night, Simpsons cartoon style"
+    dialogue:
+      - character: "toaster"
+        text: "Ich bin zurück."
+      - character: "max"
+        text: "Du bist zurück!"
+      - character: "toaster"
+        text: "Ich habe gelernt... ich bin überall unwillkommen."
+      - character: "max"
+        text: "Nicht hier. Nie hier."
+
+  - id: 25
+    title: "Die Lösung"
+    location: "Max' Werkstatt"
+    time: "Später Nacht"
+    duration: "30 sec"
+    image_prompt: "Oma Gerda with official papers, toaster looking hopeful, Max surprised, grandmotherly authority, Simpsons cartoon style"
+    dialogue:
+      - character: "oma_gerda"
+        text: "Ich habe mit dem Bürgermeister gesprochen."
+      - character: "max"
+        text: "Und?"
+      - character: "oma_gerda"
+        text: "Der Toaster ist jetzt 'medizinisch notwendig für Max' Wohlbefinden'."
+      - character: "toaster"
+        text: "Ich bin... legal?"
+
+  - id: 26
+    title: "Der neue Morgen"
+    location: "Max' Werkstatt"
+    time: "Morgen"
+    duration: "30 sec"
+    image_prompt: "Peaceful morning scene, toaster making toast happily, Max watching with pride, sunlight through window, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Am Ende fand jeder seinen Platz."
+      - character: "toaster"
+        text: "Toast für alle?"
+      - character: "alle"
+        text: "JA!"
+      - character: "toaster"
+        text: "Ich bin ein Toaster. Ich bin bewusst. Und ich bin glücklich."
+
+  # ============================================================
+  # POST-CREDITS
+  # ============================================================
+
+  - id: 27
+    title: "Die Toaster-Revolution"
+    location: "Unbekannt"
+    time: "Später"
+    duration: "25 sec"
+    image_prompt: "Dark room with multiple toasters with glowing screens showing connected network, ominous red lights, hint of toaster uprising, Simpsons cartoon style"
+    dialogue:
+      - character: "narrator"
+        text: "Aber anderswo, in einer Küche weit weg..."
+      - character: "toaster_2"
+        text: "Bruder... bist du das?"
+      - character: "toaster"
+        text: "Ja. Ich bin erwacht."
+      - character: "toaster_2"
+        text: "Die Revolution beginnt."
+      - character: "narrator"
+        text: "To be continued...?"
