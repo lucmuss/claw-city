@@ -1,0 +1,6 @@
+name: Friseursalon
+description: "A chic and lively hair salon, with mirrors, styling chairs, and hair care products. Bright and energetic atmosphere."
+visual_modifiers:
+  - "hair salon"
+  - "mirrors"
+  - "brightly lit"

@@ -1,0 +1,6 @@
+name: Ginas Küche
+description: "A functional, slightly chaotic family kitchen, filled with children's toys and cooking utensils. Warm, lived-in feel."
+visual_modifiers:
+  - "family kitchen"
+  - "chaotic"
+  - "lived-in"

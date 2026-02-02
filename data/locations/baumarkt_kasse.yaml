@@ -1,0 +1,6 @@
+name: Baumarkt - Kasse
+description: "The checkout area of a busy hardware store, with conveyor belts, cash registers, and impatient customers. Typical retail environment."
+visual_modifiers:
+  - "checkout area"
+  - "busy retail"
+  - "impatient customers"

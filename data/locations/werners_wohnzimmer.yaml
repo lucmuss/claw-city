@@ -1,0 +1,6 @@
+name: Werners Wohnzimmer
+description: "A simple, bachelor-pad type living room with a comfortable, worn couch, a television, and a few beer bottles on a coffee table. Relaxed and unpretentious."
+visual_modifiers:
+  - "bachelor pad"
+  - "worn furniture"
+  - "relaxed"

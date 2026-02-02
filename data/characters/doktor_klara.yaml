@@ -1,0 +1,18 @@
+name: Doktor Klara
+visual:
+  species: "clinical, precise robot"
+  body: "clean, white chassis, articulate limbs"
+  eyes: "focused, diagnostic, bright blue LED eyes"
+  clothing: "crisp white lab coat, ID badge, stethoscope"
+  distinguishing: "a calm, professional demeanor, always carrying a medical scanner"
+  colors:
+    body: "white (#FFFFFF)"
+    eyes: "sky blue (#87CEEB)"
+    accent: "silver (#C0C0C0)"
+traits:
+  archetype: "Ärztin"
+  personality: "Dedicated, intelligent, empathetic, but sometimes struggles with the emotional side of her patients."
+  catchphrases:
+    - "Nach meinen Berechnungen..."
+  relationships:
+    colleague: "Professor Herbert"

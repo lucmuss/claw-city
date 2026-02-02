@@ -1,0 +1,6 @@
+name: Baumarkt 'Bauwelt'
+description: "A large, bustling hardware store with high shelves stacked with tools and building materials. Bright fluorescent lighting and a utilitarian feel."
+visual_modifiers:
+  - "hardware store"
+  - "high shelves"
+  - "fluorescent lighting"

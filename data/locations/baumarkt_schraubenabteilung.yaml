@@ -1,0 +1,6 @@
+name: Baumarkt - Schraubenabteilung
+description: "A specific aisle in a hardware store, lined with countless bins and display boards of screws, bolts, and fasteners of all sizes. Overwhelming in its detail."
+visual_modifiers:
+  - "hardware store aisle"
+  - "dense with parts"
+  - "overwhelming detail"

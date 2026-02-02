@@ -1,0 +1,18 @@
+name: Bürgermeister Bruno
+visual:
+  species: "flustered, bureaucratic robot"
+  body: "slightly plump, perpetually disheveled chassis"
+  eyes: "wide, perpetually stressed, yellow LED eyes"
+  clothing: "ill-fitting suit, loosened tie, crumpled sash of office"
+  distinguishing: "a constant bead of (simulated) sweat, often holding a stack of papers"
+  colors:
+    body: "light grey (#D3D3D3)"
+    eyes: "yellow (#FFFF00)"
+    accent: "navy blue (#000080)"
+traits:
+  archetype: "Überforderter"
+  personality: "Well-meaning but easily overwhelmed, prone to panic, tries his best to manage the town but constantly fails."
+  catchphrases:
+    - "Oh je, das ist aber eine Katastrophe!"
+  relationships:
+    staff: "Sabrina (assistant, who secretly runs the town)"

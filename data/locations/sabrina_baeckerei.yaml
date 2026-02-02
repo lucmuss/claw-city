@@ -1,0 +1,6 @@
+name: Sabrinas Bäckerei
+description: "A charming, pink-themed bakery with fresh pastries, display cases, and a counter. Bright and inviting, with a sweet aroma."
+visual_modifiers:
+  - "charming bakery"
+  - "pink themed"
+  - "sweet aroma"

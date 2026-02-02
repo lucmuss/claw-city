@@ -1,0 +1,22 @@
+name: Pfarrer Paul
+visual:
+  species: "cartoon robot priest"
+  body: "slightly chubby body shape, round oval head"
+  eyes: "gentle LED eyes (soft yellow glow)"
+  clothing: "black priest collar integrated into chest plate, casual everyday clothes underneath, sometimes a cloak for sermons"
+  distinguishing: "holds beer coaster with scribbled notes"
+  expression: "warm, slightly confused but well-meaning"
+  colors:
+    body: "dark grey (#2F2F2F)"
+    eyes: "warm yellow (#FFD93D)"
+    accent: "priest purple (#6B4C9A)"
+    collar: "white (#FFFFFF)"
+traits:
+  archetype: "Priester"
+  personality: "Wohlmeinend, aber oft am Thema vorbei. Erfindet neue Feiertage. Nett und charmant."
+  catchphrases:
+    - "Wisst ihr, das Leben ist wie ein Fahrrad..."
+  relationships:
+    best_friend: "Werner"
+  family:
+    child: "Kevin (10): Neugierig, langweilig schnell."

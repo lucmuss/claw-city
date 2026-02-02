@@ -1,0 +1,6 @@
+name: Fitnessstudio
+description: "A modern, well-equipped fitness studio with various exercise machines, bright lighting, and motivational posters. High energy atmosphere."
+visual_modifiers:
+  - "modern gym"
+  - "bright lighting"
+  - "energetic"

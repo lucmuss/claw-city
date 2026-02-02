@@ -1,0 +1,6 @@
+name: Garten Mrs. Schmidt
+description: "A well-tended, traditional German garden with colorful flowers, neat hedges, and a white picket fence. Sunny and peaceful."
+visual_modifiers:
+  - "well-tended garden"
+  - "colorful flowers"
+  - "white picket fence"

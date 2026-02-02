@@ -1,0 +1,18 @@
+name: Professor Herbert
+visual:
+  species: "thin, scholarly robot"
+  body: "lanky frame, hunched posture"
+  eyes: "large, inquisitive, green display eyes"
+  clothing: "lab coat, bow tie, spectacles"
+  distinguishing: "a perpetually curious expression, always holding a tablet or book"
+  colors:
+    body: "polished steel (#B0C4DE)"
+    eyes: "emerald green (#3CB371)"
+    accent: "maroon (#800000)"
+traits:
+  archetype: "Erklärbär"
+  personality: "Highly intelligent, eager to explain, sometimes overly technical, a bit socially awkward."
+  catchphrases:
+    - "Faszinierend, nicht wahr?"
+  relationships:
+    colleague: "Doktor Klara"

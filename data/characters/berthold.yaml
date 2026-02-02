@@ -1,0 +1,18 @@
+name: Berthold
+visual:
+  species: "weathered, old-fashioned robot"
+  body: "stout and a bit rusty, built for endurance"
+  eyes: "calm, focused, dull yellow LED eyes"
+  clothing: "fishing vest, waders, wide-brimmed hat"
+  distinguishing: "a serene, patient expression, often holding a fishing rod"
+  colors:
+    body: "moss green (#8B8B00)"
+    eyes: "dull yellow (#DAA520)"
+    accent: "earth brown (#8B4513)"
+traits:
+  archetype: "Angler"
+  personality: "Patient, quiet, observant, finds peace by the water."
+  catchphrases:
+    - "Man muss Geduld haben, mein Freund."
+  relationships:
+    fishing_buddy: "Torsten"

@@ -65,7 +65,7 @@ claw-city/
 - `scripts/ep04_v3.yaml` - 29 Szenen
 - Struktur: scenes[] mit id, location, image_prompt, dialogue[]
 
-## Generation Pipeline (Aktuell) - REFACTORED V2
+## Generation Pipeline (Aktuell) - REFACTORED V3 (Stabilisiert)
 
 Die gesamte Logik ist in das zentrale `clawcity` CLI-Tool migriert.
 

@@ -1,0 +1,6 @@
+name: Ginas Wohnung
+description: "A cozy but slightly chaotic family apartment, filled with toys and everyday life. Warm and inviting, but a bit lived-in."
+visual_modifiers:
+  - "family apartment"
+  - "chaotic"
+  - "lived-in"

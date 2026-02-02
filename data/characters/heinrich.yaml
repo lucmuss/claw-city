@@ -1,0 +1,20 @@
+name: Heinrich
+visual:
+  species: "dependable, slightly worn robot"
+  body: "solid, rectangular build, a few dents"
+  eyes: "warm, reassuring, amber LED eyes"
+  clothing: "flannel shirt, jeans, sturdy work boots"
+  distinguishing: "a kind, tired smile, often with children's drawings taped to his chassis"
+  colors:
+    body: "forest green (#228B22)"
+    eyes: "amber (#FFBF00)"
+    accent: "brown (#A52A2A)"
+traits:
+  archetype: "Familienvater"
+  personality: "Caring, responsible, a bit overwhelmed but always tries his best, loves his family."
+  catchphrases:
+    - "Na, wer hat denn das gemacht?"
+  relationships:
+    colleague: "Tina"
+    family:
+      child: "Sophie (8), Max (5)"

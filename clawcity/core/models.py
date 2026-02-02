@@ -57,6 +57,7 @@ class Scene:
     image_prompt: str
     dialogue: List[DialogueLine] = field(default_factory=list)
     status: ProcessingStatus = ProcessingStatus.PENDING
+    visual_summary: Optional[str] = None # For context window
     
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Scene":
@@ -67,7 +68,8 @@ class Scene:
             time=data.get("time", ""),
             duration=data.get("duration", "10 sec"),
             image_prompt=data["image_prompt"],
-            dialogue=[DialogueLine.from_dict(d) for d in data.get("dialogue", [])]
+            dialogue=[DialogueLine.from_dict(d) for d in data.get("dialogue", [])],
+            visual_summary=data["image_prompt"] # Default to image_prompt as visual summary
         )
     
     @property

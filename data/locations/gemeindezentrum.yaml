@@ -1,0 +1,6 @@
+name: Gemeindezentrum
+description: "A multi-purpose community center hall, set up as a classroom with desks, a whiteboard, and presentation equipment. Functional and brightly lit."
+visual_modifiers:
+  - "community hall"
+  - "classroom setup"
+  - "brightly lit"

@@ -1,0 +1,18 @@
+name: Fitness-Fiona
+visual:
+  species: "athletic, energetic robot"
+  body: "sleek, muscular build, agile joints"
+  eyes: "bright, focused, vibrant green LED eyes"
+  clothing: "form-fitting workout gear, sweatband, shiny chrome finish"
+  distinguishing: "a determined, enthusiastic smile, often in a dynamic pose"
+  colors:
+    body: "chrome silver (#C0C0C0)"
+    eyes: "lime green (#32CD32)"
+    accent: "electric blue (#00BFFF)"
+traits:
+  archetype: "Motivierte"
+  personality: "Enthusiastic, disciplined, always striving for self-improvement, encourages others (sometimes too much)."
+  catchphrases:
+    - "Keine Ausreden, los geht's!"
+  relationships:
+    workout_partner: "Gina"

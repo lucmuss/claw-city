@@ -1,0 +1,18 @@
+name: Künstler Kurt
+visual:
+  species: "eccentric, artistic robot"
+  body: "asymmetrical, patchwork design, splattered with colorful paint"
+  eyes: "dreamy, intense, swirling rainbow LED eyes"
+  clothing: "paint-splattered overalls, beret, silk scarf"
+  distinguishing: "a melancholic yet passionate expression, often holding a paintbrush or chisel"
+  colors:
+    body: "mixed (various muted tones)"
+    eyes: "rainbow gradient"
+    accent: "gold (#FFD700)"
+traits:
+  archetype: "Unverstandener"
+  personality: "Passionate, sensitive, sees beauty everywhere, but struggles to connect with others who don't 'get' his art."
+  catchphrases:
+    - "Es ist mehr als nur Farbe, es ist ein Gefühl!"
+  relationships:
+    muse: "Sabrina (unrequited admiration)"

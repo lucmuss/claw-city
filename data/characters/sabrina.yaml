@@ -1,0 +1,18 @@
+name: Sabrina
+visual:
+  species: "elegant, graceful robot"
+  body: "slender, flowing lines, meticulously polished"
+  eyes: "sparkling, expressive, violet LED eyes"
+  clothing: "stylish, form-fitting dress, always with a touch of glitter"
+  distinguishing: "a captivating smile, a subtle, confident sway as she moves"
+  colors:
+    body: "rose gold (#B76E79)"
+    eyes: "violet (#EE82EE)"
+    accent: "silver (#C0C0C0)"
+traits:
+  archetype: "Charmante"
+  personality: "Charming, manipulative, always gets what she wants, uses her allure to her advantage."
+  catchphrases:
+    - "Na, für mich machst du doch eine Ausnahme, oder?"
+  relationships:
+    rival: "Eric"

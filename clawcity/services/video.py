@@ -155,7 +155,7 @@ class VideoService:
         context: PipelineContext,
         intro_path: Optional[Path] = None
     ) -> PipelineResult:
-        """Combine all scene videos into full episode"""
+        """Combine all scene videos into full episode with filter_complex for audio"""
         video_dir = context.output_dir / "video"
         output_path = context.get_full_episode_path()
         
@@ -168,46 +168,71 @@ class VideoService:
             )
         
         videos = sorted(video_dir.glob("scene_*.mp4"))
-        if not videos:
+        
+        video_paths: List[Path] = []
+        if intro_path and intro_path.exists():
+            video_paths.append(intro_path.absolute())
+        
+        video_paths.extend([v.absolute() for v in videos])
+        
+        if len(video_paths) == 0:
             return PipelineResult(
                 success=False,
                 stage="full_episode",
-                message="No scene videos found",
+                message="No videos found to concatenate",
                 output_path=output_path
             )
         
-        # Create concat file
-        concat_file = video_dir / "concat.txt"
-        with open(concat_file, "w") as f:
-            # Optional intro
-            if intro_path and intro_path.exists():
-                f.write(f"file '{intro_path.absolute()}'\n")
-            
-            # Verwende absolute Pfade für alle Videos, um sicherzustellen, dass FFmpeg sie findet
-            for v in videos:
-                f.write(f"file '{v.absolute()}'\n")
+        # Nur 1 Video? Direkt kopieren
+        if len(video_paths) == 1:
+            import shutil
+            shutil.copy2(video_paths[0], output_path)
+            size_mb = output_path.stat().st_size / (1024 * 1024)
+            return PipelineResult(
+                success=True,
+                stage="full_episode",
+                message=f"Full episode (single): {output_path.name} ({size_mb:.1f} MB)",
+                output_path=output_path,
+                metadata={"scenes": len(videos), "size_mb": size_mb}
+            )
+
+        # Methode: Filter Complex (robusteste Audio/Video-Zusammenführung)
+        # Baut separate Video- und Audio-Streams und konkateniert diese explizit
         
-        # Concatenate videos
-        # Wir geben cwd=video_dir an. Wenn wir absolute Pfade verwenden (was wir taten), 
-        # ist es besser, cwd=None zu verwenden, um mögliche relative/absolute Path-Konflikte zu vermeiden.
-        # For robust concatenation, re-encode audio/video to avoid stream inconsistency issues (very common with -c copy)
+        n = len(video_paths)
+        
+        # Build input arguments
+        input_args = []
+        for v in video_paths:
+            input_args.extend(["-i", str(v)])
+        
+        # Build filter_complex
+        # Concatenate video streams: [0:v][1:v][2:v]...concat=n=N:v=1:a=0[outv]
+        # Concatenate audio streams: [0:a][1:a][2:a]...concat=n=N:v=0:a=1[outa]
+        video_concat = "".join([f"[{i}:v]" for i in range(n)])
+        audio_concat = "".join([f"[{i}:a]" for i in range(n)])
+        
+        filter_complex = (
+            f"{video_concat}concat=n={n}:v=1:a=0[outv];"
+            f"{audio_concat}concat=n={n}:v=0:a=1[outa]"
+        )
+        
         cmd = [
-            "ffmpeg", "-y",
-            "-f", "concat", "-safe", "0",
-            "-i", str(concat_file),
+            "ffmpeg", "-y"
+        ] + input_args + [
+            "-filter_complex", filter_complex,
+            "-map", "[outv]",
+            "-map", "[outa]",
             "-c:v", self.config.video.codec,
             "-c:a", self.config.video.audio_codec,
-            "-b:a", "192k", # High-quality audio bitrate
+            "-b:a", "192k",
             "-pix_fmt", self.config.video.pix_fmt,
             str(output_path)
         ]
         
-        # Führe Befehl mit dem cwd des Prozesses aus (None)
+        # Run command
         result = subprocess.run(cmd, capture_output=True)
-        concat_file.unlink()
 
-        # Führe den Befehl erneut aus, um detailliertere Fehler zu erhalten, falls nötig.
-        # Aber nur den vorhandenen Fehler string zurückgeben.
         if result.returncode == 0:
             size_mb = output_path.stat().st_size / (1024 * 1024)
             return PipelineResult(
@@ -218,8 +243,9 @@ class VideoService:
                 metadata={"scenes": len(videos), "size_mb": size_mb}
             )
         else:
-            error = result.stderr.decode()[:200]
-            raise VideoGenerationError(f"Failed to combine videos: {error}")
+            error = result.stderr.decode()
+            print(f"FFmpeg error: {error}")
+            raise VideoGenerationError(f"Failed to combine videos: {error[:200]}")
     
     def generate_episode(
         self,

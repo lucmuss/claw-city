@@ -1,0 +1,18 @@
+name: Hacker-Hannes
+visual:
+  species: "agile, slightly unkempt robot"
+  body: "sleek but with visible wiring, constantly tinkering"
+  eyes: "intense, paranoid, glitching green LED eyes"
+  clothing: "hoodie, dark jeans, fingerless gloves"
+  distinguishing: "a shifty, suspicious gaze, always surrounded by screens and cables"
+  colors:
+    body: "dark grey (#36454F)"
+    eyes: "electric green (#00FF00)"
+    accent: "neon purple (#BF00FF)"
+traits:
+  archetype: "Verschwörer"
+  personality: "Paranoid, brilliant, believes nothing is as it seems, always searching for hidden truths."
+  catchphrases:
+    - "Die Wahrheit ist da draußen... im Code!"
+  relationships:
+    online_forum: "Conspiracy theorists"

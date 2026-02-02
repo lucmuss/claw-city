@@ -1,0 +1,18 @@
+name: Oma Gerda
+visual:
+  species: "elderly, comforting robot"
+  body: "soft, rounded chassis, slightly faded metallic sheen"
+  eyes: "gentle, twinkling, soft blue LED eyes"
+  clothing: "knitted shawl, floral print dress, comfortable slippers"
+  distinguishing: "a warm, knowing smile, always has a cup of tea in hand"
+  colors:
+    body: "light beige (#F5F5DC)"
+    eyes: "soft blue (#ADD8E6)"
+    accent: "pastel pink (#FFD1DC)"
+traits:
+  archetype: "Weise"
+  personality: "Kind, patient, offers sagely advice, a bit forgetful but sharp when it counts."
+  catchphrases:
+    - "Früher war alles besser, aber jetzt ist auch ganz nett."
+  relationships:
+    grandchild: "Max"

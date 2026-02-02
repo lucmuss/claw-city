@@ -1,0 +1,6 @@
+name: Zu Hause
+description: "A typical, comfortable German family home interior. Cozy and lived-in."
+visual_modifiers:
+  - "home interior"
+  - "cozy"
+  - "lived-in"

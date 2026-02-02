@@ -1,0 +1,6 @@
+name: Bar
+description: "A dimly lit, classic German pub with a long wooden counter, bar stools, and bottles of spirits. Cozy and somewhat smoky atmosphere."
+visual_modifiers:
+  - "dimly lit pub"
+  - "wooden interior"
+  - "cozy"

@@ -1,0 +1,18 @@
+name: Eric
+visual:
+  species: "sleek, modern robot"
+  body: "sharp angles, metallic finish"
+  eyes: "piercing red LED eyes"
+  clothing: "designer suit, always impeccable"
+  distinguishing: "a smug, self-satisfied smirk"
+  colors:
+    body: "silver (#C0C0C0)"
+    eyes: "red (#FF0000)"
+    accent: "black (#000000)"
+traits:
+  archetype: "Ehrlicher Egoist"
+  personality: "Self-centered, ambitious, always looking for personal gain, but honest about it."
+  catchphrases:
+    - "Erst ich, dann die anderen. Ganz ehrlich."
+  relationships:
+    rival: "Sabrina"

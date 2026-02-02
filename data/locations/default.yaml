@@ -1,0 +1,5 @@
+name: Default Location
+description: "A generic, cozy German living room with a fireplace and warm lighting."
+visual_modifiers:
+  - "cozy"
+  - "warm lighting"

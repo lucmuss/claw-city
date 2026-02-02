@@ -1,0 +1,6 @@
+name: Werners Wohnung
+description: "A simple, lived-in apartment with comfortable, slightly worn furniture. Reflects a bachelor lifestyle, perhaps a bit messy."
+visual_modifiers:
+  - "bachelor apartment"
+  - "worn furniture"
+  - "messy"

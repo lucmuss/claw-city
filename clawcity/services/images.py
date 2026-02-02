@@ -15,6 +15,7 @@ except ImportError:
 from clawcity.core.config import get_config
 from clawcity.core.exceptions import ImageGenerationError, ConfigurationError, RateLimitError
 from clawcity.core.models import Scene, PipelineContext, PipelineResult
+from src.prompt_builder import build_image_prompt # Import the new prompt builder
 
 
 class ImageService:
@@ -31,9 +32,10 @@ class ImageService:
         
         os.environ["REPLICATE_API_TOKEN"] = self.config.replicate_api_token
     
-    def build_prompt(self, scene_prompt: str) -> str:
-        """Build full prompt with style suffix"""
-        return f"{scene_prompt}. {self.config.images.style_suffix}"
+    # The build_prompt method is no longer needed as build_image_prompt handles the full prompt
+    # def build_prompt(self, scene_prompt: str) -> str:
+    #     """Build full prompt with style suffix"""
+    #     return f"{scene_prompt}. {self.config.images.style_suffix}"
     
     def generate(
         self,
@@ -53,7 +55,7 @@ class ImageService:
             )
         
         max_retries = max_retries or self.config.images.max_retries
-        full_prompt = self.build_prompt(prompt)
+        full_prompt = prompt # The prompt is already fully built by build_image_prompt
         
         for attempt in range(max_retries):
             try:
@@ -108,12 +110,16 @@ class ImageService:
     def generate_scene(
         self,
         scene: Scene,
-        context: PipelineContext
+        context: PipelineContext,
+        previous_scene: Optional[Scene] = None # Add previous_scene for context
     ) -> PipelineResult:
         """Generate image for a scene"""
         output_path = context.get_image_path(scene.id)
         
-        result = self.generate(scene.image_prompt, output_path)
+        # Build the prompt using the new prompt_builder
+        full_image_prompt = build_image_prompt(scene, previous_scene)
+        
+        result = self.generate(full_image_prompt, output_path)
         
         # NOTE: Rate limiting is handled internally by 'generate' on 429 errors.
         # Adding a global sleep here is ineffective in a ThreadPoolExecutor, 
@@ -137,14 +143,16 @@ class ImageService:
         print(f"   Model: {self.config.images.model}")
         print("-" * 40)
 
-        def _worker(scene):
+        def _worker(index: int, scene: Scene):
+            previous_scene = context.episode.scenes[index - 1] if index > 0 else None
             try:
-                return self.generate_scene(scene, context)
+                # Pass the previous_scene to generate_scene for context
+                return self.generate_scene(scene, context, previous_scene)
             except Exception as e:
                 return PipelineResult(success=False, stage="image", message=str(e), metadata={"scene_id": scene.id})
 
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            future_to_scene = {executor.submit(_worker, scene): scene for scene in context.episode.scenes}
+            future_to_scene = {executor.submit(_worker, i, scene): scene for i, scene in enumerate(context.episode.scenes)}
             
             for future in as_completed(future_to_scene):
                 scene = future_to_scene[future]

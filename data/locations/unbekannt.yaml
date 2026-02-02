@@ -1,0 +1,6 @@
+name: Unbekannt
+description: "A mysterious, undefined location, perhaps dark and foreboding, or strangely ethereal. Leaves much to the imagination."
+visual_modifiers:
+  - "mysterious"
+  - "undefined"
+  - "foreboding"
