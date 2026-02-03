@@ -71,13 +71,13 @@ def build_character_visual_prompt(char_def: dict) -> str:
 
     return ", ".join(filter(None, visual_parts))
 
-def build_image_prompt(scene: Scene, previous_scene: Optional[Scene] = None) -> str:
+def build_image_prompt(scene: Scene, previous_scenes: Optional[List[Scene]] = None) -> str:
     parts = []
 
-    # 1. Globaler Stil (immer)
+    # 1. Globaler Stil (immer oben)
     parts.append(load_style_prefix())
 
-    # 2. Charaktere in Szene (detailliert)
+    # 2. Charaktere in Szene
     characters_in_scene = set(d.character for d in scene.dialogue)
     for char_name in characters_in_scene:
         char_def = load_character(char_name)
@@ -89,11 +89,25 @@ def build_image_prompt(scene: Scene, previous_scene: Optional[Scene] = None) -> 
     location_data = load_location(scene.location)
     parts.append(location_data.get("description", scene.location))
 
-    # 4. Kontext vorherige Szene (optional)
-    if previous_scene and previous_scene.visual_summary:
-        parts.append(f"Continuation: {previous_scene.visual_summary}")
+    # 4. Kontext vorherige Szenen (max 2)
+    if previous_scenes:
+        for i, prev in enumerate(reversed(previous_scenes[-2:])):
+            if prev.visual_summary:
+                label = "Recent context" if i == 0 else "Earlier context"
+                parts.append(f"{label}: {prev.visual_summary}")
 
-    # 5. Aktuelle Szene-Aktion
-    parts.append(scene.image_prompt)
+    # 5. Aktuelle Szene-Aktion (mit Bereinigung von alten Stil-Tags)
+    action_prompt = scene.image_prompt
+    style_removals = [
+        "Simpsons cartoon style", 
+        "Pixar-style 3D animation", 
+        "Pixar-style",
+        "cartoon style",
+        "3D animation"
+    ]
+    for s in style_removals:
+        action_prompt = action_prompt.replace(s, "").replace(s.lower(), "")
+    
+    parts.append(action_prompt.strip(", "))
 
     return " | ".join(filter(None, parts))

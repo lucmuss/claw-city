@@ -32,11 +32,6 @@ class ImageService:
         
         os.environ["REPLICATE_API_TOKEN"] = self.config.replicate_api_token
     
-    # The build_prompt method is no longer needed as build_image_prompt handles the full prompt
-    # def build_prompt(self, scene_prompt: str) -> str:
-    #     """Build full prompt with style suffix"""
-    #     return f"{scene_prompt}. {self.config.images.style_suffix}"
-    
     def generate(
         self,
         prompt: str,
@@ -111,20 +106,15 @@ class ImageService:
         self,
         scene: Scene,
         context: PipelineContext,
-        previous_scene: Optional[Scene] = None # Add previous_scene for context
+        previous_scenes: Optional[List[Scene]] = None # Use multiple previous scenes for context
     ) -> PipelineResult:
         """Generate image for a scene"""
         output_path = context.get_image_path(scene.id)
         
         # Build the prompt using the new prompt_builder
-        full_image_prompt = build_image_prompt(scene, previous_scene)
+        full_image_prompt = build_image_prompt(scene, previous_scenes)
         
         result = self.generate(full_image_prompt, output_path)
-        
-        # NOTE: Rate limiting is handled internally by 'generate' on 429 errors.
-        # Adding a global sleep here is ineffective in a ThreadPoolExecutor, 
-        # relying on internal retries is more effective.
-        
         return result
     
     def generate_episode(
@@ -144,10 +134,15 @@ class ImageService:
         print("-" * 40)
 
         def _worker(index: int, scene: Scene):
-            previous_scene = context.episode.scenes[index - 1] if index > 0 else None
+            # Get up to 2 previous scenes for context
+            previous_scenes = []
+            if index > 0:
+                start_idx = max(0, index - 2)
+                previous_scenes = context.episode.scenes[start_idx:index]
+            
             try:
-                # Pass the previous_scene to generate_scene for context
-                return self.generate_scene(scene, context, previous_scene)
+                # Pass the history to generate_scene for context
+                return self.generate_scene(scene, context, previous_scenes)
             except Exception as e:
                 return PipelineResult(success=False, stage="image", message=str(e), metadata={"scene_id": scene.id})
 
