@@ -41,17 +41,17 @@ image_generation:
 api:
   midjourney:
     enabled: false
-    channel_id: ""  # Discord Channel ID
-    bot_token: ""   # In .env als MIDJOURNEY_BOT_TOKEN
+    channel_id: null  # Discord Channel ID
+    bot_token: null   # In .env als MIDJOURNEY_BOT_TOKEN
   
   openai:
     enabled: false
     model: "dall-e-3"
-    api_key: ""     # In .env als OPENAI_API_KEY
+    api_key: null     # In .env als OPENAI_API_KEY
   
   stability_ai:
     enabled: false
-    api_key: ""     # In .env als STABILITY_API_KEY
+    api_key: null     # In .env als STABILITY_API_KEY
   
   replicate:
     enabled: true

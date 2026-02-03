@@ -5,6 +5,7 @@ from typing import List, Optional, Dict, Any
 
 from clawcity.core.models import Scene, DialogueLine
 
+
 @dataclass
 class Location:
     name: str
@@ -13,19 +14,22 @@ class Location:
 
 
 def load_yaml_file(filepath: str):
-    with open(filepath, 'r', encoding='utf-8') as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         return yaml.safe_load(file)
+
 
 def load_style_prefix() -> str:
     config_path = "data/config/visual_style.yaml"
     config = load_yaml_file(config_path)
     return config.get("style_prefix", "")
 
+
 def load_character(character_name: str) -> dict:
     char_path = os.path.join("data", "characters", f"{character_name.lower()}.yaml")
     if not os.path.exists(char_path):
         return {"name": character_name, "physical": {"breed": "unknown cat"}}
     return load_yaml_file(char_path)
+
 
 def load_location(location_name: str) -> dict:
     loc_id = location_name.lower()
@@ -34,6 +38,7 @@ def load_location(location_name: str) -> dict:
     if not os.path.exists(loc_path):
         loc_path = os.path.join("data", "locations", "default.yaml")
     return load_yaml_file(loc_path)
+
 
 def build_character_visual_prompt(char_def: dict) -> str:
     visual_parts = []
@@ -65,6 +70,7 @@ def build_character_visual_prompt(char_def: dict) -> str:
         visual_parts.extend(traits)
     return ", ".join(filter(None, visual_parts))
 
+
 def build_image_prompt(scene: Scene, previous_scenes: Optional[List[Scene]] = None) -> str:
     parts = []
     parts.append(load_style_prefix())
@@ -82,7 +88,13 @@ def build_image_prompt(scene: Scene, previous_scenes: Optional[List[Scene]] = No
                 label = "Recent context" if i == 0 else "Earlier context"
                 parts.append(f"{label}: {prev.visual_summary}")
     action_prompt = scene.image_prompt
-    style_removals = ["Simpsons cartoon style", "Pixar-style 3D animation", "Pixar-style", "cartoon style", "3D animation"]
+    style_removals = [
+        "Simpsons cartoon style",
+        "Pixar-style 3D animation",
+        "Pixar-style",
+        "cartoon style",
+        "3D animation",
+    ]
     for s in style_removals:
         action_prompt = action_prompt.replace(s, "").replace(s.lower(), "")
     parts.append(action_prompt.strip(", "))
