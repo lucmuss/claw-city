@@ -255,8 +255,12 @@ class PipelineEngine:
             print(f"   {status} {r.stage}: {r.message}")
         
         # File counts
+        # We try to detect which audio engine was used based on directory existence
         images_dir = context.output_dir / "images"
-        audio_dir = context.output_dir / f"audio_openai"
+        audio_dir = context.output_dir / "audio_edge"
+        if not audio_dir.exists():
+            audio_dir = context.output_dir / "audio_openai"
+        
         video_dir = context.output_dir / "video"
         
         print(f"\n📁 Output Files:")

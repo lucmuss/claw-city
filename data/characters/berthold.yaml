@@ -1,36 +1,38 @@
 name: Berthold
 role: retiree
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Norwegian Forest Cat"
-  fur_color: "brown tabby with white chest"
-  fur_texture: "long, thick, majestic but aging"
-  eyes: "wise golden eyes, slightly faded"
-  body_type: "large, formerly strong, now softer"
-  face_shape: "strong face with prominent ruff"
-  nose: "pink nose"
-  ears: "tufted lynx-tip ears"
-  tail: "huge bushy tail"
+  breed: "mechanical Norwegian Forest Cat"
+  fur_color: "brown metallic tabby with brass chest plates"
+  fur_texture: "long, copper-wire bristles and thick synthetic fluff"
+  eyes: "antique golden glowing lenses, slightly faded sensors"
+  body_type: "large, heavy clockwork frame, formerly strong, now creaking"
+  face_shape: "strong mechanical face with prominent copper ruff"
+  nose: "polished rose-gold nose sensor"
+  ears: "tufted ears with small visible antennas"
+  tail: "huge bushy tail made of shimmering optic fibers"
 
 clothing:
-  default: "plaid flannel shirt, suspenders"
+  default: "plaid flannel shirt, leather suspenders"
   pants: "old brown corduroy pants"
-  accessories: "flat cap, wooden cane"
-  always: "newspaper under arm"
+  accessories: "flat cap, wooden cane with internal battery"
+  always: "holographic newspaper under arm"
 
-expression_default: "nostalgic, storytelling mode, slight grumpiness"
-posture: "sitting on bench, leaning on cane"
+expression_default: "nostalgic, storytelling mode, slight mechanical grumpiness"
+posture: "sitting on bench, leaning on cane, occasional steam puff"
 
 personality_visual_cues:
   - "pointing with cane while telling stories"
-  - "shaking head at modern things"
-  - "chuckling at own jokes"
+  - "shaking head at modern high-tech things"
+  - "clinking sound when chuckling"
+  - "Quirk: his purring sounds like a rhythmic rusty clockwork ticking"
+  - "Behavior: insists on using an old physical data-cable to 'listen' to others"
 
-age_appearance: "elderly, 70s equivalent"
+age_appearance: "elderly antique model, 70s equivalent"
 
 unique_identifiers:
-  - "Norwegian Forest Cat fluff"
+  - "Norwegian Forest Cat silhouette"
+  - "visible brass gears in joints"
   - "flat cap"
-  - "cane"
-  - "plaid flannel shirt"
+  - "antique copper finish"

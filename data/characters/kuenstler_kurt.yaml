@@ -1,36 +1,38 @@
 name: KÃ¼nstler Kurt
 role: artist
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Turkish Van"
-  fur_color: "white with orange patches on head and tail"
-  fur_texture: "semi-long, often has paint in it"
-  eyes: "odd-eyed (one blue, one amber)"
-  body_type: "lanky, graceful, expressive"
-  face_shape: "long face, dreamy expression"
-  nose: "pink nose, often paint smudge"
-  ears: "medium feathered ears"
-  tail: "fluffy orange-tipped tail"
+  breed: "mechanical Turkish Van"
+  fur_color: "white enamel with orange metallic patches on head and tail"
+  fur_texture: "semi-long synthetic fluff, often has real paint splattered on it"
+  eyes: "odd-eyed glowing sensors (one bright blue, one warm amber)"
+  body_type: "lanky, graceful, expressive mechanical frame"
+  face_shape: "long mechanical face, dreamy inspired expression"
+  nose: "pink sensor port, often with a smudge of blue paint"
+  ears: "medium feathered antennas"
+  tail: "fluffy segmented orange-tipped tail"
 
 clothing:
-  default: "paint-splattered smock"
-  underneath: "striped French artist shirt"
-  accessories: "beret, paintbrush behind ear"
-  always: "paint somewhere on fur"
+  default: "paint-splattered artist smock"
+  underneath: "striped synthetic French artist shirt"
+  accessories: "beret, digital paintbrush behind ear"
+  always: "wet paint somewhere on his metallic chassis"
 
-expression_default: "dreamy, inspired, slightly pretentious"
-posture: "dramatic gestures, hand on chin thinking"
+expression_default: "dreamy, inspired, slightly pretentious mechanical hum"
+posture: "dramatic gestures, metallic hand on chin thinking"
 
 personality_visual_cues:
-  - "squinting at things like art"
-  - "framing scenes with paws"
-  - "dramatic sighing"
+  - "squinting with optic sensors at things like art"
+  - "framing scenes with metallic paws"
+  - "dramatic venting of steam (sighing)"
+  - "Quirk: his tail tip functions as a high-precision digital airbrush"
+  - "Behavior: often 'paints' invisible masterpieces in the air with his metallic paws"
 
-age_appearance: "adult, 30s-40s equivalent"
+age_appearance: "eccentric older model, 30s-40s equivalent"
 
 unique_identifiers:
-  - "odd eyes (heterochromia)"
+  - "glowing odd eyes (heterochromia)"
   - "beret"
-  - "paint-splattered"
+  - "paint-splattered chassis"
   - "Turkish Van orange patches"

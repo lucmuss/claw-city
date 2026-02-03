@@ -22,7 +22,7 @@ from clawcity.core.exceptions import AudioGenerationError, ConfigurationError
 from clawcity.core.models import Scene, PipelineContext, PipelineResult
 
 
-# Voice mapping for characters
+# Voice mapping for characters (OpenAI)
 VOICE_MAP: Dict[str, str] = {
     "narrator": "nova",
     "max": "echo",
@@ -44,9 +44,27 @@ VOICE_MAP: Dict[str, str] = {
     "paul": "alloy",
 }
 
+# Voice mapping for characters (Edge TTS)
 EDGE_VOICE_MAP: Dict[str, str] = {
-    "default": "de-DE-ConradNeural",
-    "female": "de-DE-KatjaNeural",
+    "narrator": "de-DE-ConradNeural",
+    "max": "de-DE-KillianNeural",
+    "gina": "de-DE-KatjaNeural",
+    "werner": "de-DE-FlorianMultilingualNeural",
+    "eric": "de-DE-KillianNeural",
+    "herbert": "de-DE-ConradNeural",
+    "oma_gerda": "de-DE-SeraphinaMultilingualNeural",
+    "tim_tim": "de-DE-AmalaNeural",
+    "lisa": "de-DE-KatjaNeural",
+    "lena": "de-DE-KatjaNeural",
+    "beate": "de-DE-SeraphinaMultilingualNeural",
+    "günther": "de-DE-FlorianMultilingualNeural",
+    "berthold": "de-DE-FlorianMultilingualNeural",
+    "fiona": "de-DE-KatjaNeural",
+    "heinrich": "de-DE-ConradNeural",
+    "sabrina": "de-DE-AmalaNeural",
+    "app": "de-DE-SeraphinaMultilingualNeural",
+    "paul": "de-DE-FlorianMultilingualNeural",
+    "default": "de-DE-ConradNeural"
 }
 
 
@@ -74,11 +92,12 @@ class AudioService:
     
     def get_voice(self, character: str) -> str:
         """Get voice for character"""
+        char_id = character.lower()
         if self.provider == "openai":
-            return VOICE_MAP.get(character.lower(), "alloy")
+            return VOICE_MAP.get(char_id, "alloy")
         else:
-            # Edge TTS - simple gender-based mapping
-            return EDGE_VOICE_MAP.get("female" if character in ["gina", "oma_gerda", "sabrina"] else "default")
+            # Edge TTS - try character-specific voice, then fallback
+            return EDGE_VOICE_MAP.get(char_id, EDGE_VOICE_MAP["default"])
     
     async def generate_line(
         self,
@@ -146,20 +165,27 @@ class AudioService:
         generated = 0
         failed = 0
         
-        for i, line in enumerate(scene.dialogue):
-            output_path = audio_dir / f"{i:03d}_{line.character}.mp3"
-            
-            result = await self.generate_line(
-                text=line.text,
-                character=line.character,
-                output_path=output_path,
-                emotion=line.emotion
-            )
-            
-            if result.success:
-                generated += 1
-            else:
-                failed += 1
+        # Temporarily switch provider for this scene if engine matches
+        old_provider = self.provider
+        self.provider = engine
+        
+        try:
+            for i, line in enumerate(scene.dialogue):
+                output_path = audio_dir / f"{i:03d}_{line.character}.mp3"
+                
+                result = await self.generate_line(
+                    text=line.text,
+                    character=line.character,
+                    output_path=output_path,
+                    emotion=line.emotion
+                )
+                
+                if result.success:
+                    generated += 1
+                else:
+                    failed += 1
+        finally:
+            self.provider = old_provider
         
         # Combine scene audio immediately after generation
         if failed == 0 and generated > 0:

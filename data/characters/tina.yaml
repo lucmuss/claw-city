@@ -1,36 +1,38 @@
 name: Tina
 role: waitress
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Calico"
-  fur_color: "white, orange, and black patches"
-  fur_texture: "short, practical"
-  eyes: "tired but kind hazel eyes"
-  body_type: "average, hardworking build"
-  face_shape: "friendly approachable face"
-  nose: "half pink half black nose"
-  ears: "medium ears, one orange one black"
-  tail: "multicolored calico tail"
+  breed: "mechanical Calico cat"
+  fur_color: "white, orange, and black metallic patches"
+  fur_texture: "short practical micro-plating"
+  eyes: "tired but kind hazel glowing optic sensors"
+  body_type: "average hardworking chassis, robust build"
+  face_shape: "friendly approachable mechanical face"
+  nose: "half pink, half black sensor intake"
+  ears: "medium antennas, one orange, one black"
+  tail: "multicolored segmented calico tail"
 
 clothing:
-  default: "diner waitress uniform"
-  colors: "pink uniform dress, white apron"
-  accessories: "notepad in apron, pen behind ear"
-  shoes: "comfortable worn shoes"
+  default: "retro diner waitress uniform"
+  colors: "pink synthetic uniform dress, white apron"
+  accessories: "digital notepad in apron, stylus behind ear-antenna"
+  shoes: "comfortable rubberized metallic feet"
 
-expression_default: "tired but friendly, seen-it-all look"
-posture: "slightly slouched, always carrying something"
+expression_default: "tired but friendly, digital 'seen-it-all' look"
+posture: "slightly slouched, always balancing multiple metallic plates"
 
 personality_visual_cues:
-  - "blowing fur out of face"
-  - "balancing multiple plates"
-  - "knowing eye-roll"
+  - "blowing air out of intake to clear 'fur'"
+  - "balancing trays with robotic precision"
+  - "knowing optic-sensor roll"
+  - "Quirk: her internal speaker occasionally crackles with old radio tunes when she's relaxed"
+  - "Behavior: often wipes the same spot on the counter for 5 minutes when daydreaming"
 
-age_appearance: "adult, 30s equivalent"
+age_appearance: "reliable workhorse model, 30s equivalent"
 
 unique_identifiers:
-  - "calico three-color pattern"
+  - "calico three-color metallic pattern"
   - "pink diner uniform"
-  - "notepad and pen"
-  - "tired friendly face"
+  - "digital notepad and stylus"
+  - "tired friendly expression"

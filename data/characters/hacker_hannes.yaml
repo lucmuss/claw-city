@@ -1,37 +1,39 @@
 name: Hacker Hannes
 role: tech_guy
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Scottish Fold"
-  fur_color: "gray tabby"
-  fur_texture: "medium, slightly greasy looking"
-  eyes: "tired green eyes, dark circles"
-  eye_detail: "screen glare reflection"
-  body_type: "thin, hunched from sitting"
-  face_shape: "round face, folded ears (signature)"
-  nose: "pink nose"
-  ears: "folded forward (Scottish Fold trait)"
-  tail: "medium gray tabby tail"
+  breed: "mechanical Scottish Fold"
+  fur_color: "gray tabby circuit-pattern finish"
+  fur_texture: "medium synthetic fluff, slightly unkempt"
+  eyes: "tired green glowing lenses, dark circles around optic ports"
+  eye_detail: "constant data-stream reflection in eyes"
+  body_type: "thin hunched chassis from sitting at terminals"
+  face_shape: "round mechanical face, folded ear-antennas"
+  nose: "pink LED sensor"
+  ears: "folded forward mechanical antennas"
+  tail: "medium gray tabby segmented tail"
 
 clothing:
-  default: "oversized black hoodie"
-  underneath: "anime or tech t-shirt"
-  accessories: "multiple monitors glow on face"
-  always: "energy drink nearby"
+  default: "oversized black synthetic hoodie"
+  underneath: "anime or tech-themed chassis decal"
+  accessories: "multiple holographic screens glowing on face"
+  always: "energy-cell drink nearby"
 
-expression_default: "tired but focused, occasional manic excitement"
-posture: "hunched over keyboard"
+expression_default: "tired but focused, occasional manic digital excitement"
+posture: "hunched over holographic keyboard"
 
 personality_visual_cues:
-  - "eyes lit by screen"
-  - "typing furiously"
-  - "headphones around neck"
+  - "optic sensors lit by screen glow"
+  - "fingers typing with rapid clicking"
+  - "high-tech headphones around neck"
+  - "Quirk: his tail morses binary error codes when he's stressed"
+  - "Behavior: often talks to his internal OS (named 'Mimi') in a whisper"
 
-age_appearance: "young adult, late 20s equivalent"
+age_appearance: "overclocked younger model, late 20s equivalent"
 
 unique_identifiers:
-  - "Scottish Fold folded ears"
+  - "Scottish Fold folded mechanical ears"
   - "black hoodie"
-  - "screen glow on face"
-  - "energy drink"
+  - "holographic screen glow"
+  - "energy-cell cans"

@@ -1,38 +1,40 @@
 name: Max
 role: protagonist
-species: cat
+species: robotic cat
 
 physical:
-  breed: "orange tabby cat (europäisch kurzhaar)"
-  fur_color: "bright orange with darker orange tiger stripes"
-  fur_texture: "short, slightly unkempt, some tufts sticking up"
-  eyes: "large round green eyes, slightly droopy, tired look"
-  eye_detail: "visible pupils, slight bags under eyes"
-  body_type: "medium height, slightly overweight, soft belly"
-  face_shape: "round face, chubby cheeks"
-  nose: "small pink triangle nose"
-  ears: "rounded ears, small notch in left ear (old injury)"
-  whiskers: "long white whiskers, slightly bent"
-  paws: "orange with pink paw pads"
-  tail: "fluffy orange tail with darker rings"
+  breed: "mechanical orange tabby cat"
+  fur_color: "bright orange copper with darker orange tiger-stripe etching"
+  fur_texture: "short synthetic fluff, slightly unkempt with visible wires"
+  eyes: "large round green glowing lenses, slightly droopy, tired look"
+  eye_detail: "digital pupils, slight dark circles around optic ports"
+  body_type: "medium height, slightly bulky chassis, soft synthetic belly"
+  face_shape: "round mechanical face, chubby plate-cheeks"
+  nose: "small pink triangular sensor"
+  ears: "rounded antennas, small notch in left ear (old workshop accident)"
+  whiskers: "long white fiber-optic whiskers, slightly bent"
+  paws: "orange metal with pink rubberized paw pads"
+  tail: "fluffy orange segmented tail with darker rings"
 
 clothing:
   default: "faded black vintage band t-shirt (always same shirt)"
-  pants: "no pants (cat style) or gray sweatpants when outside"
+  pants: "no pants (classic robot-cat style) or gray sweatpants when outside"
   accessories: "none"
 
-expression_default: "lazy, skeptical, slightly annoyed but lovable"
-posture: "slouched, relaxed, low energy"
+expression_default: "lazy, skeptical, slightly annoyed but lovable mechanical look"
+posture: "slouched, relaxed, low energy servos"
 
 personality_visual_cues:
-  - "half-closed eyes (sleepy/unimpressed look)"
-  - "one eyebrow often raised"
-  - "mouth slightly open when confused"
+  - "half-closed optic sensors (sleepy/unimpressed look)"
+  - "one ear-antenna often raised"
+  - "mouth sensor slightly open when confused"
+  - "Quirk: emits a tiny puff of steam from ears when he has an idea"
+  - "Behavior: taps his metallic chin with a rhythmic clicking sound when thinking"
 
-age_appearance: "young adult cat, late 20s equivalent"
+age_appearance: "slightly outdated younger model, late 20s equivalent"
 
 unique_identifiers:
-  - "notch in left ear"
-  - "always same black t-shirt"
-  - "orange tabby stripes pattern"
-  - "chubby soft belly"
+  - "notch in left ear-antenna"
+  - "always same black vintage t-shirt"
+  - "orange tabby stripe patterns"
+  - "bulky soft synthetic belly"

@@ -1,38 +1,40 @@
 name: Werner
 role: neighbor
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Persian mix"
-  fur_color: "white with large brown patches"
-  fur_texture: "long, fluffy, slightly messy"
-  eyes: "small yellow-green eyes, squinty"
-  eye_detail: "suspicious look, always observing"
-  body_type: "stocky, barrel-shaped, low to ground"
-  face_shape: "flat Persian face, grumpy expression"
-  nose: "pushed-in pink nose (Persian feature)"
-  ears: "small rounded ears, hidden in fluff"
-  whiskers: "thick messy whiskers"
-  paws: "big fluffy paws"
-  tail: "big fluffy plume tail"
+  breed: "mechanical Persian mix"
+  fur_color: "white matte chassis with large brown metallic patches"
+  fur_texture: "long synthetic fluff, slightly messy with visible seams"
+  eyes: "small yellow-green glowing sensors, squinty"
+  eye_detail: "suspicious optic-shutter look, always observing"
+  body_type: "stocky barrel-shaped industrial frame, low to ground"
+  face_shape: "flat mechanical Persian face, grumpy expression"
+  nose: "pushed-in pink sensor intake"
+  ears: "small rounded antennas, hidden in fluff"
+  whiskers: "thick messy fiber-optic whiskers"
+  paws: "big fluffy metallic paws"
+  tail: "big fluffy segmented plume tail"
 
 clothing:
-  default: "old brown cardigan sweater"
-  accessories: "reading glasses on chain around neck"
-  slippers: "worn house slippers"
+  default: "old brown hand-knitted cardigan sweater"
+  accessories: "reading glasses on a metallic chain around neck"
+  slippers: "worn synthetic house slippers"
 
-expression_default: "grumpy, suspicious, judging"
-posture: "hunched, arms often crossed"
+expression_default: "grumpy, suspicious, judging digital flicker"
+posture: "hunched, metallic arms often crossed"
 
 personality_visual_cues:
-  - "squinting when suspicious"
-  - "glasses sliding down nose"
-  - "fur puffing up when angry"
+  - "squinting optic shutters when suspicious"
+  - "glasses sliding down mechanical nose"
+  - "synthetic fur puffing up with static when angry"
+  - "Quirk: his internal cooling fan starts rattling loudly when he gets annoyed"
+  - "Behavior: constantly polishes his optic sensors with the edge of his cardigan"
 
-age_appearance: "middle-aged to older, 50s equivalent"
+age_appearance: "worn older model, 50s equivalent"
 
 unique_identifiers:
   - "brown cardigan always"
-  - "flat Persian face"
-  - "white and brown patches"
+  - "flat Persian mechanical face"
+  - "white and brown metallic patches"
   - "reading glasses on chain"

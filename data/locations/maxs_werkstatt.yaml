@@ -1,6 +1,0 @@
-name: Max's Werkstatt
-description: "A cluttered inventor's workshop, with tools, wires, and half-finished robot projects everywhere. Dim lighting from a single desk lamp."
-visual_modifiers:
-  - "cluttered"
-  - "inventor's workshop"
-  - "dimly lit"

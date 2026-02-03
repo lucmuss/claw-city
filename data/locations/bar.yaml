@@ -1,6 +1,14 @@
 name: Bar
-description: "A dimly lit, classic German pub with a long wooden counter, bar stools, and bottles of spirits. Cozy and somewhat smoky atmosphere."
+description: |
+  A dimly lit, classic German pub with heavy atmosphere. 
+  Anchor objects: a long polished oak counter with high leather-topped stools, 
+  a colorful stained-glass lamp hanging directly over the counter, 
+  a back-bar with hundreds of glowing bottles reflecting in an old mirror, 
+  and a wooden dartboard on the right wall. 
+  The air is filled with visible dust motes dancing in the light beams. 
+  The walls are decorated with old beer advertisements and copper plates.
 visual_modifiers:
-  - "dimly lit pub"
-  - "wooden interior"
-  - "cozy"
+  - "Ghibli-style cozy pub"
+  - "warm ambient light"
+  - "polished wood textures"
+  - "atmospheric dust and light"

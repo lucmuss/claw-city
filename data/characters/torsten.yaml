@@ -1,36 +1,38 @@
 name: Torsten
 role: police_officer
-species: cat
+species: robotic cat
 
 physical:
-  breed: "German Rex"
-  fur_color: "brown tabby, wavy fur"
-  fur_texture: "short curly/wavy (Rex trait)"
-  eyes: "serious gray eyes"
-  body_type: "fit, regulation build"
-  face_shape: "square serious face"
-  nose: "brown nose"
-  ears: "large slightly wavy ears"
-  tail: "curly-furred tail"
+  breed: "mechanical German Rex"
+  fur_color: "brown tabby metallic finish"
+  fur_texture: "short wavy/curly synthetic fur (mechanical Rex trait)"
+  eyes: "serious gray glowing sensors"
+  body_type: "fit regulation chassis, sturdy build"
+  face_shape: "square serious mechanical face"
+  nose: "brown sensor port"
+  ears: "large wavy antennas"
+  tail: "curly-furred segmented tail"
 
 clothing:
-  default: "police uniform"
-  colors: "dark blue uniform, silver badge"
-  accessories: "police hat, utility belt"
-  detail: "everything regulation perfect"
+  default: "police uniform chassis-cover"
+  colors: "dark blue synthetic uniform, glowing silver badge"
+  accessories: "police hat with antenna, utility belt for gadgets"
+  detail: "everything maintained to regulation perfection"
 
-expression_default: "serious, by-the-book, slightly confused"
-posture: "straight, official stance"
+expression_default: "serious, programmed by-the-book, slightly confused digital logic"
+posture: "straight official stance, servos locked"
 
 personality_visual_cues:
-  - "writing in notebook"
-  - "looking suspicious at everything"
-  - "hand on utility belt"
+  - "writing in holographic notebook"
+  - "optic sensors scanning suspiciously"
+  - "metallic hand on utility belt"
+  - "Quirk: his police siren sound is actually just him saying 'Tatutata' in a monotone robotic voice"
+  - "Behavior: often checks the expiration date on other robots' battery packs"
 
-age_appearance: "adult, 30s-40s equivalent"
+age_appearance: "reliable duty model, 30s-40s equivalent"
 
 unique_identifiers:
-  - "wavy Rex fur (unusual)"
+  - "wavy mechanical Rex fur"
   - "police uniform and hat"
   - "serious expression"
-  - "always has notebook"
+  - "always has digital notebook"

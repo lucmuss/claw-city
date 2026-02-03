@@ -24,23 +24,19 @@ def load_style_prefix() -> str:
 def load_character(character_name: str) -> dict:
     char_path = os.path.join("data", "characters", f"{character_name.lower()}.yaml")
     if not os.path.exists(char_path):
-        # Fallback if character-specific YAML not found
         return {"name": character_name, "physical": {"breed": "unknown cat"}}
     return load_yaml_file(char_path)
 
 def load_location(location_name: str) -> dict:
-    # Normalize location name for file path
-    loc_id = location_name.lower().replace(' ', '_').replace('-', '_')
+    loc_id = location_name.lower()
+    loc_id = "".join(c for c in loc_id if c.isalnum())
     loc_path = os.path.join("data", "locations", f"{loc_id}.yaml")
     if not os.path.exists(loc_path):
-        loc_path = os.path.join("data", "locations", "default.yaml") # Fallback to default location
+        loc_path = os.path.join("data", "locations", "default.yaml")
     return load_yaml_file(loc_path)
 
 def build_character_visual_prompt(char_def: dict) -> str:
-    """Build a detailed visual prompt from the structured character YAML"""
     visual_parts = []
-    
-    # 1. Physical traits
     phys = char_def.get("physical", {})
     if phys:
         breed = phys.get("breed", "")
@@ -48,13 +44,11 @@ def build_character_visual_prompt(char_def: dict) -> str:
         texture = phys.get("fur_texture", "")
         eyes = phys.get("eyes", "")
         body = phys.get("body_type", "")
-        
-        trait_string = f"{body} {texture} {fur} {breed}"
+        physical_traits = [body, texture, fur, breed]
+        trait_string = ", ".join(filter(None, physical_traits))
         if eyes:
-            trait_string += f" with {eyes} eyes"
+            trait_string += f", with {eyes} eyes"
         visual_parts.append(trait_string.strip())
-
-    # 2. Clothing
     clothing = char_def.get("clothing", {})
     if clothing:
         default_outfit = clothing.get("default", "")
@@ -63,51 +57,33 @@ def build_character_visual_prompt(char_def: dict) -> str:
             visual_parts.append(f"wearing {default_outfit}")
         if acc and acc.lower() != "none":
             visual_parts.append(f"with {acc}")
-
-    # 3. Unique Identifiers (Very important for consistency)
     uniques = char_def.get("unique_identifiers", [])
     if uniques:
         visual_parts.extend(uniques)
-
+    traits = char_def.get("personality_visual_cues", [])
+    if traits:
+        visual_parts.extend(traits)
     return ", ".join(filter(None, visual_parts))
 
 def build_image_prompt(scene: Scene, previous_scenes: Optional[List[Scene]] = None) -> str:
     parts = []
-
-    # 1. Globaler Stil (immer oben)
     parts.append(load_style_prefix())
-
-    # 2. Charaktere in Szene
     characters_in_scene = set(d.character for d in scene.dialogue)
     for char_name in characters_in_scene:
         char_def = load_character(char_name)
         char_prompt = build_character_visual_prompt(char_def)
         if char_prompt:
             parts.append(f"{char_def['name']}: {char_prompt}")
-
-    # 3. Location
     location_data = load_location(scene.location)
     parts.append(location_data.get("description", scene.location))
-
-    # 4. Kontext vorherige Szenen (max 2)
     if previous_scenes:
         for i, prev in enumerate(reversed(previous_scenes[-2:])):
             if prev.visual_summary:
                 label = "Recent context" if i == 0 else "Earlier context"
                 parts.append(f"{label}: {prev.visual_summary}")
-
-    # 5. Aktuelle Szene-Aktion (mit Bereinigung von alten Stil-Tags)
     action_prompt = scene.image_prompt
-    style_removals = [
-        "Simpsons cartoon style", 
-        "Pixar-style 3D animation", 
-        "Pixar-style",
-        "cartoon style",
-        "3D animation"
-    ]
+    style_removals = ["Simpsons cartoon style", "Pixar-style 3D animation", "Pixar-style", "cartoon style", "3D animation"]
     for s in style_removals:
         action_prompt = action_prompt.replace(s, "").replace(s.lower(), "")
-    
     parts.append(action_prompt.strip(", "))
-
     return " | ".join(filter(None, parts))

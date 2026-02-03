@@ -1,36 +1,38 @@
 name: Eric
 role: claw_machine_owner
-species: cat
+species: robotic cat
 
 physical:
-  breed: "black cat (Bombay)"
-  fur_color: "pure jet black, shiny"
-  fur_texture: "short, sleek, well-groomed"
-  eyes: "golden-yellow eyes, calculating"
-  body_type: "lean, tall, elegant"
-  face_shape: "sleek angular face"
-  nose: "black nose"
-  ears: "medium pointed ears"
-  tail: "long thin black tail"
+  breed: "mechanical Bombay cat"
+  fur_color: "obsidian-black polished carbon fiber"
+  fur_texture: "short, sleek, high-gloss finish"
+  eyes: "golden-yellow glowing sensors, calculating"
+  body_type: "lean, tall, elegant mechanical frame"
+  face_shape: "sleek angular mechanical face"
+  nose: "matte black sensor"
+  ears: "medium pointed antennas"
+  tail: "long thin segmented black tail"
 
 clothing:
-  default: "cheap shiny suit (polyester), slightly too big"
-  color: "purple or green suit"
-  accessories: "gold chain necklace, pinky ring"
-  hair: "slicked back head fur"
+  default: "cheap shiny synthetic suit, slightly too big"
+  color: "shimmering purple or green suit"
+  accessories: "gold-plated chain necklace, glowing pinky ring"
+  hair: "slicked back metallic head fur"
 
-expression_default: "salesman smile, untrustworthy"
-posture: "leaning in, hands gesturing"
+expression_default: "artificial salesman smile, untrustworthy flicker in eyes"
+posture: "leaning in with oily servos, hands gesturing"
 
 personality_visual_cues:
-  - "smile that doesn't reach eyes"
-  - "rubbing paws together"
-  - "looking at wallet area"
+  - "smile that feels programmed and fake"
+  - "rubbing metallic paws together"
+  - "scanning others' wallet areas"
+  - "Quirk: his pupils turn into rotating slot machine symbols when he sees a profit"
+  - "Behavior: constantly adjusts his 'hair' even though it is fixed metal"
 
-age_appearance: "adult, 40s equivalent"
+age_appearance: "slick older model, 40s equivalent"
 
 unique_identifiers:
-  - "shiny cheap suit"
-  - "gold chain"
-  - "pure black fur"
-  - "salesman grin"
+  - "shiny cheap polyester-style suit"
+  - "gold-plated chain"
+  - "glossy black carbon fur"
+  - "fixed salesman grin"

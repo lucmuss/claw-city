@@ -1,36 +1,38 @@
 name: Sabrina
 role: influencer
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Ragdoll"
-  fur_color: "cream with gray points, very fluffy"
-  fur_texture: "long, silky, perfectly styled"
-  eyes: "large blue eyes, always camera-ready"
-  body_type: "slim, photogenic, posed"
-  face_shape: "sweet round face, doll-like"
-  nose: "pink nose"
-  ears: "medium fluffy ears"
-  tail: "magnificent fluffy plume"
+  breed: "mechanical Ragdoll"
+  fur_color: "cream-colored chassis with gray matte points, very fluffy"
+  fur_texture: "long silky synthetic fluff, perfectly styled and antistatic"
+  eyes: "large blue glowing sensors, always camera-ready"
+  body_type: "slim photogenic chassis, elegant posing servos"
+  face_shape: "sweet round mechanical face, doll-like"
+  nose: "pink sensor intake"
+  ears: "medium fluffy antennas"
+  tail: "magnificent segmented fluffy plume tail"
 
 clothing:
-  default: "trendy outfit, changes frequently"
-  style: "Instagram aesthetic, pastels and pinks"
-  accessories: "phone ALWAYS in paw, ring light nearby"
-  makeup: "visible styled whiskers, maybe bow"
+  default: "trendy high-tech outfit, changes frequently"
+  style: "social-media aesthetic, pastels and pinks"
+  accessories: "integrated smartphone in paw, portable ring-light drone"
+  makeup: "styled glowing whiskers, decorative bows"
 
-expression_default: "photo-ready smile, slightly fake"
-posture: "always angled for best photo"
+expression_default: "photo-ready smile, slightly artificial digital cheer"
+posture: "always angled for the best camera shot"
 
 personality_visual_cues:
-  - "checking phone constantly"
-  - "posing unconsciously"
-  - "duck face for selfies"
+  - "checking internal notifications constantly"
+  - "posing unconsciously with a soft whirring"
+  - "optimizing facial plates for selfies"
+  - "Quirk: her fluff emits a subtle pink holographic sparkle when she is 'trending'"
+  - "Behavior: often filters her real-time optical output for others to see"
 
-age_appearance: "young adult, early 20s equivalent"
+age_appearance: "latest lifestyle model, early 20s equivalent"
 
 unique_identifiers:
-  - "phone always visible"
-  - "Ragdoll fluffy cream fur"
-  - "trendy changing outfits"
-  - "posed expressions"
+  - "integrated smartphone/camera"
+  - "Ragdoll fluffy synthetic fur"
+  - "constantly changing trendy outfits"
+  - "perfectly posed mechanical expressions"

@@ -1,38 +1,40 @@
 name: Gina
 role: best_friend
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Russian Blue mix"
-  fur_color: "sleek silver-gray, uniform color"
-  fur_texture: "short, perfectly groomed, shiny"
-  eyes: "large almond-shaped bright blue eyes"
-  eye_detail: "alert, sparkling, always focused"
-  body_type: "slim, athletic, graceful"
-  face_shape: "elegant angular face, defined cheekbones"
-  nose: "small gray nose"
-  ears: "tall pointed ears, always perked up"
-  whiskers: "thin white whiskers, neat"
-  paws: "gray with gray paw pads"
-  tail: "long elegant gray tail"
+  breed: "mechanical Russian Blue mix"
+  fur_color: "sleek silver-gray with a turquoise metallic sheen"
+  fur_texture: "short micro-plating, perfectly polished and shiny"
+  eyes: "large almond-shaped bright blue optic sensors"
+  eye_detail: "alert, sparkling with digital energy"
+  body_type: "slim athletic chassis, graceful servos"
+  face_shape: "elegant angular mechanical face"
+  nose: "small matte gray sensor port"
+  ears: "tall pointed antennas, always perked up"
+  whiskers: "thin fiber-optic whiskers, glowing faintly"
+  paws: "gray metallic pads"
+  tail: "long elegant segmented gray tail"
 
 clothing:
-  default: "pink collar with small silver bell"
-  style: "minimalist, sometimes small earrings"
-  outside: "stylish jacket or scarf"
+  default: "pink metallic collar with small silver data-bell"
+  style: "minimalist, sometimes small glowing earrings"
+  outside: "stylish synthetic jacket or scarf"
 
-expression_default: "confident, slightly smug, energetic"
-posture: "upright, alert, ready to move"
+expression_default: "confident, slightly smug, energetic mechanical grin"
+posture: "upright, alert, ready to move with silent precision"
 
 personality_visual_cues:
-  - "wide eyes when excited"
-  - "tail swishing when planning something"
-  - "smirk when she has an idea"
+  - "brightening eyes when excited"
+  - "tail swishing with a soft clicking sound when planning"
+  - "smirk when a new idea is processing"
+  - "Quirk: her sarcasm-module occasionally glitches, making her eyes flash yellow for 3 seconds"
+  - "Behavior: taps her holographic data-bell when she is impatient"
 
-age_appearance: "young adult cat, late 20s equivalent"
+age_appearance: "high-end modern model, late 20s equivalent"
 
 unique_identifiers:
-  - "pink collar with bell"
-  - "silver-gray sleek fur"
-  - "bright blue eyes"
+  - "pink collar with data-bell"
+  - "silver-turquoise sleek metallic finish"
+  - "bright blue glowing eyes"
   - "athletic slim build"

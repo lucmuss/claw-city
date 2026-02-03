@@ -1,35 +1,37 @@
 name: BÃ¼rgermeister Bruno
 role: mayor
-species: cat
+species: robotic cat
 
 physical:
-  breed: "British Shorthair"
-  fur_color: "solid blue-gray"
-  fur_texture: "dense, plush, round appearance"
-  eyes: "large round copper-orange eyes"
-  body_type: "rotund, well-fed, pompous"
-  face_shape: "very round face, chubby cheeks"
-  nose: "gray nose"
-  ears: "small rounded ears"
-  tail: "thick medium tail"
+  breed: "mechanical British Shorthair"
+  fur_color: "brushed blue-gray steel"
+  fur_texture: "dense micro-plate armor, looks plush but is metallic"
+  eyes: "large round glowing copper-orange optic sensors"
+  body_type: "rotund, bulky industrial frame, pompous"
+  face_shape: "round mechanical face, chubby plate-cheeks"
+  nose: "matte gray air intake"
+  ears: "small rounded antennas"
+  tail: "thick segmented metallic tail"
 
 clothing:
-  default: "formal suit with mayoral sash"
+  default: "formal velvet suit with mayoral sash"
   color: "navy blue suit, red-white-gold sash"
-  accessories: "golden mayor medal, pocket watch"
+  accessories: "golden mayor medal, antique pocket watch with gears"
 
-expression_default: "pompous, self-important, fake friendly"
-posture: "puffed up chest, chin raised"
+expression_default: "pompous, self-important, fake friendly mechanical smile"
+posture: "puffed up metallic chest, chin raised"
 
 personality_visual_cues:
-  - "adjusting sash importantly"
+  - "adjusting sash with robotic precision"
   - "waving like royalty"
-  - "looking down nose at others"
+  - "whirring sound when thinking"
+  - "Quirk: his mayoral sash is a scrolling LED display showing (fake) approval ratings"
+  - "Behavior: his metallic whiskers vibrate when he feels important"
 
-age_appearance: "middle-aged, 50s equivalent"
+age_appearance: "high-end classic model, 50s equivalent"
 
 unique_identifiers:
   - "mayoral sash"
-  - "round British Shorthair shape"
-  - "copper eyes"
+  - "round bulky British Shorthair shape"
+  - "glowing copper eyes"
   - "pompous expression"

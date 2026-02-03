@@ -1,35 +1,37 @@
 name: Pfarrer Paul
 role: priest
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Tuxedo cat"
-  fur_color: "black and white tuxedo pattern"
-  fur_texture: "short, neat, always clean"
-  eyes: "gentle brown eyes"
-  body_type: "average, soft, non-threatening"
-  face_shape: "kind round face, white muzzle"
-  nose: "pink and black spotted nose"
-  ears: "medium black ears"
-  tail: "black tail with white tip"
+  breed: "mechanical Tuxedo cat"
+  fur_color: "black and white polished enamel tuxedo pattern"
+  fur_texture: "short micro-plating, neat and always clean"
+  eyes: "gentle brown glowing optic sensors"
+  body_type: "average soft-form chassis, non-threatening"
+  face_shape: "kind mechanical face, white muzzle plate"
+  nose: "pink and black spotted sensor intake"
+  ears: "medium black antennas"
+  tail: "black segmented tail with a glowing white tip"
 
 clothing:
-  default: "black priest collar and robe"
-  accessories: "small cross necklace"
-  detail: "always immaculately dressed"
+  default: "black priest collar and synthetic robe"
+  accessories: "small cross-shaped data-necklace"
+  detail: "always immaculately maintained"
 
-expression_default: "benevolent, patient, slight worry for souls"
-posture: "hands clasped, attentive"
+expression_default: "benevolent, patient, slight mechanical flicker of worry for souls"
+posture: "metallic hands clasped, attentive servos"
 
 personality_visual_cues:
-  - "blessing gesture"
-  - "concerned head tilt"
-  - "patient smile"
+  - "mechanical blessing gesture"
+  - "concerned head tilt with a soft click"
+  - "patient programmed smile"
+  - "Quirk: he tries to 'segne' (bless) malfunctioning robots with a drop of high-grade lubricant"
+  - "Behavior: often quotes outdated programming manuals as if they were holy scripture"
 
-age_appearance: "middle-aged, 50s equivalent"
+age_appearance: "well-maintained older model, 50s equivalent"
 
 unique_identifiers:
-  - "tuxedo pattern (natural priest look)"
-  - "priest collar"
+  - "tuxedo pattern (natural priest aesthetic)"
+  - "mechanical priest collar"
   - "cross necklace"
   - "gentle expression"

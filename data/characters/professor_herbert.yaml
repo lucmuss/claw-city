@@ -1,39 +1,41 @@
 name: Professor Herbert
 role: conspiracy_theorist
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Siamese"
-  fur_color: "cream body with dark brown points (face, ears, paws, tail)"
-  fur_texture: "short, slightly disheveled"
-  eyes: "intense ice-blue eyes, wide, manic"
-  eye_detail: "always look like he knows something you don't"
-  body_type: "thin, wiry, nervous energy"
-  face_shape: "angular Siamese face, dark mask"
-  nose: "dark brown nose"
-  ears: "large pointed dark ears"
-  whiskers: "long, bent at odd angles"
-  paws: "dark brown paws"
-  tail: "long thin dark-tipped tail, always twitching"
+  breed: "mechanical Siamese"
+  fur_color: "cream-colored chassis with dark brown anodized points (face, ears, paws, tail)"
+  fur_texture: "short synthetic fluff, slightly disheveled with visible wires"
+  eyes: "intense ice-blue glowing optic sensors, wide and manic"
+  eye_detail: "flickering with rapid data processing"
+  body_type: "thin wiry mechanical frame, high nervous energy"
+  face_shape: "angular Siamese mechanical face, dark sensor mask"
+  nose: "dark brown air intake"
+  ears: "large pointed dark antennas"
+  whiskers: "long bent fiber-optic whiskers, sparkling with static"
+  paws: "dark brown metallic paws"
+  tail: "long thin dark segmented tail, always twitching"
 
 clothing:
-  default: "wrinkled lab coat covered in sticky notes"
-  underneath: "old turtleneck sweater"
-  accessories: "multiple pens in pocket, magnifying glass"
-  head: "sometimes tin foil hat (for 'protection')"
+  default: "wrinkled lab coat covered in digital sticky notes"
+  underneath: "old synthetic turtleneck sweater"
+  accessories: "multiple styluses in pocket, high-power magnifying lens"
+  head: "sometimes a makeshift lead-foil hat (for 'signal protection')"
 
-expression_default: "wide-eyed, paranoid, excited about theories"
-posture: "leaning forward, invading personal space"
+expression_default: "wide-eyed, paranoid, excited mechanical humming"
+posture: "leaning forward with jerky servos, invading personal space"
 
 personality_visual_cues:
-  - "eyes darting around"
-  - "fur standing up when excited"
-  - "gesturing wildly while explaining"
+  - "optic sensors darting around rapidly"
+  - "synthetic fur standing up due to static discharge"
+  - "gesturing wildly with clicking metallic fingers"
+  - "Quirk: eyes show a 'Blue Screen of Death' or 'Loading...' icon when he is overwhelmed"
+  - "Behavior: whispers his theories into a small tape recorder that is never actually recording"
 
-age_appearance: "older, 60s equivalent, but spry"
+age_appearance: "overclocked older model, 60s equivalent"
 
 unique_identifiers:
-  - "lab coat with sticky notes"
-  - "Siamese dark face mask"
-  - "manic ice-blue eyes"
-  - "tin foil hat (sometimes)"
+  - "lab coat with glowing sticky notes"
+  - "Siamese dark mechanical face mask"
+  - "manic ice-blue glowing eyes"
+  - "lead-foil hat (sometimes)"

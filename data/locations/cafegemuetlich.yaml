@@ -1,0 +1,13 @@
+name: Café Gemütlich
+description: |
+  A quaint, cozy German small-town cafe with warm wooden panelling. 
+  Anchor objects: a large gleaming copper espresso machine in the left corner, 
+  sturdy round wooden tables with red checkered tablecloths, 
+  large circular windows with small flower boxes, 
+  and a green chalkboard on the wall that always says "Heute: Kirschtorte".
+  The floor is made of old terracotta tiles.
+visual_modifiers:
+  - "Ghibli-style warm lighting"
+  - "cozy interior"
+  - "red checkered pattern"
+  - "copper details"

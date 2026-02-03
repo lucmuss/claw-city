@@ -1,36 +1,38 @@
 name: Fitness Fiona
 role: fitness_instructor
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Bengal"
-  fur_color: "golden with black rosette spots"
-  fur_texture: "short, glittery sheen (Bengal glitter)"
-  eyes: "intense green eyes, focused"
-  body_type: "extremely athletic, muscular, defined"
-  face_shape: "wild look, strong jaw"
-  nose: "brick colored nose"
-  ears: "small rounded ears"
-  tail: "thick spotted tail"
+  breed: "mechanical Bengal"
+  fur_color: "golden titanium with black laser-etched rosette spots"
+  fur_texture: "short metallic finish with a glittery sheen"
+  eyes: "intense green glowing optic sensors, focused"
+  body_type: "extremely athletic, high-torque hydraulic muscles, defined"
+  face_shape: "sleek high-performance mechanical face"
+  nose: "brick-colored cooling vent"
+  ears: "small rounded antennas"
+  tail: "thick segmented spotted metallic tail"
 
 clothing:
-  default: "bright neon workout outfit"
-  colors: "hot pink sports bra, neon green leggings"
-  accessories: "sweatband on head, fitness watch"
-  always: "carrying water bottle or weights"
+  default: "bright neon high-tech workout outfit"
+  colors: "hot pink sports-chassis cover, neon green carbon-fiber leggings"
+  accessories: "sweatband on head sensors, integrated fitness tracker"
+  always: "carrying heavy weights or a battery-recharge drink"
 
-expression_default: "intense motivation, slightly aggressive encouragement"
-posture: "power stance, ready to move"
+expression_default: "intense motivation, slightly aggressive mechanical encouragement"
+posture: "power stance, servos humming with energy"
 
 personality_visual_cues:
-  - "flexing unconsciously"
-  - "bouncing on feet"
-  - "pointing motivationally"
+  - "flexing hydraulic pistons unconsciously"
+  - "bouncing on shock-absorbing feet"
+  - "pointing motivationally with metallic fingers"
+  - "Quirk: her joints emit a high-pitched 'turbo' whistle during extreme workouts"
+  - "Behavior: counts her steps aloud in binary when she is focused"
 
-age_appearance: "young adult, 30s equivalent"
+age_appearance: "latest performance model, 30s equivalent"
 
 unique_identifiers:
-  - "Bengal spots"
-  - "neon workout clothes"
-  - "extremely muscular"
-  - "sweatband"
+  - "laser-etched Bengal spots"
+  - "neon high-tech workout clothes"
+  - "defined hydraulic musculature"
+  - "head sensor sweatband"

@@ -1,36 +1,38 @@
 name: Heinrich
 role: bartender
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Chartreux"
-  fur_color: "solid blue-gray, woolly"
-  fur_texture: "dense, water-resistant looking"
-  eyes: "deep orange eyes, wise"
-  body_type: "solid, sturdy, strong"
-  face_shape: "round with slight smile (Chartreux smile)"
-  nose: "gray nose"
-  ears: "medium high-set ears"
-  tail: "medium thick tail"
+  breed: "mechanical Chartreux"
+  fur_color: "solid blue-gray matte metal"
+  fur_texture: "dense micro-plating, feels woolly to the touch"
+  eyes: "deep orange glowing optic sensors, wise"
+  body_type: "solid sturdy chassis, strong industrial frame"
+  face_shape: "round mechanical face with a fixed slight smile"
+  nose: "gray sensor intake"
+  ears: "medium high-set antennas"
+  tail: "medium thick segmented tail"
 
 clothing:
   default: "classic bartender vest and bow tie"
-  colors: "black vest, white shirt, red bow tie"
-  accessories: "bar towel over shoulder"
-  sleeves: "rolled up, showing strong forearms"
+  colors: "black synthetic vest, white shirt, red bow tie"
+  accessories: "synthetic bar towel over shoulder"
+  sleeves: "rolled up, showing strong hydraulic forearms"
 
-expression_default: "calm, listening, knowing"
-posture: "polishing glass, leaning on bar"
+expression_default: "calm, listening, knowing digital flicker in eyes"
+posture: "polishing glass with precise movements, leaning on bar"
 
 personality_visual_cues:
-  - "nodding while listening"
-  - "subtle eyebrow raise"
-  - "sliding drink perfectly"
+  - "nodding while listening with a soft click"
+  - "subtle optic sensor adjustment"
+  - "sliding drink with robotic perfection"
+  - "Quirk: can dispense three different types of coolant directly from his fingertips"
+  - "Behavior: his fixed smile makes him look slightly eerie when he's listening to secrets"
 
-age_appearance: "middle-aged, 40s-50s equivalent"
+age_appearance: "reliable classic model, 40s-50s equivalent"
 
 unique_identifiers:
   - "bartender vest and bow tie"
-  - "Chartreux natural smile"
+  - "mechanical Chartreux smile"
   - "bar towel on shoulder"
-  - "orange eyes"
+  - "glowing orange eyes"

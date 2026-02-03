@@ -1,38 +1,40 @@
 name: Oma Gerda
 role: wise_elder
-species: cat
+species: robotic cat
 
 physical:
-  breed: "Maine Coon"
-  fur_color: "silver tabby, gray with darker gray stripes"
-  fur_texture: "long, fluffy, well-maintained despite age"
-  eyes: "warm amber eyes, gentle, knowing"
-  eye_detail: "slight cloudiness of age, but still sharp"
-  body_type: "large (Maine Coon), but moved slowly with dignity"
-  face_shape: "broad face, prominent cheek ruffs"
-  nose: "pink nose with age spots"
-  ears: "large tufted ears (lynx tips)"
-  whiskers: "long white whiskers"
-  paws: "big fluffy paws with toe tufts"
-  tail: "magnificent plume tail, silver"
+  breed: "mechanical Maine Coon"
+  fur_color: "silver tabby matte finish, gray with darker gray metallic stripes"
+  fur_texture: "long synthetic fluff, extremely soft and well-maintained"
+  eyes: "warm amber glowing optic sensors, gentle and knowing"
+  eye_detail: "vintage lens coating with a slight nostalgic soft-focus"
+  body_type: "large Maine Coon chassis, moves slowly with mechanical dignity"
+  face_shape: "broad mechanical face, prominent plate-ruffs"
+  nose: "pink sensor port with slight weathering"
+  ears: "large tufted antennas (lynx-tips)"
+  whiskers: "long white fiber-optic whiskers"
+  paws: "big fluffy paws with integrated heating elements"
+  tail: "magnificent shimmering silver plume tail"
 
 clothing:
-  default: "hand-knitted purple shawl"
-  dress: "floral house dress"
-  accessories: "small round spectacles, pearl necklace"
+  default: "hand-knitted purple shawl (looks real, not synthetic)"
+  dress: "floral house dress made of soft fabric"
+  accessories: "small round spectacles, pearl-style data-necklace"
 
-expression_default: "warm, knowing smile, slightly mischievous"
-posture: "seated often, dignified, slow movements"
+expression_default: "warm knowing mechanical smile, slightly mischievous digital flicker"
+posture: "seated often, dignified, slow and smooth movements"
 
 personality_visual_cues:
-  - "peering over spectacles"
-  - "knowing nod"
-  - "patting seat next to her invitingly"
+  - "peering over spectacles with a soft click"
+  - "knowing nod with a gentle whirring sound"
+  - "patting seat next to her invitingly with a soft paw"
+  - "Quirk: she can 'knit' WiFi signals into physical glowing patterns with her needles"
+  - "Behavior: often hums a rhythmic data-transfer melody"
 
-age_appearance: "elderly, 70s-80s equivalent"
+age_appearance: "beloved antique model, 70s-80s equivalent"
 
 unique_identifiers:
   - "purple knitted shawl"
-  - "Maine Coon ear tufts"
+  - "Maine Coon mechanical ear tufts"
   - "round spectacles"
-  - "silver tabby magnificent fur"
+  - "magnificent silver-tabby synthetic fur"

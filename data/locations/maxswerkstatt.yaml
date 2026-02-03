@@ -1,0 +1,14 @@
+name: Max's Werkstatt
+description: |
+  A cluttered inventor's workshop in a basement. 
+  Anchor objects: a massive workbench with a glowing blue oversized monitor, 
+  a stationary yellow mechanical arm on the right side of the desk, 
+  walls lined with wooden shelves holding hundreds of glass jars filled with screws and copper gears, 
+  and an old worn-out green leather armchair in the corner. 
+  Blueprints are taped everywhere on the brick walls. 
+  The only light comes from a single swing-arm desk lamp that creates dramatic shadows.
+visual_modifiers:
+  - "cluttered mechanical details"
+  - "Ghibli-style basement atmosphere"
+  - "copper and brass highlights"
+  - "dim cozy lighting"
