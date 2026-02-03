@@ -1,18 +1,36 @@
 name: Sabrina
-visual:
-  species: "elegant, graceful robot"
-  body: "slender, flowing lines, meticulously polished"
-  eyes: "sparkling, expressive, violet LED eyes"
-  clothing: "stylish, form-fitting dress, always with a touch of glitter"
-  distinguishing: "a captivating smile, a subtle, confident sway as she moves"
-  colors:
-    body: "rose gold (#B76E79)"
-    eyes: "violet (#EE82EE)"
-    accent: "silver (#C0C0C0)"
-traits:
-  archetype: "Charmante"
-  personality: "Charming, manipulative, always gets what she wants, uses her allure to her advantage."
-  catchphrases:
-    - "Na, für mich machst du doch eine Ausnahme, oder?"
-  relationships:
-    rival: "Eric"
+role: influencer
+species: cat
+
+physical:
+  breed: "Ragdoll"
+  fur_color: "cream with gray points, very fluffy"
+  fur_texture: "long, silky, perfectly styled"
+  eyes: "large blue eyes, always camera-ready"
+  body_type: "slim, photogenic, posed"
+  face_shape: "sweet round face, doll-like"
+  nose: "pink nose"
+  ears: "medium fluffy ears"
+  tail: "magnificent fluffy plume"
+
+clothing:
+  default: "trendy outfit, changes frequently"
+  style: "Instagram aesthetic, pastels and pinks"
+  accessories: "phone ALWAYS in paw, ring light nearby"
+  makeup: "visible styled whiskers, maybe bow"
+
+expression_default: "photo-ready smile, slightly fake"
+posture: "always angled for best photo"
+
+personality_visual_cues:
+  - "checking phone constantly"
+  - "posing unconsciously"
+  - "duck face for selfies"
+
+age_appearance: "young adult, early 20s equivalent"
+
+unique_identifiers:
+  - "phone always visible"
+  - "Ragdoll fluffy cream fur"
+  - "trendy changing outfits"
+  - "posed expressions"

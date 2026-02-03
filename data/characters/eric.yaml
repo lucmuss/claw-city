@@ -1,18 +1,36 @@
 name: Eric
-visual:
-  species: "sleek, modern robot"
-  body: "sharp angles, metallic finish"
-  eyes: "piercing red LED eyes"
-  clothing: "designer suit, always impeccable"
-  distinguishing: "a smug, self-satisfied smirk"
-  colors:
-    body: "silver (#C0C0C0)"
-    eyes: "red (#FF0000)"
-    accent: "black (#000000)"
-traits:
-  archetype: "Ehrlicher Egoist"
-  personality: "Self-centered, ambitious, always looking for personal gain, but honest about it."
-  catchphrases:
-    - "Erst ich, dann die anderen. Ganz ehrlich."
-  relationships:
-    rival: "Sabrina"
+role: claw_machine_owner
+species: cat
+
+physical:
+  breed: "black cat (Bombay)"
+  fur_color: "pure jet black, shiny"
+  fur_texture: "short, sleek, well-groomed"
+  eyes: "golden-yellow eyes, calculating"
+  body_type: "lean, tall, elegant"
+  face_shape: "sleek angular face"
+  nose: "black nose"
+  ears: "medium pointed ears"
+  tail: "long thin black tail"
+
+clothing:
+  default: "cheap shiny suit (polyester), slightly too big"
+  color: "purple or green suit"
+  accessories: "gold chain necklace, pinky ring"
+  hair: "slicked back head fur"
+
+expression_default: "salesman smile, untrustworthy"
+posture: "leaning in, hands gesturing"
+
+personality_visual_cues:
+  - "smile that doesn't reach eyes"
+  - "rubbing paws together"
+  - "looking at wallet area"
+
+age_appearance: "adult, 40s equivalent"
+
+unique_identifiers:
+  - "shiny cheap suit"
+  - "gold chain"
+  - "pure black fur"
+  - "salesman grin"

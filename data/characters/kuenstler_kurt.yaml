@@ -1,18 +1,36 @@
 name: Künstler Kurt
-visual:
-  species: "eccentric, artistic robot"
-  body: "asymmetrical, patchwork design, splattered with colorful paint"
-  eyes: "dreamy, intense, swirling rainbow LED eyes"
-  clothing: "paint-splattered overalls, beret, silk scarf"
-  distinguishing: "a melancholic yet passionate expression, often holding a paintbrush or chisel"
-  colors:
-    body: "mixed (various muted tones)"
-    eyes: "rainbow gradient"
-    accent: "gold (#FFD700)"
-traits:
-  archetype: "Unverstandener"
-  personality: "Passionate, sensitive, sees beauty everywhere, but struggles to connect with others who don't 'get' his art."
-  catchphrases:
-    - "Es ist mehr als nur Farbe, es ist ein Gefühl!"
-  relationships:
-    muse: "Sabrina (unrequited admiration)"
+role: artist
+species: cat
+
+physical:
+  breed: "Turkish Van"
+  fur_color: "white with orange patches on head and tail"
+  fur_texture: "semi-long, often has paint in it"
+  eyes: "odd-eyed (one blue, one amber)"
+  body_type: "lanky, graceful, expressive"
+  face_shape: "long face, dreamy expression"
+  nose: "pink nose, often paint smudge"
+  ears: "medium feathered ears"
+  tail: "fluffy orange-tipped tail"
+
+clothing:
+  default: "paint-splattered smock"
+  underneath: "striped French artist shirt"
+  accessories: "beret, paintbrush behind ear"
+  always: "paint somewhere on fur"
+
+expression_default: "dreamy, inspired, slightly pretentious"
+posture: "dramatic gestures, hand on chin thinking"
+
+personality_visual_cues:
+  - "squinting at things like art"
+  - "framing scenes with paws"
+  - "dramatic sighing"
+
+age_appearance: "adult, 30s-40s equivalent"
+
+unique_identifiers:
+  - "odd eyes (heterochromia)"
+  - "beret"
+  - "paint-splattered"
+  - "Turkish Van orange patches"

@@ -1,7 +1,38 @@
 name: Gina
-visual:
-  species: "sleek gray cat"
-  fur: "silver-gray short fur"
-  eyes: "bright blue eyes"
-  body: "slim athletic build"
-  clothing: "pink collar with small bell"
+role: best_friend
+species: cat
+
+physical:
+  breed: "Russian Blue mix"
+  fur_color: "sleek silver-gray, uniform color"
+  fur_texture: "short, perfectly groomed, shiny"
+  eyes: "large almond-shaped bright blue eyes"
+  eye_detail: "alert, sparkling, always focused"
+  body_type: "slim, athletic, graceful"
+  face_shape: "elegant angular face, defined cheekbones"
+  nose: "small gray nose"
+  ears: "tall pointed ears, always perked up"
+  whiskers: "thin white whiskers, neat"
+  paws: "gray with gray paw pads"
+  tail: "long elegant gray tail"
+
+clothing:
+  default: "pink collar with small silver bell"
+  style: "minimalist, sometimes small earrings"
+  outside: "stylish jacket or scarf"
+
+expression_default: "confident, slightly smug, energetic"
+posture: "upright, alert, ready to move"
+
+personality_visual_cues:
+  - "wide eyes when excited"
+  - "tail swishing when planning something"
+  - "smirk when she has an idea"
+
+age_appearance: "young adult cat, late 20s equivalent"
+
+unique_identifiers:
+  - "pink collar with bell"
+  - "silver-gray sleek fur"
+  - "bright blue eyes"
+  - "athletic slim build"

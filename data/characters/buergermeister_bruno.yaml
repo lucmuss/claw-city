@@ -1,18 +1,35 @@
 name: Bürgermeister Bruno
-visual:
-  species: "flustered, bureaucratic robot"
-  body: "slightly plump, perpetually disheveled chassis"
-  eyes: "wide, perpetually stressed, yellow LED eyes"
-  clothing: "ill-fitting suit, loosened tie, crumpled sash of office"
-  distinguishing: "a constant bead of (simulated) sweat, often holding a stack of papers"
-  colors:
-    body: "light grey (#D3D3D3)"
-    eyes: "yellow (#FFFF00)"
-    accent: "navy blue (#000080)"
-traits:
-  archetype: "Überforderter"
-  personality: "Well-meaning but easily overwhelmed, prone to panic, tries his best to manage the town but constantly fails."
-  catchphrases:
-    - "Oh je, das ist aber eine Katastrophe!"
-  relationships:
-    staff: "Sabrina (assistant, who secretly runs the town)"
+role: mayor
+species: cat
+
+physical:
+  breed: "British Shorthair"
+  fur_color: "solid blue-gray"
+  fur_texture: "dense, plush, round appearance"
+  eyes: "large round copper-orange eyes"
+  body_type: "rotund, well-fed, pompous"
+  face_shape: "very round face, chubby cheeks"
+  nose: "gray nose"
+  ears: "small rounded ears"
+  tail: "thick medium tail"
+
+clothing:
+  default: "formal suit with mayoral sash"
+  color: "navy blue suit, red-white-gold sash"
+  accessories: "golden mayor medal, pocket watch"
+
+expression_default: "pompous, self-important, fake friendly"
+posture: "puffed up chest, chin raised"
+
+personality_visual_cues:
+  - "adjusting sash importantly"
+  - "waving like royalty"
+  - "looking down nose at others"
+
+age_appearance: "middle-aged, 50s equivalent"
+
+unique_identifiers:
+  - "mayoral sash"
+  - "round British Shorthair shape"
+  - "copper eyes"
+  - "pompous expression"

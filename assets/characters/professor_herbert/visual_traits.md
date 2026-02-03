@@ -1,22 +1,35 @@
-# Visuelle Merkmale - [CHARAKTERNAME]
+# Visual Traits - Professor Herbert
 
-## Farbschema
-- **Körper**: [Farbe] (#HEXCODE)
-- **Augen**: [Farbe] (#HEXCODE)
-- **Akzent**: [Farbe] (#HEXCODE)
+## Physical Description
+- **Species:** Cat (Siamese)
+- **Breed Details:** Short fur, slightly disheveled.
+- **Fur Color:** Cream body with dark brown points (face, ears, paws, tail). Dark Siamese mask.
+- **Eyes:** Intense ice-blue eyes, wide, manic. Paranoid look.
+- **Body Type:** Thin, wiry, nervous energy.
+- **Face:** Angular Siamese face.
+- **Nose:** Dark brown nose.
+- **Ears:** Large pointed dark ears.
+- **Whiskers:** Long, bent at odd angles.
+- **Paws:** Dark brown paws.
+- **Tail:** Long thin dark-tipped tail, always twitching.
 
-## Aussehen
-- [TODO: Beschreibe Aussehen]
+## Clothing & Accessories
+- **Default:** Wrinkled lab coat covered in sticky notes.
+- **Underneath:** Old turtleneck sweater.
+- **Accessories:** Multiple pens in pocket, magnifying glass.
+- **Head:** Sometimes tin foil hat (for "protection").
 
-## Kleidung
-- [TODO: Beschreibe Kleidung]
+## Expressions & Posture
+- **Default Expression:** Wide-eyed, paranoid, excited about theories.
+- **Posture:** Leaning forward, invading personal space.
+- **Visual Cues:** Eyes darting around, fur standing up when excited, gesturing wildly.
 
-## Accessoires
-- [TODO: Liste Accessoires]
+## Unique Identifiers
+- Lab coat with sticky notes.
+- Siamese dark face mask.
+- Manic ice-blue eyes.
+- Tin foil hat (sometimes).
 
-## Prompt-Template (Midjourney/DALL-E)
-\`\`\`
-[TODO: Füge Prompt-Template hier ein]
-Simpsons art style, warm pastel colors, cartoon style
---style cartoon --ar 1:1
-\`\`\`
+## Technical Prompts (Flux)
+- **Core Prompt:** A wiry Siamese cat with manic ice-blue eyes, wearing a wrinkled lab coat covered in sticky notes. Dark brown face mask, nervous expression, sometimes wearing a tin foil hat.
+- **Style:** Simpsons/Futurama cartoon style, vibrant colors, clean lines.

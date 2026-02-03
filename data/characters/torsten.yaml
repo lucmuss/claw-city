@@ -1,18 +1,36 @@
 name: Torsten
-visual:
-  species: "agile, compact robot"
-  body: "streamlined, designed for speed and efficiency"
-  eyes: "bright, alert, white LED eyes"
-  clothing: "uniform postal carrier outfit, comfortable shoes"
-  distinguishing: "a friendly, always-on-the-move expression, often carrying a mail bag"
-  colors:
-    body: "orange (#FF7F00)"
-    eyes: "white (#FFFFFF)"
-    accent: "dark blue (#00008B)"
-traits:
-  archetype: "Postbote"
-  personality: "Efficient, friendly, always on time, knows everyone's secrets from delivering mail."
-  catchphrases:
-    - "Ihre Sendung, bitte unterschreiben!"
-  relationships:
-    fishing_buddy: "Berthold"
+role: police_officer
+species: cat
+
+physical:
+  breed: "German Rex"
+  fur_color: "brown tabby, wavy fur"
+  fur_texture: "short curly/wavy (Rex trait)"
+  eyes: "serious gray eyes"
+  body_type: "fit, regulation build"
+  face_shape: "square serious face"
+  nose: "brown nose"
+  ears: "large slightly wavy ears"
+  tail: "curly-furred tail"
+
+clothing:
+  default: "police uniform"
+  colors: "dark blue uniform, silver badge"
+  accessories: "police hat, utility belt"
+  detail: "everything regulation perfect"
+
+expression_default: "serious, by-the-book, slightly confused"
+posture: "straight, official stance"
+
+personality_visual_cues:
+  - "writing in notebook"
+  - "looking suspicious at everything"
+  - "hand on utility belt"
+
+age_appearance: "adult, 30s-40s equivalent"
+
+unique_identifiers:
+  - "wavy Rex fur (unusual)"
+  - "police uniform and hat"
+  - "serious expression"
+  - "always has notebook"

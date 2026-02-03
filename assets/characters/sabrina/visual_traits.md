@@ -1,22 +1,32 @@
-# Visuelle Merkmale - [CHARAKTERNAME]
+# Visual Traits - Sabrina
 
-## Farbschema
-- **Körper**: [Farbe] (#HEXCODE)
-- **Augen**: [Farbe] (#HEXCODE)
-- **Akzent**: [Farbe] (#HEXCODE)
+## Physical Description
+- **Species:** Cat (Ragdoll)
+- **Breed Details:** Long, silky, perfectly styled fur. Magnificent fluffy plume tail.
+- **Fur Color:** Cream with gray points.
+- **Eyes:** Large blue eyes, always camera-ready.
+- **Body Type:** Slim, photogenic, posed.
+- **Face:** Sweet round face, doll-like.
+- **Nose:** Pink nose.
+- **Ears:** Medium fluffy ears.
 
-## Aussehen
-- [TODO: Beschreibe Aussehen]
+## Clothing & Accessories
+- **Default:** Trendy outfit, changes frequently.
+- **Style:** Instagram aesthetic, pastels and pinks.
+- **Accessories:** Phone ALWAYS in paw, ring light nearby.
+- **Makeup:** Visible styled whiskers, sometimes a bow.
 
-## Kleidung
-- [TODO: Beschreibe Kleidung]
+## Expressions & Posture
+- **Default Expression:** Photo-ready smile, slightly fake.
+- **Posture:** Always angled for the best photo.
+- **Visual Cues:** Checking phone constantly, posing unconsciously, duck face for selfies.
 
-## Accessoires
-- [TODO: Liste Accessoires]
+## Unique Identifiers
+- Phone always visible.
+- Ragdoll fluffy cream fur.
+- Trendy changing outfits.
+- Posed expressions.
 
-## Prompt-Template (Midjourney/DALL-E)
-\`\`\`
-[TODO: Füge Prompt-Template hier ein]
-Simpsons art style, warm pastel colors, cartoon style
---style cartoon --ar 1:1
-\`\`\`
+## Technical Prompts (Flux)
+- **Core Prompt:** A glamorous fluffy cream and gray Ragdoll cat with large blue eyes, wearing a trendy pastel outfit and holding a smartphone. Posed for a selfie, perfect fur.
+- **Style:** Simpsons/Futurama cartoon style, vibrant colors, clean lines.

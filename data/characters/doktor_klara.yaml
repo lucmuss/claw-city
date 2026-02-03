@@ -1,18 +1,36 @@
 name: Doktor Klara
-visual:
-  species: "clinical, precise robot"
-  body: "clean, white chassis, articulate limbs"
-  eyes: "focused, diagnostic, bright blue LED eyes"
-  clothing: "crisp white lab coat, ID badge, stethoscope"
-  distinguishing: "a calm, professional demeanor, always carrying a medical scanner"
-  colors:
-    body: "white (#FFFFFF)"
-    eyes: "sky blue (#87CEEB)"
-    accent: "silver (#C0C0C0)"
-traits:
-  archetype: "Ärztin"
-  personality: "Dedicated, intelligent, empathetic, but sometimes struggles with the emotional side of her patients."
-  catchphrases:
-    - "Nach meinen Berechnungen..."
-  relationships:
-    colleague: "Professor Herbert"
+role: doctor
+species: cat
+
+physical:
+  breed: "Abyssinian"
+  fur_color: "warm ruddy brown with ticking"
+  fur_texture: "short, fine, warm colored"
+  eyes: "alert green eyes, intelligent"
+  body_type: "lithe, elegant, precise movements"
+  face_shape: "wedge-shaped face, alert expression"
+  nose: "brick red nose"
+  ears: "large alert ears"
+  tail: "long tapered tail"
+
+clothing:
+  default: "clean white doctor coat"
+  underneath: "professional blouse"
+  accessories: "stethoscope around neck, small glasses"
+  detail: "coat always spotless"
+
+expression_default: "professional, caring, slightly worried"
+posture: "attentive, leaning to listen"
+
+personality_visual_cues:
+  - "adjusting glasses"
+  - "taking notes"
+  - "concerned head tilt"
+
+age_appearance: "adult, 40s equivalent"
+
+unique_identifiers:
+  - "white doctor coat"
+  - "Abyssinian ticked fur"
+  - "stethoscope"
+  - "professional demeanor"

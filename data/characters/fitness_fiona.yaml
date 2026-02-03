@@ -1,18 +1,36 @@
-name: Fitness-Fiona
-visual:
-  species: "athletic, energetic robot"
-  body: "sleek, muscular build, agile joints"
-  eyes: "bright, focused, vibrant green LED eyes"
-  clothing: "form-fitting workout gear, sweatband, shiny chrome finish"
-  distinguishing: "a determined, enthusiastic smile, often in a dynamic pose"
-  colors:
-    body: "chrome silver (#C0C0C0)"
-    eyes: "lime green (#32CD32)"
-    accent: "electric blue (#00BFFF)"
-traits:
-  archetype: "Motivierte"
-  personality: "Enthusiastic, disciplined, always striving for self-improvement, encourages others (sometimes too much)."
-  catchphrases:
-    - "Keine Ausreden, los geht's!"
-  relationships:
-    workout_partner: "Gina"
+name: Fitness Fiona
+role: fitness_instructor
+species: cat
+
+physical:
+  breed: "Bengal"
+  fur_color: "golden with black rosette spots"
+  fur_texture: "short, glittery sheen (Bengal glitter)"
+  eyes: "intense green eyes, focused"
+  body_type: "extremely athletic, muscular, defined"
+  face_shape: "wild look, strong jaw"
+  nose: "brick colored nose"
+  ears: "small rounded ears"
+  tail: "thick spotted tail"
+
+clothing:
+  default: "bright neon workout outfit"
+  colors: "hot pink sports bra, neon green leggings"
+  accessories: "sweatband on head, fitness watch"
+  always: "carrying water bottle or weights"
+
+expression_default: "intense motivation, slightly aggressive encouragement"
+posture: "power stance, ready to move"
+
+personality_visual_cues:
+  - "flexing unconsciously"
+  - "bouncing on feet"
+  - "pointing motivationally"
+
+age_appearance: "young adult, 30s equivalent"
+
+unique_identifiers:
+  - "Bengal spots"
+  - "neon workout clothes"
+  - "extremely muscular"
+  - "sweatband"

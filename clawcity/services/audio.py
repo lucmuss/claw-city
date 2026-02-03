@@ -53,13 +53,14 @@ EDGE_VOICE_MAP: Dict[str, str] = {
 class AudioService:
     """Service for generating audio from text"""
     
-    def __init__(self):
+    def __init__(self, provider: Optional[str] = None):
         self.config = get_config()
+        self.provider = provider or self.config.tts.provider
         self._openai_client: Optional[OpenAI] = None
         
-        if self.config.tts.provider == "openai" and not HAS_OPENAI:
+        if self.provider == "openai" and not HAS_OPENAI:
             raise ConfigurationError("OpenAI package not installed. Install with: pip install openai")
-        if self.config.tts.provider == "edge" and not HAS_EDGE_TTS:
+        if self.provider == "edge" and not HAS_EDGE_TTS:
             raise ConfigurationError("edge-tts package not installed. Install with: pip install edge-tts")
     
     @property
@@ -73,7 +74,7 @@ class AudioService:
     
     def get_voice(self, character: str) -> str:
         """Get voice for character"""
-        if self.config.tts.provider == "openai":
+        if self.provider == "openai":
             return VOICE_MAP.get(character.lower(), "alloy")
         else:
             # Edge TTS - simple gender-based mapping
@@ -98,7 +99,7 @@ class AudioService:
             )
         
         try:
-            if self.config.tts.provider == "openai":
+            if self.provider == "openai":
                 await self._generate_openai(text, character, output_path)
             else:
                 await self._generate_edge(text, character, output_path)
@@ -138,7 +139,7 @@ class AudioService:
         context: PipelineContext,
         engine: str = "openai"
     ) -> PipelineResult:
-        """Generate audio for all lines in a scene"""
+        """Generate audio for all lines in a scene and combine them"""
         audio_dir = context.get_audio_dir(scene.id, engine)
         audio_dir.mkdir(parents=True, exist_ok=True)
         
@@ -159,6 +160,12 @@ class AudioService:
                 generated += 1
             else:
                 failed += 1
+        
+        # Combine scene audio immediately after generation
+        if failed == 0 and generated > 0:
+            from clawcity.services.video import get_video_service
+            video_service = get_video_service()
+            video_service.combine_scene_audio(audio_dir)
         
         return PipelineResult(
             success=failed == 0,

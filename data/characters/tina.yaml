@@ -1,18 +1,36 @@
 name: Tina
-visual:
-  species: "robust, no-nonsense robot"
-  body: "strong, utilitarian build, slightly grimy"
-  eyes: "piercing, observant, orange LED eyes"
-  clothing: "bright orange safety vest over sturdy overalls, work gloves"
-  distinguishing: "a tough, determined expression, often with a smudge of grease on her face"
-  colors:
-    body: "dark grey (#36454F)"
-    eyes: "orange (#FF4500)"
-    accent: "reflective silver (#C0C0C0)"
-traits:
-  archetype: "Müllfrau"
-  personality: "Hard-working, practical, no-nonsense, secretly a soft spot for animals."
-  catchphrases:
-    - "Hier kommt der Müll weg!"
-  relationships:
-    colleague: "Heinrich"
+role: waitress
+species: cat
+
+physical:
+  breed: "Calico"
+  fur_color: "white, orange, and black patches"
+  fur_texture: "short, practical"
+  eyes: "tired but kind hazel eyes"
+  body_type: "average, hardworking build"
+  face_shape: "friendly approachable face"
+  nose: "half pink half black nose"
+  ears: "medium ears, one orange one black"
+  tail: "multicolored calico tail"
+
+clothing:
+  default: "diner waitress uniform"
+  colors: "pink uniform dress, white apron"
+  accessories: "notepad in apron, pen behind ear"
+  shoes: "comfortable worn shoes"
+
+expression_default: "tired but friendly, seen-it-all look"
+posture: "slightly slouched, always carrying something"
+
+personality_visual_cues:
+  - "blowing fur out of face"
+  - "balancing multiple plates"
+  - "knowing eye-roll"
+
+age_appearance: "adult, 30s equivalent"
+
+unique_identifiers:
+  - "calico three-color pattern"
+  - "pink diner uniform"
+  - "notepad and pen"
+  - "tired friendly face"

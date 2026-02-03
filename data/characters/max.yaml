@@ -1,9 +1,38 @@
 name: Max
-visual:
-  species: "orange tabby cat"
-  fur: "bright orange with dark orange stripes"
-  eyes: "large round green eyes with visible pupils"
-  body: "slightly overweight, soft belly"
-  face: "round face, small pink nose, long whiskers"
-  clothing: "faded black band t-shirt, always same shirt"
-  distinguishing: "small notch in left ear, lazy expression"
+role: protagonist
+species: cat
+
+physical:
+  breed: "orange tabby cat (europäisch kurzhaar)"
+  fur_color: "bright orange with darker orange tiger stripes"
+  fur_texture: "short, slightly unkempt, some tufts sticking up"
+  eyes: "large round green eyes, slightly droopy, tired look"
+  eye_detail: "visible pupils, slight bags under eyes"
+  body_type: "medium height, slightly overweight, soft belly"
+  face_shape: "round face, chubby cheeks"
+  nose: "small pink triangle nose"
+  ears: "rounded ears, small notch in left ear (old injury)"
+  whiskers: "long white whiskers, slightly bent"
+  paws: "orange with pink paw pads"
+  tail: "fluffy orange tail with darker rings"
+
+clothing:
+  default: "faded black vintage band t-shirt (always same shirt)"
+  pants: "no pants (cat style) or gray sweatpants when outside"
+  accessories: "none"
+
+expression_default: "lazy, skeptical, slightly annoyed but lovable"
+posture: "slouched, relaxed, low energy"
+
+personality_visual_cues:
+  - "half-closed eyes (sleepy/unimpressed look)"
+  - "one eyebrow often raised"
+  - "mouth slightly open when confused"
+
+age_appearance: "young adult cat, late 20s equivalent"
+
+unique_identifiers:
+  - "notch in left ear"
+  - "always same black t-shirt"
+  - "orange tabby stripes pattern"
+  - "chubby soft belly"

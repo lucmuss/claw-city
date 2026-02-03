@@ -1,22 +1,32 @@
-# Visuelle Merkmale - [CHARAKTERNAME]
+# Visual Traits - Gina
 
-## Farbschema
-- **Körper**: [Farbe] (#HEXCODE)
-- **Augen**: [Farbe] (#HEXCODE)
-- **Akzent**: [Farbe] (#HEXCODE)
+## Physical Description
+- **Species:** Cat (Russian Blue mix)
+- **Breed Details:** Short, perfectly groomed, shiny fur.
+- **Fur Color:** Sleek silver-gray, uniform color.
+- **Eyes:** Large almond-shaped bright blue eyes. Alert, sparkling, always focused.
+- **Body Type:** Slim, athletic, graceful.
+- **Face:** Elegant angular face, defined cheekbones, small gray nose.
+- **Ears:** Tall pointed ears, always perked up.
+- **Whiskers:** Thin white whiskers, neat.
+- **Paws:** Gray with gray paw pads.
+- **Tail:** Long elegant gray tail.
 
-## Aussehen
-- [TODO: Beschreibe Aussehen]
+## Clothing & Accessories
+- **Default:** Pink collar with small silver bell.
+- **Style:** Minimalist, sometimes small earrings. Stylish jacket or scarf when outside.
 
-## Kleidung
-- [TODO: Beschreibe Kleidung]
+## Expressions & Posture
+- **Default Expression:** Confident, slightly smug, energetic.
+- **Posture:** Upright, alert, ready to move.
+- **Visual Cues:** Wide eyes when excited, tail swishing when planning, smirk for new ideas.
 
-## Accessoires
-- [TODO: Liste Accessoires]
+## Unique Identifiers
+- Pink collar with bell.
+- Silver-gray sleek fur.
+- Bright blue eyes.
+- Athletic slim build.
 
-## Prompt-Template (Midjourney/DALL-E)
-\`\`\`
-[TODO: Füge Prompt-Template hier ein]
-Simpsons art style, warm pastel colors, cartoon style
---style cartoon --ar 1:1
-\`\`\`
+## Technical Prompts (Flux)
+- **Core Prompt:** A sleek silver-gray cat with bright blue eyes, wearing a pink collar with a small silver bell. Athletic and graceful build, alert expression.
+- **Style:** Simpsons/Futurama cartoon style, vibrant colors, clean lines.

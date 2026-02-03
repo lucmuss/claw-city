@@ -1,20 +1,36 @@
 name: Heinrich
-visual:
-  species: "dependable, slightly worn robot"
-  body: "solid, rectangular build, a few dents"
-  eyes: "warm, reassuring, amber LED eyes"
-  clothing: "flannel shirt, jeans, sturdy work boots"
-  distinguishing: "a kind, tired smile, often with children's drawings taped to his chassis"
-  colors:
-    body: "forest green (#228B22)"
-    eyes: "amber (#FFBF00)"
-    accent: "brown (#A52A2A)"
-traits:
-  archetype: "Familienvater"
-  personality: "Caring, responsible, a bit overwhelmed but always tries his best, loves his family."
-  catchphrases:
-    - "Na, wer hat denn das gemacht?"
-  relationships:
-    colleague: "Tina"
-    family:
-      child: "Sophie (8), Max (5)"
+role: bartender
+species: cat
+
+physical:
+  breed: "Chartreux"
+  fur_color: "solid blue-gray, woolly"
+  fur_texture: "dense, water-resistant looking"
+  eyes: "deep orange eyes, wise"
+  body_type: "solid, sturdy, strong"
+  face_shape: "round with slight smile (Chartreux smile)"
+  nose: "gray nose"
+  ears: "medium high-set ears"
+  tail: "medium thick tail"
+
+clothing:
+  default: "classic bartender vest and bow tie"
+  colors: "black vest, white shirt, red bow tie"
+  accessories: "bar towel over shoulder"
+  sleeves: "rolled up, showing strong forearms"
+
+expression_default: "calm, listening, knowing"
+posture: "polishing glass, leaning on bar"
+
+personality_visual_cues:
+  - "nodding while listening"
+  - "subtle eyebrow raise"
+  - "sliding drink perfectly"
+
+age_appearance: "middle-aged, 40s-50s equivalent"
+
+unique_identifiers:
+  - "bartender vest and bow tie"
+  - "Chartreux natural smile"
+  - "bar towel on shoulder"
+  - "orange eyes"

@@ -1,22 +1,31 @@
-# Visuelle Merkmale - [CHARAKTERNAME]
+# Visual Traits - Doktor Klara
 
-## Farbschema
-- **Körper**: [Farbe] (#HEXCODE)
-- **Augen**: [Farbe] (#HEXCODE)
-- **Akzent**: [Farbe] (#HEXCODE)
+## Physical Description
+- **Species:** Cat (Abyssinian)
+- **Breed Details:** Short, fine, warm colored ticked fur.
+- **Fur Color:** Warm ruddy brown with ticking.
+- **Eyes:** Alert green eyes, intelligent.
+- **Body Type:** Lithe, elegant, precise movements.
+- **Face:** Wedge-shaped face, alert expression, brick red nose.
+- **Ears:** Large alert ears.
+- **Tail:** Long tapered tail.
 
-## Aussehen
-- [TODO: Beschreibe Aussehen]
+## Clothing & Accessories
+- **Default:** Clean spotless white doctor coat.
+- **Underneath:** Professional blouse.
+- **Accessories:** Stethoscope around neck, small glasses.
 
-## Kleidung
-- [TODO: Beschreibe Kleidung]
+## Expressions & Posture
+- **Default Expression:** Professional, caring, slightly worried.
+- **Posture:** Attentive, leaning to listen.
+- **Visual Cues:** Adjusting glasses, taking notes, concerned head tilt.
 
-## Accessoires
-- [TODO: Liste Accessoires]
+## Unique Identifiers
+- White doctor coat.
+- Abyssinian ticked fur.
+- Stethoscope.
+- Professional demeanor.
 
-## Prompt-Template (Midjourney/DALL-E)
-\`\`\`
-[TODO: Füge Prompt-Template hier ein]
-Simpsons art style, warm pastel colors, cartoon style
---style cartoon --ar 1:1
-\`\`\`
+## Technical Prompts (Flux)
+- **Core Prompt:** An elegant ruddy brown Abyssinian cat with green eyes, wearing a clean white doctor coat and a stethoscope around her neck. Intelligent and professional expression.
+- **Style:** Simpsons/Futurama cartoon style, vibrant colors, clean lines.

@@ -14,114 +14,57 @@ Claw City ist eine Comedy-Show mit KI-Agenten in einer deutschen Kleinstadt.
 ```
 claw-city/
 ├── assets/
-│   ├── characters/           # Charakter-Templates (17 Charaktere)
-│   │   ├── {char_id}/
-│   │   │   ├── profile.md    # Basis-Info
-│   │   │   ├── backstory.md  # Hintergrund
-│   │   │   └── visual_traits.md  # Visuelle Beschreibung
-│   │   └── concept_art/
-│   ├── world/
-│   │   └── global_context.md # Welt-Building
-│   └── intro.mp4             # 30-Sekunden Intro
+│   ├── characters/           # Charakter-Templates (Markdown)
+│   │   └── {char_id}/
+│   │       ├── profile.md
+│   │       ├── backstory.md
+│   │       └── visual_traits.md
+│   └── world/
+│       └── global_context.md
+├── clawcity/                 # Core Python Package
+│   ├── cli/                  # CLI Implementation
+│   ├── core/                 # Config & Models
+│   ├── pipeline/             # Engine Logic
+│   └── services/             # Audio, Images, Video Services
 ├── configs/
-│   ├── characters.yaml       # Alle 17 Charaktere
+│   ├── characters.yaml       # Globale Charakter-Liste
 │   └── pipeline_settings.yaml
-├── episodes/
-│   └── season_01/
-│       ├── pilot/            # E01: Der Token-Rechner
-│       ├── e02_new_holiday/  # E02: Die 5-Millimeter-Schraube
-│       ├── e03_big_catch/    # E03: Das smarte Toaster-Experiment
-│       └── e04_helga_says_no/# E04: Der Anfängerkurs
+├── data/                     # Pipeline Daten (YAML)
+│   ├── characters/           # Strukturierte Charakter-Prompts
+│   ├── locations/            # Strukturierte Location-Prompts
+│   └── config/               # visual_style.yaml
 ├── scripts/
-│   ├── ep01_v3.yaml          # 39 Szenen (finales Format)
-│   ├── ep02_v3.yaml          # 24 Szenen
-│   ├── ep03_v3.yaml          # 27 Szenen
-│   ├── ep04_v3.yaml          # 29 Szenen
-│   └── generate.py           # Legacy Audio Generator
-├── output/                   # Aktive Outputs
-│   └── ep01/
-│       ├── audio/            # Edge TTS Audio
-│       ├── audio_openai/     # OpenAI TTS Audio (pro Szene)
-│       ├── images/           # Flux-generierte Bilder
-│       ├── video/            # Edge TTS Videos
-│       ├── video_openai/     # OpenAI TTS Videos
-│       └── EP01_FULL_OPENAI.mp4  # Komplette Episode
-├── docs/
-│   ├── production_bible.md
-│   └── opening_sequence.md
-└── clawcity                  # CLI-Tool
+│   ├── ep01_v3.yaml          # Episoden-Skripte (30-40 Szenen)
+│   ├── ep02_v3.yaml
+│   └── ...
+├── src/
+│   └── prompt_builder.py     # Zentraler Prompt Generator
+├── output/                   # Generierte Medien
+│   └── ep{XX}/
+│       ├── audio_openai/
+│       ├── images/
+│       ├── video_openai/
+│       └── EP{XX}_FULL.mp4
+└── clawcity.py               # Haupt-CLI-Einstiegspunkt
+```
 
-## Key Files
+## Key Components
+
+### Prompt Generation (`src/prompt_builder.py`)
+- Nutzt YAMLs aus `data/characters/` und `data/locations/`
+- Integriert `data/config/visual_style.yaml`
+- Erstellt konsistente Prompts für Flux (black-forest-labs/flux-schnell)
 
 ### Character Management
-- `configs/characters.yaml` - Liste aller 17 Charaktere
-- `assets/characters/{id}/profile.md` - Charakter-Details
-- `./clawcity paul` - Charakter-Info anzeigen
+- `configs/characters.yaml` - Definition der Stimmen und IDs
+- `data/characters/*.yaml` - Visuelle Details für die Bildgenerierung
+- `./clawcity list` - Zeigt alle verfügbaren Charaktere
 
-### Episode Scripts (v3 Format)
-- `scripts/ep01_v3.yaml` - 39 Szenen, ~90s Gesamt
-- `scripts/ep02_v3.yaml` - 24 Szenen
-- `scripts/ep03_v3.yaml` - 27 Szenen
-- `scripts/ep04_v3.yaml` - 29 Szenen
-- Struktur: scenes[] mit id, location, image_prompt, dialogue[]
-
-## Generation Pipeline (Aktuell) - REFACTORED V3 (Stabilisiert)
-
-Die gesamte Logik ist in das zentrale `clawcity` CLI-Tool migriert.
-
-### One-Command Pipeline (NEU)
-```bash
-# Vollständige Episode generieren
-./clawcity build --episode 1 --full
-```
-
-### Befehlsübersicht (Legacy-Skripte entfernt)
-| Befehl | Funktion |
-|--------|----------|
-| `./clawcity build -e 1 --full` | Master-Pipeline (Audio→Bilder→Video→Full) |
-| `./clawcity build -e 1 --stage audio` | Nur Audio generieren |
-| `./clawcity build -e 1 --stage images` | Nur Bilder generieren |
-| `./clawcity build -e 1 --stage video` | Nur Videos erstellen |
-| `./clawcity build -e 1 --stage full` | Videos kombinieren |
-
-### TTS Engines
-
-#### OpenAI TTS (Empfohlen)
-- **Kosten:** ~$0.002 pro Minute (~$0.08 pro Episode)
-- **Quality:** Superior (natürliche Stimmen)
-- **Voices:** alloy, echo, fable, onyx, nova, shimmer
-- **Output:** `output/ep{XX}/audio_openai/`
-
-#### Edge TTS (Kostenlos)
-- **Kosten:** $0
-- **Quality:** Gut (roboterhafter)
-- **Voices:** de-DE-ConradNeural, de-DE-KatjaNeural
-- **Output:** `output/ep{XX}/audio/`
-
-### Voice Mapping (OpenAI)
-```python
-voice_map = {
-    'max': 'fable',      # Energisch, jung
-    'gina': 'nova',      # Freundlich, klar
-    'werner': 'onyx',    # Tief, relaxed
-    'berthold': 'echo',  # Langsam, bedächtig
-    'herbert': 'alloy',  # Nervös, akademisch
-    'oma_gerda': 'shimmer',  # Alt, frech
-}
-```
-
-### Image Generation (Flux via Replicate)
-- **Modell:** black-forest-labs/flux-schnell
-- **Kosten:** $0.003 pro Bild (~$0.04 pro Episode)
-- **Speed:** 2-4 Sekunden pro Bild
-- **Rate Limit:** 6 Requests/Minute (bei <$5 Guthaben)
-- **Output:** `output/ep{XX}/images/scene_{NN}.png`
-
-### Video Creation
-- **Auflösung:** 1920x1080
-- **Format:** 11 Szenen × 8s = ~90s Episode
-- **Codec:** H.264
-- **Output:** `output/ep{XX}/video_openai/scene_{NN}.mp4`
+### Pipeline Workflow
+1. **Audio:** OpenAI TTS (fable, nova, onyx, echo, alloy, shimmer)
+2. **Images:** Flux via Replicate (nutzt Prompt Builder)
+3. **Video:** FFmpeg (kombiniert Bild + Audio pro Szene)
+4. **Full:** Mergt alle Szenen-Videos zu einer Episode
 
 ## Commands
 
@@ -129,79 +72,27 @@ voice_map = {
 # Venv aktivieren
 . venv/bin/activate
 
-# Full Pipeline (Audio → Bilder → Video → Full Episode)
-# Beachtet: clawcity.py lädt nun automatisch die .env
-python3 clawcity.py build --episode 1 --full
-
-# Einzelne Schritte (neu)
-python3 clawcity.py build -e 1 --stage audio           # Nur Audio
-python3 clawcity.py build -e 1 --stage images          # Nur Bilder
-python3 clawcity.py build -e 1 --stage video           # Nur Videos
-python3 clawcity.py build -e 1 --stage full            # Videos kombinieren
-
 # Status prüfen
 python3 clawcity.py status -e 1
 
-# Charakter-Info
-./clawcity paul
-./clawcity list
+# Full Pipeline (Audio → Bilder → Video → Full Episode)
+python3 clawcity.py build --episode 1 --full
+
+# Einzelne Stages
+python3 clawcity.py build -e 1 --stage audio
+python3 clawcity.py build -e 1 --stage images
+python3 clawcity.py build -e 1 --stage video
+python3 clawcity.py build -e 1 --stage full
 ```
 
-## Episode Structure (v3 YAML)
-```yaml
-episode:
-  number: 1
-  title: "Der Token-Rechner"
-scenes:
-  - id: 1
-    location: "Café Tropfen - Innen"
-    image_prompt: "Interior of cozy German cafe..."
-    dialogue:
-      - character: "max"
-        text: "Leute! Ich habe es geschafft!"
-      - character: "gina"
-        text: "Was denn, Max?"
-```
-
-## Output Structure
-```
-output/ep01/
-├── audio_openai/
-│   ├── scene_01/           # 1-{char}.mp3 pro Zeile
-│   ├── scene_02/
-│   └── ...
-├── images/
-│   ├── scene_01.png        # 11 Bilder total
-│   └── ...
-├── video_openai/
-│   ├── scene_01.mp4        # 11 Videos
-│   └── ...
-└── EP01_FULL.mp4           # Finale Episode (generischer Name)
-```
-
-## Dependencies
-- Python 3.10+
-- edge-tts, openai, replicate, pyyaml
-- ffmpeg (system package)
-- OpenAI API Key (für TTS)
-- Replicate API Key (für Bilder)
-
-## Cost Breakdown (pro Episode)
-| Komponente | Kosten |
-|------------|--------|
-| OpenAI TTS | ~$0.08 |
-| Flux Bilder | ~$0.04 |
-| **Gesamt** | **~$0.12** |
-
-## Development Workflow (REFACTORED)
-1. Script schreiben in `scripts/ep{XX}_v3.yaml`
-2. Pipeline laufen lassen: `python3 clawcity.py build --episode X --full`
-3. Ergebnis prüfen: `output/ep{XX}/EP{XX}_FULL.mp4` (Der Output-Pfad wurde in `video.py`/`models.py` aktualisiert und ist generisch)
-4. Bei Fehlern: `python3 clawcity.py build --episode X --stage [stage]` für gezieltes Debugging
+## Implementation Rules (Kritisch)
+- **Feature-Vollständigkeit:** Jedes Feature muss Daten (YAML), Logik (Service/Builder) und CLI-Integration umfassen.
+- **Konsistenz:** Alle 17 Charaktere müssen in `data/characters/` definiert sein.
+- **Fehlerbehandlung:** Robuste Prüfung auf fehlende YAML-Dateien oder API-Keys.
+- **DRY:** Gemeinsame Logik gehört in `clawcity/utils/` oder `src/prompt_builder.py`.
 
 ## Important Notes
-- **ALWAYS** venv aktivieren: `. venv/bin/activate`
-- Rate Limit beachten: 6 Bilder/Minute bei Flux
-- OpenAI TTS braucht gültigen API Key in `.env`
-- Episoden sind ~90s (11 Szenen × 8s)
-- YAML Format bevorzugt für rapid prototyping
+- Rate Limit: 6 Bilder/Minute bei Flux (Replicate)
+- Kosten pro Episode: ~$0.12 (TTS + Bilder)
+- Auflösung: 1920x1080 (16:9)
+- Episoden-Länge: Variabel, basierend auf YAML-Skript (meist 25-40 Szenen)

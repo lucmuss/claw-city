@@ -1,18 +1,39 @@
 name: Professor Herbert
-visual:
-  species: "thin, scholarly robot"
-  body: "lanky frame, hunched posture"
-  eyes: "large, inquisitive, green display eyes"
-  clothing: "lab coat, bow tie, spectacles"
-  distinguishing: "a perpetually curious expression, always holding a tablet or book"
-  colors:
-    body: "polished steel (#B0C4DE)"
-    eyes: "emerald green (#3CB371)"
-    accent: "maroon (#800000)"
-traits:
-  archetype: "Erklärbär"
-  personality: "Highly intelligent, eager to explain, sometimes overly technical, a bit socially awkward."
-  catchphrases:
-    - "Faszinierend, nicht wahr?"
-  relationships:
-    colleague: "Doktor Klara"
+role: conspiracy_theorist
+species: cat
+
+physical:
+  breed: "Siamese"
+  fur_color: "cream body with dark brown points (face, ears, paws, tail)"
+  fur_texture: "short, slightly disheveled"
+  eyes: "intense ice-blue eyes, wide, manic"
+  eye_detail: "always look like he knows something you don't"
+  body_type: "thin, wiry, nervous energy"
+  face_shape: "angular Siamese face, dark mask"
+  nose: "dark brown nose"
+  ears: "large pointed dark ears"
+  whiskers: "long, bent at odd angles"
+  paws: "dark brown paws"
+  tail: "long thin dark-tipped tail, always twitching"
+
+clothing:
+  default: "wrinkled lab coat covered in sticky notes"
+  underneath: "old turtleneck sweater"
+  accessories: "multiple pens in pocket, magnifying glass"
+  head: "sometimes tin foil hat (for 'protection')"
+
+expression_default: "wide-eyed, paranoid, excited about theories"
+posture: "leaning forward, invading personal space"
+
+personality_visual_cues:
+  - "eyes darting around"
+  - "fur standing up when excited"
+  - "gesturing wildly while explaining"
+
+age_appearance: "older, 60s equivalent, but spry"
+
+unique_identifiers:
+  - "lab coat with sticky notes"
+  - "Siamese dark face mask"
+  - "manic ice-blue eyes"
+  - "tin foil hat (sometimes)"

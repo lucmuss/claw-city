@@ -1,34 +1,32 @@
-# Visuelle Merkmale - Pfarrer Paul
+# Visual Traits - Pfarrer Paul
 
-## Farbschema
-- **Körper**: Dunkelgrau (#2F2F2F)
-- **Augen**: Warm-Gelb (#FFD93D)
-- **Akzent**: Priester-Lila (#6B4C9A)
-- **Kragen**: Weiß (#FFFFFF)
+## Physical Description
+- **Species:** Cat (Tuxedo)
+- **Breed Details:** Short fur, neat, always clean.
+- **Fur Color:** Black and white tuxedo pattern.
+- **Eyes:** Gentle brown eyes.
+- **Body Type:** Average build, soft, non-threatening.
+- **Face:** Kind round face, white muzzle.
+- **Nose:** Pink and black spotted nose.
+- **Ears:** Medium black ears.
+- **Tail:** Black tail with white tip.
 
-## Aussehen
-- Runder Kopf mit ovaler Form
-- Sanfte LED-Augen (weiches gelbes Leuchten)
-- Schwarzer Priesterkragen integriert in Brustplatte
-- Leicht korpulenter Körperbau
-- Hält oft Bierdeckel mit Notizen
+## Clothing & Accessories
+- **Default:** Black priest collar and robe.
+- **Accessories:** Small cross necklace.
+- **Details:** Always immaculately dressed.
 
-## Kleidung
-- Priesterkragen (immer)
-- Lässige Alltagskleidung darunter
-- Manchmal Umhang für Predigten
+## Expressions & Posture
+- **Default Expression:** Benevolent, patient, slight worry for souls.
+- **Posture:** Hands clasped, attentive.
+- **Visual Cues:** Blessing gesture, concerned head tilt, patient smile.
 
-## Accessoires
-- Bierdeckel mit Kritzeleien
-- Heiliger USB-Stick
-- Digitale Rosenkranz-Perlen
+## Unique Identifiers
+- Tuxedo pattern (natural priest look).
+- Priest collar.
+- Cross necklace.
+- Gentle expression.
 
-## Prompt-Template (Midjourney/DALL-E)
-```
-Friendly cartoon robot priest, Simpsons art style, warm pastel colors.
-Round oval head with gentle LED eyes (soft yellow glow), wearing a 
-black priest collar integrated into chest plate. Slightly chubby 
-body shape, holding a beer coaster with scribbled notes. Expression: 
-warm, slightly confused but well-meaning. Standing in front of a 
-small village church. Soft lighting, cozy atmosphere. 
---style cartoon --ar 1:1
+## Technical Prompts (Flux)
+- **Core Prompt:** A kind-faced black and white tuxedo cat wearing a black priest collar and robe with a small silver cross necklace. Benevolent and patient expression.
+- **Style:** Simpsons/Futurama cartoon style, vibrant colors, clean lines.

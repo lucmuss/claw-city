@@ -1,18 +1,38 @@
 name: Werner
-visual:
-  species: "sturdy, older robot"
-  body: "round belly, broad shoulders"
-  eyes: "small, wise, blue LED eyes"
-  clothing: "suspenders over a stained white shirt, work boots"
-  distinguishing: "a perpetually content, slightly tipsy expression"
-  colors:
-    body: "rusty brown (#8B4513)"
-    eyes: "blue (#0000FF)"
-    accent: "leather brown (#A0522D)"
-traits:
-  archetype: "Gemütlicher Trinker"
-  personality: "Easy-going, enjoys a good drink, loyal friend."
-  catchphrases:
-    - "Noch 'n Bierchen?"
-  relationships:
-    best_friend: "Pfarrer Paul"
+role: neighbor
+species: cat
+
+physical:
+  breed: "Persian mix"
+  fur_color: "white with large brown patches"
+  fur_texture: "long, fluffy, slightly messy"
+  eyes: "small yellow-green eyes, squinty"
+  eye_detail: "suspicious look, always observing"
+  body_type: "stocky, barrel-shaped, low to ground"
+  face_shape: "flat Persian face, grumpy expression"
+  nose: "pushed-in pink nose (Persian feature)"
+  ears: "small rounded ears, hidden in fluff"
+  whiskers: "thick messy whiskers"
+  paws: "big fluffy paws"
+  tail: "big fluffy plume tail"
+
+clothing:
+  default: "old brown cardigan sweater"
+  accessories: "reading glasses on chain around neck"
+  slippers: "worn house slippers"
+
+expression_default: "grumpy, suspicious, judging"
+posture: "hunched, arms often crossed"
+
+personality_visual_cues:
+  - "squinting when suspicious"
+  - "glasses sliding down nose"
+  - "fur puffing up when angry"
+
+age_appearance: "middle-aged to older, 50s equivalent"
+
+unique_identifiers:
+  - "brown cardigan always"
+  - "flat Persian face"
+  - "white and brown patches"
+  - "reading glasses on chain"

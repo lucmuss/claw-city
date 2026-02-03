@@ -144,7 +144,8 @@ class PipelineEngine:
     
     def _run_audio(self, context: PipelineContext, engine: str = "openai") -> PipelineResult:
         """Run audio generation stage"""
-        service = get_audio_service()
+        from clawcity.services.audio import AudioService
+        service = AudioService(provider=engine)
         return asyncio.run(service.generate_episode(context, engine))
     
     def _run_video(self, context: PipelineContext, engine: str = "openai") -> PipelineResult:

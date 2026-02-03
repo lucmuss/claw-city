@@ -1,18 +1,36 @@
 name: Berthold
-visual:
-  species: "weathered, old-fashioned robot"
-  body: "stout and a bit rusty, built for endurance"
-  eyes: "calm, focused, dull yellow LED eyes"
-  clothing: "fishing vest, waders, wide-brimmed hat"
-  distinguishing: "a serene, patient expression, often holding a fishing rod"
-  colors:
-    body: "moss green (#8B8B00)"
-    eyes: "dull yellow (#DAA520)"
-    accent: "earth brown (#8B4513)"
-traits:
-  archetype: "Angler"
-  personality: "Patient, quiet, observant, finds peace by the water."
-  catchphrases:
-    - "Man muss Geduld haben, mein Freund."
-  relationships:
-    fishing_buddy: "Torsten"
+role: retiree
+species: cat
+
+physical:
+  breed: "Norwegian Forest Cat"
+  fur_color: "brown tabby with white chest"
+  fur_texture: "long, thick, majestic but aging"
+  eyes: "wise golden eyes, slightly faded"
+  body_type: "large, formerly strong, now softer"
+  face_shape: "strong face with prominent ruff"
+  nose: "pink nose"
+  ears: "tufted lynx-tip ears"
+  tail: "huge bushy tail"
+
+clothing:
+  default: "plaid flannel shirt, suspenders"
+  pants: "old brown corduroy pants"
+  accessories: "flat cap, wooden cane"
+  always: "newspaper under arm"
+
+expression_default: "nostalgic, storytelling mode, slight grumpiness"
+posture: "sitting on bench, leaning on cane"
+
+personality_visual_cues:
+  - "pointing with cane while telling stories"
+  - "shaking head at modern things"
+  - "chuckling at own jokes"
+
+age_appearance: "elderly, 70s equivalent"
+
+unique_identifiers:
+  - "Norwegian Forest Cat fluff"
+  - "flat cap"
+  - "cane"
+  - "plaid flannel shirt"
