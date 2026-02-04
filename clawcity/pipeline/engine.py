@@ -72,9 +72,7 @@ class PipelineEngine:
                     break
 
         if script_path is None or not script_path.exists():
-            raise ScriptError(
-                "Script for episode {} not found".format(episode_num)
-            )
+            raise ScriptError("Script for episode {} not found".format(episode_num))
 
         with open(script_path) as f:
             data = yaml.safe_load(f)
@@ -110,7 +108,7 @@ class PipelineEngine:
                 success=True, stage=stage.value, message="Skipped {} (disabled)".format(stage.value)
             )
 
-        print("\n" + '='*50)
+        print("\n" + "=" * 50)
         print("🎬 Stage: {}".format(stage.value.upper()))
         print("=" * 50)
 
@@ -184,9 +182,9 @@ class PipelineEngine:
             ]
 
         # Load episode
-        print("\n" + '#'*60)
+        print("\n" + "#" * 60)
         print("# 🎬 CLAW CITY PIPELINE - Episode {:02d}".format(episode_num))
-        print('#'*60)
+        print("#" * 60)
 
         episode = self.load_episode(episode_num, script_path)
         print("\n📖 Episode: {}".format(episode.title))
@@ -223,9 +221,9 @@ class PipelineEngine:
 
     def _print_summary(self, results: List[PipelineResult], context: PipelineContext):
         """Print pipeline summary"""
-        print("\n" + '#'*60)
+        print("\n" + "#" * 60)
         print("# ✅ PIPELINE COMPLETE - Episode {:02d}".format(context.episode.number))
-        print('#'*60)
+        print("#" * 60)
 
         success_count = sum(1 for r in results if r.success)
         total_count = len(results)

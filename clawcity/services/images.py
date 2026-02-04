@@ -17,7 +17,7 @@ except ImportError:
 from clawcity.core.config import get_config
 from clawcity.core.exceptions import ImageGenerationError, ConfigurationError, RateLimitError
 from clawcity.core.models import Scene, PipelineContext, PipelineResult
-from src.prompt_builder import build_image_prompt  # Import the new prompt builder
+from clawcity.pipeline.prompt_builder import build_image_prompt  # Import the new prompt builder
 
 
 class ImageService:

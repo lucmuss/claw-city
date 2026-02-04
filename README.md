@@ -45,11 +45,12 @@ Das `clawcity` CLI-Tool steuert nun die gesamte Episode-Produktion (Audio, Bilde
 # Repository klonen
 cd claw-city
 
-# Abhängigkeiten installieren (sicherstellen, dass FFmpeg installiert ist)
-pip install -r requirements.txt
+# Projekt initialisieren (installiert uv, dependencies, kopiert .env)
+just setup
 
-# Umgebungsvariablen konfigurieren
-cp .env.example .env
+# Alternativ manuell:
+# uv sync --all-extras  # Installiert alle Dependencies
+# cp .env.example .env  # Umgebungsvariablen konfigurieren
 # Edit .env, füge OPENAI_API_KEY und REPLICATE_API_TOKEN hinzu
 ```
 

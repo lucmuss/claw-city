@@ -1,5 +1,5 @@
 from clawcity.core.models import Scene, Episode, DialogueLine
-from src.prompt_builder import build_image_prompt
+from clawcity.pipeline.prompt_builder import build_image_prompt
 
 # Setup test data with a scene in the Cafe
 current_scene = Scene(

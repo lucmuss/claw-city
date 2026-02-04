@@ -1,10 +1,47 @@
-[tool.black]
-line-length = 100
-target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+[project]
+name = "clawcity"
+version = "0.1.0"
+description = "Claw City - AI Comedy Show Pipeline"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pyyaml",
+    "openai",
+    "replicate",
+    "edge-tts",
+    "pydub",
+    "requests",
+    "python-dotenv",
+]
 
-[tool.isort]
-profile = "black"
-line_length = 100
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+
+[project.scripts]
+clawcity = "clawcity.cli.main:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+src = ["clawcity", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "SIM"]
+ignore = ["E203", "E501", "E402", "F401"]
+exclude = [".git", "__pycache__", "build", "dist", "venv", ".venv"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
 
 [tool.mypy]
 python_version = "3.11"

@@ -16,3 +16,7 @@ output/
 # Logs
 *.log
 logs/
+
+# Tool caches
+.ruff_cache/
+.uv/
