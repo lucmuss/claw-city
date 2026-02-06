@@ -1,0 +1,29 @@
+episode:
+  number: 1
+  title: "Sample Episode"
+  subtitle: "A short demo"
+  duration: "2 min"
+  tone: "light"
+  themes:
+    - "demo"
+    - "friendship"
+
+scenes:
+  - id: 1
+    title: "Morning start"
+    location: "Cafe"
+    time: "morning"
+    duration: "10 sec"
+    image_prompt: "A cozy cafe with warm light"
+    dialogue:
+      - character: "gina"
+        text: "Good morning. The day is just starting."
+  - id: 2
+    title: "Quick chat"
+    location: "Workshop"
+    time: "day"
+    duration: "12 sec"
+    image_prompt: "A small workshop with tools on the wall"
+    dialogue:
+      - character: "max"
+        text: "We should build something new today."

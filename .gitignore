@@ -6,12 +6,19 @@ venv/
 __pycache__/
 *.py[co]
 *.so
+*.egg-info/
 
 # Configuration Secrets
 .env
 
+# Local tooling
+.cline/
+
 # Generated Output
 output/
+outputs/
+dist/
+build/
 
 # Logs
 *.log
@@ -19,4 +26,8 @@ logs/
 
 # Tool caches
 .ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+.coverage.*
 .uv/

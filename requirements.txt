@@ -1,3 +1,4 @@
+# Legacy requirements for environments without uv
 pyyaml
 openai
 replicate

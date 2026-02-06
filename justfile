@@ -5,7 +5,8 @@ default:
 
 # Initializes the project (uv-based)
 setup:
-    uv sync
+    uv venv
+    uv sync --extra dev
     cp -n .env.example .env || true
 
 # Starts development environment (runs entrypoint.sh)
@@ -14,17 +15,18 @@ dev:
 
 # Formats code (Ruff)
 format:
-    uv run ruff format clawcity tests
-    uv run ruff check --fix clawcity tests
+    uv run --with black black src tests
+    uv run ruff check --fix src tests
 
 # Checks code quality (read-only)
 lint:
-    uv run ruff check clawcity tests
-    uv run ruff format --check clawcity tests
+    uv run ruff check src tests
+    uv run --with black black --check src tests
+    uv run --with flake8 flake8 src tests
 
 # Type-checking
 typecheck:
-    uv run mypy clawcity
+    uv run mypy src
 
 # Runs tests
 test:
@@ -32,6 +34,14 @@ test:
 
 # Full quality check (CI simulation)
 check: lint typecheck test
+
+# Build artifacts
+build:
+    uv run --with build python -m build
+    uv run --with twine twine check dist/*
+
+# Full local CI (includes build)
+ci: check build
 
 # Starts Docker containers (deployment testing)
 docker-up:
@@ -46,4 +56,4 @@ docker-down:
 clean:
     find . -type d -name "__pycache__" -exec rm -rf {} +
     find . -type f -name "*.pyc" -delete
-    rm -rf .pytest_cache .coverage htmlcov .ruff_cache
+    rm -rf .pytest_cache .coverage htmlcov .ruff_cache .mypy_cache dist build

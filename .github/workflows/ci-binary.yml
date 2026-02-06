@@ -1,0 +1,45 @@
+name: CI Binary
+
+on:
+  workflow_call:
+    inputs:
+      os:
+        required: true
+        type: string
+      python-version:
+        required: true
+        type: string
+      artifact-name:
+        required: true
+        type: string
+
+jobs:
+  binary:
+    runs-on: ${{ inputs.os }}
+    env:
+      UV_PROJECT_ENVIRONMENT: .venv
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v1
+
+      - name: Install dependencies
+        run: |
+          uv venv
+          uv sync --extra dev --frozen
+
+      - name: Build binary
+        run: uv run --with pyinstaller pyinstaller -m clawcity --name clawcity
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact-name }}
+          path: dist/*

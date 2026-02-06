@@ -1,10 +1,11 @@
-"""Audio generation service with multiple TTS providers"""
+# -*- coding: utf-8 -*-
+"""Audio generation service with multiple TTS providers."""
 
-import os
-import asyncio
+from __future__ import annotations
+
+import re
+import unicodedata
 from pathlib import Path
-from typing import Optional, Dict
-from dataclasses import dataclass
 
 try:
     from openai import OpenAI
@@ -22,11 +23,18 @@ except ImportError:
 
 from clawcity.core.config import get_config
 from clawcity.core.exceptions import AudioGenerationError, ConfigurationError
-from clawcity.core.models import Scene, PipelineContext, PipelineResult
+from clawcity.core.models import PipelineContext, PipelineResult, Scene
 
 
-# Voice mapping for characters (OpenAI)
-VOICE_MAP: Dict[str, str] = {
+def _normalize_character_id(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value.strip().lower())
+    normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    normalized = normalized.replace(" ", "_")
+    normalized = re.sub(r"[^a-z0-9_]+", "", normalized)
+    return normalized
+
+
+VOICE_MAP: dict[str, str] = {
     "narrator": "nova",
     "max": "echo",
     "gina": "shimmer",
@@ -38,7 +46,7 @@ VOICE_MAP: Dict[str, str] = {
     "lisa": "shimmer",
     "lena": "shimmer",
     "beate": "nova",
-    "günther": "onyx",
+    "gunther": "onyx",
     "berthold": "onyx",
     "fiona": "shimmer",
     "heinrich": "alloy",
@@ -47,8 +55,7 @@ VOICE_MAP: Dict[str, str] = {
     "paul": "alloy",
 }
 
-# Voice mapping for characters (Edge TTS)
-EDGE_VOICE_MAP: Dict[str, str] = {
+EDGE_VOICE_MAP: dict[str, str] = {
     "narrator": "de-DE-ConradNeural",
     "max": "de-DE-KillianNeural",
     "gina": "de-DE-KatjaNeural",
@@ -60,7 +67,7 @@ EDGE_VOICE_MAP: Dict[str, str] = {
     "lisa": "de-DE-KatjaNeural",
     "lena": "de-DE-KatjaNeural",
     "beate": "de-DE-SeraphinaMultilingualNeural",
-    "günther": "de-DE-FlorianMultilingualNeural",
+    "gunther": "de-DE-FlorianMultilingualNeural",
     "berthold": "de-DE-FlorianMultilingualNeural",
     "fiona": "de-DE-KatjaNeural",
     "heinrich": "de-DE-ConradNeural",
@@ -72,25 +79,25 @@ EDGE_VOICE_MAP: Dict[str, str] = {
 
 
 class AudioService:
-    """Service for generating audio from text"""
+    """Service for generating audio from text."""
 
-    def __init__(self, provider: Optional[str] = None):
+    def __init__(self, provider: str | None = None) -> None:
         self.config = get_config()
         self.provider = provider or self.config.tts.provider
-        self._openai_client: Optional[OpenAI] = None
+        self._openai_client: OpenAI | None = None
 
         if self.provider == "openai" and not HAS_OPENAI:
             raise ConfigurationError(
-                "OpenAI package not installed. Install with: pip install openai"
+                "OpenAI package not installed. Install with: uv add openai"
             )
         if self.provider == "edge" and not HAS_EDGE_TTS:
             raise ConfigurationError(
-                "edge-tts package not installed. Install with: pip install edge-tts"
+                "edge-tts package not installed. Install with: uv add edge-tts"
             )
 
     @property
-    def openai_client(self):
-        """Lazy initialization of OpenAI client"""
+    def openai_client(self) -> OpenAI:
+        """Lazy initialization of the OpenAI client."""
         if self._openai_client is None:
             if not self.config.openai_api_key:
                 raise ConfigurationError("OPENAI_API_KEY not set")
@@ -98,18 +105,20 @@ class AudioService:
         return self._openai_client
 
     def get_voice(self, character: str) -> str:
-        """Get voice for character"""
-        char_id = character.lower()
+        """Get the voice for a character."""
+        char_id = _normalize_character_id(character)
         if self.provider == "openai":
             return VOICE_MAP.get(char_id, "alloy")
-        else:
-            # Edge TTS - try character-specific voice, then fallback
-            return EDGE_VOICE_MAP.get(char_id, EDGE_VOICE_MAP["default"])
+        return EDGE_VOICE_MAP.get(char_id, EDGE_VOICE_MAP["default"])
 
     async def generate_line(
-        self, text: str, character: str, output_path: Path, emotion: Optional[str] = None
+        self,
+        text: str,
+        character: str,
+        output_path: Path,
+        emotion: str | None = None,
     ) -> PipelineResult:
-        """Generate audio for a single dialogue line"""
+        """Generate audio for a single dialogue line."""
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
         if output_path.exists():
@@ -132,37 +141,44 @@ class AudioService:
                 message=f"Generated: {output_path.name}",
                 output_path=output_path,
             )
-        except Exception as e:
-            raise AudioGenerationError(f"Failed to generate audio for {character}: {e}")
+        except Exception as exc:
+            raise AudioGenerationError(
+                f"Failed to generate audio for {character}: {exc}"
+            ) from exc
 
-    async def _generate_openai(self, text: str, character: str, output_path: Path):
-        """Generate using OpenAI TTS"""
+    async def _generate_openai(
+        self, text: str, character: str, output_path: Path
+    ) -> None:
+        """Generate audio using OpenAI TTS."""
         voice = self.get_voice(character)
 
         response = self.openai_client.audio.speech.create(
-            model=self.config.tts.openai_model, voice=voice, input=text, response_format="mp3"
+            model=self.config.tts.openai_model,
+            voice=voice,
+            input=text,
+            response_format="mp3",
         )
 
         response.stream_to_file(str(output_path))
 
-    async def _generate_edge(self, text: str, character: str, output_path: Path):
-        """Generate using Edge TTS"""
+    async def _generate_edge(
+        self, text: str, character: str, output_path: Path
+    ) -> None:
+        """Generate audio using Edge TTS."""
         voice = self.get_voice(character)
-
         communicate = edge_tts.Communicate(text, voice)
         await communicate.save(str(output_path))
 
     async def generate_scene(
         self, scene: Scene, context: PipelineContext, engine: str = "openai"
     ) -> PipelineResult:
-        """Generate audio for all lines in a scene and combine them"""
+        """Generate audio for all lines in a scene and combine them."""
         audio_dir = context.get_audio_dir(scene.id, engine)
         audio_dir.mkdir(parents=True, exist_ok=True)
 
         generated = 0
         failed = 0
 
-        # Temporarily switch provider for this scene if engine matches
         old_provider = self.provider
         self.provider = engine
 
@@ -184,7 +200,6 @@ class AudioService:
         finally:
             self.provider = old_provider
 
-        # Combine scene audio immediately after generation
         if failed == 0 and generated > 0:
             from clawcity.services.video import get_video_service
 
@@ -196,20 +211,24 @@ class AudioService:
             stage="audio_scene",
             message=f"Scene {scene.id}: {generated} generated, {failed} failed",
             output_path=audio_dir,
-            metadata={"generated": generated, "failed": failed, "total": len(scene.dialogue)},
+            metadata={
+                "generated": generated,
+                "failed": failed,
+                "total": len(scene.dialogue),
+            },
         )
 
     async def generate_episode(
         self, context: PipelineContext, engine: str = "openai"
     ) -> PipelineResult:
-        """Generate audio for entire episode"""
+        """Generate audio for the entire episode."""
         total_scenes = len(context.episode.scenes)
         completed = 0
         failed = 0
 
-        print(f"\n🎤 Generating audio for {total_scenes} scenes...")
-        print(f"   Engine: {engine}")
-        print(f"   Estimated cost: ~${total_scenes * 0.015:.2f}")
+        print(f"Audio: generating {total_scenes} scenes")
+        print(f"Engine: {engine}")
+        print(f"Estimated cost: ~${total_scenes * 0.015:.2f}")
         print("-" * 40)
 
         for scene in context.episode.scenes:
@@ -217,13 +236,13 @@ class AudioService:
                 result = await self.generate_scene(scene, context, engine)
                 if result.success:
                     completed += 1
-                    print(f"  ✓ Scene {scene.id}")
+                    print(f"Scene {scene.id}: ok")
                 else:
                     failed += 1
-                    print(f"  ✗ Scene {scene.id} (partial)")
-            except Exception as e:
+                    print(f"Scene {scene.id}: partial")
+            except Exception as exc:
                 failed += 1
-                print(f"  ✗ Scene {scene.id}: {e}")
+                print(f"Scene {scene.id}: {exc}")
 
         return PipelineResult(
             success=failed == 0,
@@ -233,12 +252,11 @@ class AudioService:
         )
 
 
-# Singleton instance
-_audio_service = None
+_audio_service: AudioService | None = None
 
 
 def get_audio_service() -> AudioService:
-    """Get or create audio service singleton"""
+    """Get or create the audio service singleton."""
     global _audio_service
     if _audio_service is None:
         _audio_service = AudioService()

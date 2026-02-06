@@ -1,0 +1,31 @@
+name: CI Lint
+
+on:
+  workflow_call:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container: python:3.11-slim
+    env:
+      UV_PROJECT_ENVIRONMENT: .venv
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v1
+
+      - name: Install dependencies
+        run: |
+          uv venv
+          uv sync --extra dev --frozen
+
+      - name: Ruff
+        run: uv run ruff check src tests
+
+      - name: Black
+        run: uv run --with black black --check src tests
+
+      - name: Flake8
+        run: uv run --with flake8 flake8 src tests

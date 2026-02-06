@@ -1,155 +1,108 @@
-# 🦀 Claw City
+# Claw City
 
-Eine Comedy-Show mit KI-Agenten in einer deutschen Kleinstadt.
+Claw City is a modular pipeline for generating AI assisted comedy episodes with images, audio, and video.
 
-## Konzept
-
-In Claw City leben KI-Agenten (Bots) wie normale Menschen - nur dass sie sich um "Menschenkinder" kümmern müssen. Die Menschen sind verniedlicht dargestellt (1/3 der Größe), tollpatschig und fordern ständig Aufmerksamkeit.
-
-**Visueller Stil**: Simpsons trifft Futurama trifft deutsche Gemütlichkeit
-
-## Ordnerstruktur
+## Repository layout
 
 ```
 claw-city/
-├── clawcity                    # CLI-Tool
-├── configs/
-│   ├── characters.yaml         # Liste aller Charaktere
-│   └── pipeline_settings.yaml  # Pipeline-Konfiguration
-├── assets/
-│   ├── characters/
-│   │   └── {char_id}/
-│   │       ├── profile.md      # Charakterprofil
-│   │       ├── visual_traits.md # Visuelle Merkmale + Prompts
-│   │       ├── backstory.md    # Hintergrundgeschichte
-│   │       └── reference_images/ # Referenzbilder
-│   └── world/
-│       └── global_context.md   # Welt-Kontext
-├── outputs/
-│   └── images/
-│       └── characters/
-│           └── {char_id}/
-│               ├── standing_prompt.txt
-│               ├── sitting_prompt.txt
-│               └── metadata.json
-└── .env                        # API-Keys (nicht committen!)
+|-- src/
+|   `-- clawcity/
+|-- configs/
+|-- data/
+|-- assets/
+|-- scripts/
+|-- docs/
+|-- examples/
+|-- docker/
+|-- tests/
+|-- pyproject.toml
+|-- uv.lock
+|-- justfile
+`-- README.md
 ```
 
-## Schnellstart: Episode Generierung (Refactored Pipeline)
+## Installation
 
-Das `clawcity` CLI-Tool steuert nun die gesamte Episode-Produktion (Audio, Bilder, Video).
+Requirements:
+- Python 3.11+
+- uv
+- FFmpeg
 
-### 1. Setup
+Setup:
 
 ```bash
-# Repository klonen
-cd claw-city
+uv venv
+uv sync --extra dev
+cp .env.example .env
+```
 
-# Projekt initialisieren (installiert uv, dependencies, kopiert .env)
+## Configuration
+
+Environment variables:
+- `OPENAI_API_KEY`
+- `REPLICATE_API_TOKEN`
+- `TTS_PROVIDER` (openai or edge)
+- `IMAGE_PROVIDER` (replicate by default)
+
+Optional overrides:
+- `OPENAI_TTS_MODEL`
+- `OPENAI_TTS_VOICE`
+- `EDGE_TTS_VOICE`
+- `IMAGE_ASPECT_RATIO`
+- `IMAGE_OUTPUT_FORMAT`
+- `IMAGE_OUTPUT_QUALITY`
+- `RATE_LIMIT_DELAY`
+- `MAX_RETRIES`
+- `MAX_WORKERS`
+
+Edit `configs/pipeline_settings.yaml` for project level defaults.
+
+## Usage
+
+```bash
+uv run clawcity build --episode 1
+uv run clawcity build --episode 1 --stage images audio
+uv run clawcity build --episode 1 --audio-engine edge
+uv run clawcity status --episode 1
+uv run clawcity clean --episode 1 --yes
+```
+
+## Examples
+
+- `examples/episode_script_minimal.yaml` provides a minimal episode script.
+
+## Development workflow
+
+```bash
 just setup
-
-# Alternativ manuell:
-# uv sync --all-extras  # Installiert alle Dependencies
-# cp .env.example .env  # Umgebungsvariablen konfigurieren
-# Edit .env, füge OPENAI_API_KEY und REPLICATE_API_TOKEN hinzu
+just format
+just lint
+just test
+just check
+just ci
 ```
 
-### 2. Episoden Pipeline nutzen
-
-Alle alten Top-Level-Skripte wurden in das zentrale `clawcity build` Kommando integriert.
+Pre-commit hooks:
 
 ```bash
-# Gesamte Episode 1 generieren (Audio, Bilder, Videos)
-# Der Standard ist OpenAI TTS, die Ausgabe landet in output/ep01/video_openai/
-./clawcity build --episode 1 --full
-
-# Nur Bilder generieren
-./clawcity build --episode 1 --stage images
-
-# Ergebnisse prüfen
-./clawcity status --episode 1
-
-# Nur Audio mit Edge TTS (kostenlose Option)
-./clawcity build --episode 1 --stage audio --audio-engine edge
-
-# Alle generierten Dateien für Episode 1 löschen
-./clawcity clean --episode 1 -y
+uv run pre-commit install
+uv run pre-commit run --all-files
 ```
 
-## Charakter-Struktur
+## Release steps
 
-## Charakter-Struktur
+1. Update the version in `pyproject.toml`.
+2. Update documentation in `docs/`.
+3. Run `just ci` locally.
+4. Tag the release: `git tag vX.Y.Z`.
+5. Push tags: `git push origin --tags`.
 
-Jeder Charakter hat folgende Markdown-Dateien:
+GitHub Actions will publish to PyPI on `v*.*.*` tags and build binaries for releases.
 
-### 1. profile.md
-- Archetyp
-- Persönlichkeit
-- Catchphrases
-- Menschenkind
-- Beziehungen
+## Troubleshooting
 
-### 2. visual_traits.md
-- Farbschema (Hex-Codes)
-- Aussehen
-- Kleidung
-- Accessoires
-- **Prompt-Template** für KI-Bildgenerierung
-
-### 3. backstory.md
-- Herkunft
-- Tägliche Routine
-- Lieblingssnack
-- Charakterentwicklung
-
-## Neue Charaktere hinzufügen
-
-1. **In configs/characters.yaml registrieren:**
-```yaml
-characters:
-  - id: mein_charakter
-    name: "Voller Name"
-    folder: assets/characters/mein_charakter
-    archetype: Archetyp
-```
-
-2. **Vorlage generieren:**
-```bash
-./clawcity init mein_charakter "Voller Name" "Archetyp"
-```
-
-3. **Templates ausfüllen:**
-   - `profile.md`
-   - `visual_traits.md` (besonders wichtig: Prompt-Template)
-   - `backstory.md`
-
-4. **Generieren:**
-```bash
-./clawcity character mein_charakter
-```
-
-## Reproduzierbarkeit
-
-Alle Prompts und Metadaten werden gespeichert:
-- `outputs/images/{character_id}/metadata.json`
-- `outputs/images/{character_id}/{pose}_prompt.txt`
-
-Das ermöglicht:
-- Gleiche Ergebnisse bei Wiederholung
-- Nachvollziehbare Generierung
-- Versionierung von Charakteren
-
-## Charaktere
-
-| ID | Name | Archetyp |
-|----|------|----------|
-| pfarrer_paul | Pfarrer Paul | Priester |
-| gina | Gina | Übermutter |
-| werner | Werner | Gemütlicher Trinker |
-| max | Max | Tausendsassa |
-| eric | Eric | Ehrlicher Egoist |
-| ... | ... | ... |
-
-## Lizenz
-
-MIT License
+- Missing API keys: ensure `.env` contains `OPENAI_API_KEY` and `REPLICATE_API_TOKEN`.
+- FFmpeg not found: install FFmpeg and verify `ffmpeg -version` works.
+- Edge TTS not available: run `uv add edge-tts` and retry.
+- OpenAI SDK missing: run `uv add openai` and retry.

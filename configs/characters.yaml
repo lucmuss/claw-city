@@ -1,28 +1,28 @@
 characters:
   - id: pfarrer_paul
-    name: Pfarrer Paul
+    name: Pastor Paul
     folder: assets/characters/pfarrer_paul
-    archetype: Priester
+    archetype: Priest
   - id: gina
     name: Gina
     folder: assets/characters/gina
-    archetype: Übermutter
+    archetype: Overprotective mother
   - id: werner
     name: Werner
     folder: assets/characters/werner
-    archetype: Gemütlicher Trinker
+    archetype: Cozy drinker
   - id: max
     name: Max
     folder: assets/characters/max
-    archetype: Tausendsassa
+    archetype: Jack of all trades
   - id: eric
     name: Eric
     folder: assets/characters/eric
-    archetype: Ehrlicher Egoist
+    archetype: Honest egoist
   - id: professor_herbert
     name: Professor Herbert
     folder: assets/characters/professor_herbert
-    archetype: Erklärbär
+    archetype: Explainer
   - id: berthold
     name: Berthold
     folder: assets/characters/berthold
@@ -30,40 +30,40 @@ characters:
   - id: torsten
     name: Torsten
     folder: assets/characters/torsten
-    archetype: Postbote
+    archetype: Mail carrier
   - id: tina
     name: Tina
     folder: assets/characters/tina
-    archetype: Müllfrau
+    archetype: Garbage worker
   - id: heinrich
     name: Heinrich
     folder: assets/characters/heinrich
-    archetype: Familienvater
+    archetype: Family man
   - id: sabrina
     name: Sabrina
     folder: assets/characters/sabrina
-    archetype: Charmante
+    archetype: Charmer
   - id: doktor_klara
-    name: Doktor Klara
+    name: Doctor Klara
     folder: assets/characters/doktor_klara
-    archetype: Ärztin
+    archetype: Doctor
   - id: buergermeister_bruno
-    name: Bürgermeister Bruno
+    name: Mayor Bruno
     folder: assets/characters/buergermeister_bruno
-    archetype: Überforderter
+    archetype: Overwhelmed leader
   - id: fitness_fiona
-    name: Fitness-Fiona
+    name: Fitness Fiona
     folder: assets/characters/fitness_fiona
-    archetype: Motivierte
+    archetype: Motivator
   - id: oma_gerda
-    name: Oma Gerda
+    name: Grandma Gerda
     folder: assets/characters/oma_gerda
-    archetype: Weise
+    archetype: Wise elder
   - id: hacker_hannes
-    name: Hacker-Hannes
+    name: Hacker Hannes
     folder: assets/characters/hacker_hannes
-    archetype: Verschwörer
+    archetype: Conspiracy theorist
   - id: kuenstler_kurt
-    name: Künstler Kurt
+    name: Artist Kurt
     folder: assets/characters/kuenstler_kurt
-    archetype: Unverstandener
+    archetype: Misunderstood artist

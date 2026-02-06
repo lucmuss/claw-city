@@ -1,0 +1,17 @@
+.git
+.gitignore
+.cline/
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+output/
+outputs/
+dist/
+build/
+docs/
+tests/

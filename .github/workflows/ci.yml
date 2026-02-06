@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    uses: ./.github/workflows/ci-lint.yml
+
+  typecheck:
+    needs: lint
+    uses: ./.github/workflows/ci-typecheck.yml
+
+  tests:
+    needs: typecheck
+    uses: ./.github/workflows/ci-tests.yml
+
+  build:
+    needs: tests
+    uses: ./.github/workflows/ci-build.yml

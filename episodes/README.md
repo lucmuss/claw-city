@@ -1,45 +1,43 @@
-# Episoden
+# Episodes
 
-Dieser Ordner enthält alle Skripte und Produktionsunterlagen für Claw City Episoden.
+This folder contains scripts and production assets for episodes.
 
-## Struktur
+## Structure
 
 ```
 episodes/
-├── season_01/
-│   ├── pilot/
-│   │   ├── script.md
-│   │   └── prompts.md
-│   ├── e02_new_holiday/
-│   ├── e03_big_catch/
-│   └── ...
-└── templates/
-    └── episode_template.md
+|-- season_01/
+|   |-- pilot/
+|   |   |-- script.md
+|   |   `-- prompts.md
+|   |-- e02_new_holiday/
+|   |-- e03_big_catch/
+|   `-- ...
+`-- templates/
+    `-- episode_template.md
 ```
 
-## Episode Status
+## Episode status
 
-| Episode | Titel | Status | Script | Prompts |
+| Episode | Title | Status | Script | Prompts |
 |---------|-------|--------|--------|---------|
-| S01E01 | Der Token-Rechner | ✓ Fertig | ✓ | - |
-| S01E02 | Der neue Feiertag | ○ Geplant | - | - |
-| S01E03 | Bertholds großer Fang | ○ Geplant | - | - |
-| S01E04 | Helga sagt Nein | ○ Geplant | - | - |
-| S01E05 | Das Grill-Duell | ○ Geplant | - | - |
-| S01E06 | Sabrina macht Ernst | ○ Geplant | - | - |
+| S01E01 | The Token Counter | Done | Yes | No |
+| S01E02 | The New Holiday | Planned | No | No |
+| S01E03 | Berthold Big Catch | Planned | No | No |
+| S01E04 | Helga Says No | Planned | No | No |
+| S01E05 | The Grill Duel | Planned | No | No |
+| S01E06 | Sabrina Means It | Planned | No | No |
 
-## Episoden-Template
-
-Neue Episoden erstellen mit:
+## Episode template
 
 ```bash
-mkdir episodes/season_01/eXX_titel
-cp episodes/templates/episode_template.md episodes/season_01/eXX_titel/script.md
+mkdir episodes/season_01/eXX_title
+cp episodes/templates/episode_template.md episodes/season_01/eXX_title/script.md
 ```
 
 ## Format
 
-Jede Episode enthält:
-- **script.md** - Vollständiges Drehbuch
-- **prompts.md** - Bild-Prompts für jede Szene (optional)
-- **metadata.json** - Episoden-Metadaten
+Each episode may include:
+- `script.md` for the full script
+- `prompts.md` for scene prompts
+- `metadata.json` for episode metadata

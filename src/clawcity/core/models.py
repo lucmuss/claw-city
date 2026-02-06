@@ -1,9 +1,12 @@
-"""Data models for Claw City pipeline"""
+# -*- coding: utf-8 -*-
+"""Data models for the Claw City pipeline."""
+
+from __future__ import annotations
 
 from dataclasses import dataclass, field
-from pathlib import Path
-from typing import List, Dict, Optional, Any
 from enum import Enum
+from pathlib import Path
+from typing import Any
 
 
 class ProcessingStatus(Enum):
@@ -20,10 +23,10 @@ class Character:
     name: str
     voice: str = "alloy"
     archetype: str = ""
-    folder: Optional[Path] = None
+    folder: Path | None = None
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "Character":
+    def from_dict(cls, data: dict[str, Any]) -> Character:
         return cls(
             id=data["id"],
             name=data["name"],
@@ -37,11 +40,13 @@ class Character:
 class DialogueLine:
     character: str
     text: str
-    emotion: Optional[str] = None
+    emotion: str | None = None
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "DialogueLine":
-        return cls(character=data["character"], text=data["text"], emotion=data.get("emotion"))
+    def from_dict(cls, data: dict[str, Any]) -> DialogueLine:
+        return cls(
+            character=data["character"], text=data["text"], emotion=data.get("emotion")
+        )
 
 
 @dataclass
@@ -52,12 +57,12 @@ class Scene:
     time: str
     duration: str
     image_prompt: str
-    dialogue: List[DialogueLine] = field(default_factory=list)
+    dialogue: list[DialogueLine] = field(default_factory=list)
     status: ProcessingStatus = ProcessingStatus.PENDING
-    visual_summary: Optional[str] = None  # For context window
+    visual_summary: str | None = None
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "Scene":
+    def from_dict(cls, data: dict[str, Any]) -> Scene:
         return cls(
             id=data["id"],
             title=data.get("title", f"Scene {data['id']}"),
@@ -66,16 +71,16 @@ class Scene:
             duration=data.get("duration", "10 sec"),
             image_prompt=data["image_prompt"],
             dialogue=[DialogueLine.from_dict(d) for d in data.get("dialogue", [])],
-            visual_summary=data["image_prompt"],  # Default to image_prompt as visual summary
+            visual_summary=data["image_prompt"],
         )
 
     @property
     def full_text(self) -> str:
-        return " ".join([d.text for d in self.dialogue])
+        return " ".join(d.text for d in self.dialogue)
 
     @property
     def duration_seconds(self) -> int:
-        """Parse duration string like '25 sec' to seconds"""
+        """Parse duration string like '25 sec' to seconds."""
         try:
             return int(self.duration.split()[0])
         except (ValueError, IndexError):
@@ -86,14 +91,14 @@ class Scene:
 class Episode:
     number: int
     title: str
-    subtitle: Optional[str] = None
-    duration: Optional[str] = None
-    tone: Optional[str] = None
-    themes: List[str] = field(default_factory=list)
-    scenes: List[Scene] = field(default_factory=list)
+    subtitle: str | None = None
+    duration: str | None = None
+    tone: str | None = None
+    themes: list[str] = field(default_factory=list)
+    scenes: list[Scene] = field(default_factory=list)
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "Episode":
+    def from_dict(cls, data: dict[str, Any]) -> Episode:
         ep_data = data.get("episode", {})
         return cls(
             number=ep_data["number"],
@@ -118,8 +123,8 @@ class Episode:
 class PipelineContext:
     episode: Episode
     output_dir: Path
-    config: Dict[str, Any] = field(default_factory=dict)
-    characters: Dict[str, Character] = field(default_factory=dict)
+    config: dict[str, Any] = field(default_factory=dict)
+    characters: dict[str, Character] = field(default_factory=dict)
 
     def get_scene_dir(self, scene_id: int) -> Path:
         return self.output_dir / f"scene_{scene_id:02d}"
@@ -142,5 +147,5 @@ class PipelineResult:
     success: bool
     stage: str
     message: str
-    output_path: Optional[Path] = None
-    metadata: Dict[str, Any] = field(default_factory=dict)
+    output_path: Path | None = None
+    metadata: dict[str, Any] = field(default_factory=dict)

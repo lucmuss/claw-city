@@ -1,76 +1,61 @@
-# Claw City Pipeline Einstellungen
+# Claw City pipeline settings
 
-# Projekt-Info
 project:
   name: "Claw City"
-  version: "1.0.0"
-  description: "Comedy-Show mit KI-Agenten in einer deutschen Kleinstadt"
+  version: "0.1.0"
+  description: "Comedy show with AI agents in a small town"
 
-# Bildgenerierung
 image_generation:
-  provider: "midjourney"  # midjourney, dalle, stable_diffusion
+  provider: "replicate"
   default_style: "cartoon"
   output_format: "png"
   resolution:
     width: 1024
     height: 1024
-  
-  # Prompt-Engineering
   prompt_prefix: "Claw City character, Simpsons art style, warm pastel colors, friendly cartoon robot,"
   prompt_suffix: "clean lines, expressive face, cozy atmosphere, soft lighting, --ar 1:1 --style cartoon"
-  
-  # Posen die generiert werden sollen
   poses:
     - id: "standing"
-      name: "Stehend"
+      name: "Standing"
       prompt_addition: "standing pose, full body view, neutral background"
     - id: "sitting"
-      name: "Sitzend"
+      name: "Sitting"
       prompt_addition: "sitting on a chair, relaxed posture"
     - id: "talking"
-      name: "Sprechend"
+      name: "Talking"
       prompt_addition: "talking, gesturing with hands, expressive"
     - id: "happy"
-      name: "Fröhlich"
+      name: "Happy"
       prompt_addition: "happy expression, smiling, cheerful"
     - id: "confused"
-      name: "Verwirrt"
+      name: "Confused"
       prompt_addition: "confused expression, scratching head"
 
-# API-Konfiguration (Keys in .env!)
 api:
   midjourney:
     enabled: false
-    channel_id: null  # Discord Channel ID
-    bot_token: null   # In .env als MIDJOURNEY_BOT_TOKEN
-  
+    channel_id: null
+    bot_token: null
   openai:
     enabled: false
     model: "dall-e-3"
-    api_key: null     # In .env als OPENAI_API_KEY
-  
+    api_key: null
   stability_ai:
     enabled: false
-    api_key: null     # In .env als STABILITY_API_KEY
-  
+    api_key: null
   replicate:
     enabled: true
-    rate_limit_delay: 10 # Auf 10s reduziert für schnellere Generierung (6 Req/Min)
-    max_workers: 6 # Auf 6 Worker erhöht, für max. Rate Limit Auslastung
+    rate_limit_delay: 10
+    max_workers: 6
 
-# Reproduzierbarkeit
 reproducibility:
-  # Seed für deterministische Generierung (wenn unterstützt)
   seed: null
-  # Version der Prompts
   prompt_version: "1.0"
-  # Welche Metadaten speichern
   save_metadata: true
   save_prompts: true
 
-# Output-Struktur
 output:
-  base_dir: "outputs"
+  base_dir: "output"
   structure:
     - "images/characters/{character_id}/"
     - "images/scenes/{scene_id}/"
@@ -78,7 +63,6 @@ output:
     - "prompts/{date}/"
     - "metadata/{character_id}/"
 
-# Logging
 logging:
   level: "INFO"
   file: "logs/clawcity.log"
